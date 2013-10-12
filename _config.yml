@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email: othertang[at]gmail.com
+email: othertang@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -41,7 +41,7 @@ rdiscount:
     - smart
 pygments: false # default python pygments have been replaced by pygments.rb
 
-paginate: 10          # Posts per page on the blog index
+paginate: 5          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
@@ -62,11 +62,19 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 #   3rd Party Settings    #
 # ----------------------- #
 
+# douban
+douban_user: typd
+douban_apikey: # you can leave this blank
+douban_display_category: #movie, book, music (if blank, will fetch all these categories)
+
 # Github repositories
-github_user:
+github_user: typd
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
+
+# Coderwall
+coderwall_user: typd
 
 # Twitter
 twitter_user:
@@ -82,7 +90,7 @@ googleplus_user:
 googleplus_hidden: false
 
 # Pinboard
-pinboard_user:
+pinboard_user: 
 pinboard_count: 3
 
 # Delicious
