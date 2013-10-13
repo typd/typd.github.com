@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://typd.github.io
-title: typd
-subtitle: daily thoughts
-author: typd
+title: Yizhe Tang
+subtitle: 
+author: Yizhe Tang
 simple_search: http://google.com/search
-description: daily thoughts
+description: some thinking and writing
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
