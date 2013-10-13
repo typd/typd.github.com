@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: hello | typd]]></title>
+  <title><![CDATA[Category: hello | Yizhe Tang]]></title>
   <link href="http://typd.github.io/blog/categories/hello/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-10-13T23:08:07+08:00</updated>
+  <updated>2013-10-13T23:47:26+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
-    <name><![CDATA[typd]]></name>
+    <name><![CDATA[Yizhe Tang]]></name>
     <email><![CDATA[othertang@gmail.com]]></email>
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
