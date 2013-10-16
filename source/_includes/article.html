@@ -7,6 +7,7 @@
         <!-- include post/categories.html -->
 	</div>
 	<h1 class="title" itemprop="name"><a href="{{ root_url }}{{ post.url }}" itemprop="url">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+    <br/>
 	<div class="entry-content" itemprop="articleBody">
 		{{ content | excerpt }}
 		{% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
