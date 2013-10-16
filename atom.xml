@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-10-16T20:02:56+08:00</updated>
+  <updated>2013-10-16T20:13:27+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -20,7 +20,7 @@
     <id>http://typd.github.io/blog/2013/10/16/qt-and-pyqt</id>
     <content type="html"><![CDATA[<p>Sometimes it bothers me how to write UI program cross-platform, or just get rid of Visual Studio. Qt has been referenced a lot for that. Here are some notes based on my experience, understanding of Qt, pyQt.</p>
 
-<h2>what&rsquo;s Qt</h2>
+<h1>What&rsquo;s Qt</h1>
 
 <ul>
 <li><p>Quoted, <a href="http://qt-project.org/">Qt</a> is a cross-platform application and UI framework for developers using C++ or QML, a CSS &amp; JavaScript like language.</p></li>
@@ -32,7 +32,7 @@
 </ul>
 
 
-<h2>python solution</h2>
+<h1>Python solution</h1>
 
 <p>Of course you don&rsquo;t have to write C++. PyQt and pySide are the py solutions.</p>
 
@@ -49,7 +49,7 @@
 
 <ul>
 <li>License LGPL, no need to pay for commercial usage</li>
-<li>Seems not under actively developing, release for Qt5 is still not ready yet, (pySide roadmap](<a href="http://qt-project.org/wiki/PySide_Roadmap">http://qt-project.org/wiki/PySide_Roadmap</a>)</li>
+<li>Seems not under actively developing, release for Qt5 is still not ready yet, <a href="http://qt-project.org/wiki/PySide_Roadmap">pySide roadmap</a></li>
 </ul>
 </li>
 </ul>
@@ -57,7 +57,7 @@
 
 <p>I choose <a href="http://www.riverbankcomputing.com/software/pyqt/download5">PyQt5</a>.</p>
 
-<h2>setup them</h2>
+<h1>Setup them</h1>
 
 <p>Things to do</p>
 
@@ -65,7 +65,7 @@
 <li>Install Qt5, which contains Qt Creator
 
 <ul>
-<li>download from <a href="http://qt-project.org/downloads">http://qt-project.org/downloads</a></li>
+<li><a href="http://qt-project.org/downloads">download</a></li>
 </ul>
 </li>
 <li>Install PyQt
@@ -75,7 +75,7 @@
 <li>Install SIP, seems SIP is used for converting C++ code to python
 
 <ul>
-<li>download from <a href="http://www.riverbankcomputing.com/software/sip/download">http://www.riverbankcomputing.com/software/sip/download</a></li>
+<li><a href="http://www.riverbankcomputing.com/software/sip/download">download</a></li>
 <li>note, the hg checked out version has a problem on sip.h, the tar ball works fine</li>
 <li>python configurate.py &amp;&amp; make &amp;&amp; make install</li>
 <li>add sip executor to your PATH</li>
@@ -84,7 +84,7 @@
 <li>Install PyQt5
 
 <ul>
-<li>download from <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download5">http://www.riverbankcomputing.co.uk/software/pyqt/download5</a></li>
+<li><a href="http://www.riverbankcomputing.co.uk/software/pyqt/download5">download</a></li>
 <li>python configurate.py &amp;&amp; make &amp;&amp; make install</li>
 </ul>
 </li>
@@ -93,7 +93,7 @@
 </ul>
 
 
-<h2>examples</h2>
+<h1>Examples</h1>
 
 <p>PyQt examples are included in the tar ball, PyQt-gpl-5.1/examples. Start it from PyQt-gpl-5.1/examples/qtdemo/qtdemo.py</p>
 
@@ -116,7 +116,7 @@ if __name__ == "__main__":
     app.exec_()
 </code></pre>
 
-<h2>some more</h2>
+<h1>Some more</h1>
 
 <p>Qt, PyQt, pySide seems all these are not well maintained. The offical sides are as convinient as I suppose they should be. Instructions, readmes, sample code contains some bug and mistakes more or less.</p>
 ]]></content>
