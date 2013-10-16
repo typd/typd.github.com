@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-10-16T20:13:27+08:00</updated>
+  <updated>2013-10-16T23:47:43+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A data science sharing from Hilary Mason of bit.ly]]></title>
+    <link href="http://typd.github.io/blog/2013/10/16/a-data-science-sharing-from-hilary-mason-of-bit-dot-ly/"/>
+    <updated>2013-10-16T23:17:00+08:00</updated>
+    <id>http://typd.github.io/blog/2013/10/16/a-data-science-sharing-from-hilary-mason-of-bit-dot-ly</id>
+    <content type="html"><![CDATA[<p>This is a <a href="http://www.youtube.com/watch?v=zwtg2yOCdpM">good talk</a> from Chief Scientist at bit.ly. It&rsquo;s interesting to use and present your data wisely indeed. And I&rsquo;m more interested at the factors make this a good talk</p>
+
+<ul>
+<li>The solid work and thinking behind</li>
+<li>A logical structure of the talk</li>
+<li>The attibute of sharing, not just showing off the done work or owned data</li>
+<li>A good researcher needs to have a practical tool set, and good engineering sense</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Qt and PyQt]]></title>
