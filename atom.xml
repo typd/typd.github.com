@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-10-18T23:53:31+08:00</updated>
+  <updated>2013-10-19T20:13:53+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Beijing marathon again]]></title>
+    <link href="http://typd.github.io/blog/2013/10/19/beijing-marathon-again/"/>
+    <updated>2013-10-19T19:36:00+08:00</updated>
+    <id>http://typd.github.io/blog/2013/10/19/beijing-marathon-again</id>
+    <content type="html"><![CDATA[<p>时隔六年，终于再次报上了北马！明天是个好天气！在我的北马记忆里，有清北起跑前的斗气，TAM起跑时的广阔感，途中一个化工大的教授赶着铁环跑半程，不知道今年还在不在。</p>
+
+<p>一个遗憾，今年只报上了迷你，争取赖着跑下半程。这次的比赛物品，发图留念，</p>
+
+<p><img src="./images/posts/2013-10-19/1.jpg" alt="" />
+<img src="./images/posts/2013-10-19/2.jpg" alt="" />
+<img src="./images/posts/2013-10-19/3.jpg" alt="" />
+<img src="./images/posts/2013-10-19/4.jpg" alt="" />
+<img src="./images/posts/2013-10-19/5.jpg" alt="" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Python history, a talk from Guido]]></title>
