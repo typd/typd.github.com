@@ -5,11 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>articals from The best software writing I - Yizhe Tang</title>
+	<title>Rewrite code from scratch? - Yizhe Tang</title>
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="Articals From the Best Software Writing I The best software writing I is a book contains Joel Spolsky&rsquo;s selection and some comments of &hellip;">
+	<meta name="description" content="Rewrite Code From Scratch? As a developer, almost everyone has made a difficult choice, rewrite something from scratch. Joel Spolsky wrote this to &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
 
 	<link href="http://feedpress.me/typd" rel="alternate" title="Yizhe Tang" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://typd.github.io/blog/2013/10/14/articals-from-the-best-software-writing-i/">
+	<link rel="canonical" href="http://typd.github.io/blog/2013/10/24/rewrite-code-from-scratch/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -109,35 +109,54 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-	<h1 class="title" itemprop="name">Articals From the Best Software Writing I</h1>
-	<div class="entry-content" itemprop="articleBody"><p>The best software writing I is a book contains Joel Spolsky&rsquo;s selection and some comments of articals around 2004 or so, while this is the Joel of &ldquo;Joel on Software&rdquo;. I found the orginal posts&#8217; links are available in this doubaner&rsquo;s <a href="http://book.douban.com/review/1449189/">review</a>. Some worth a read, some worth to be shared,</p>
+	<h1 class="title" itemprop="name">Rewrite Code From Scratch?</h1>
+	<div class="entry-content" itemprop="articleBody"><p>As a developer, almost everyone has made a difficult choice, rewrite something from scratch. Joel Spolsky wrote <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">this</a> to explain why you shouldn&rsquo;t do it. There&rsquo;re some good reasons.</p>
 
-<ul>
-<li><p><a href="http://paulgraham.com/gh.html">Great Hackers</a> by Paul Graham, you know &ldquo;Hackers and Painters&rdquo;</p>
+<h1>Artical summary</h1>
 
-<p>It&rsquo;s a long post with nice words.</p>
+<p>The very important, but hidden reason,</p>
 
-<p>A great hacker has much much more productivity than a normal developer. Someone says there&rsquo;re 5 levels of developers, the productivity scales 10 between each 2 levels.</p>
+<blockquote><p>It&rsquo;s hard to read code than to write it.</p></blockquote>
 
-<p>Hackers have strong curiosity, the intention to know how things work.</p>
+<p>It&rsquo;s definitly true. But no need to blame developers or the one made the rewrite decision. It&rsquo;s a nature fact in software. You don&rsquo;t necessarily have gone with the last version process, no memory, just code, may have spec or not, may have the code owner or not.</p>
 
-<p>No guarantee on whether someone can become a hacker or not. Raw talent, habit, even personality decides your potential. It&rsquo;s even hard to identify if someone is a hacker.</p>
-
-<p>Release the hackers!</p></li>
-</ul>
-
+<p>Then you may have bias to make the decision.</p>
 
 <!-- more -->
 
 
+<p>The old code is valuable because they are used, tested, bug found and fixed. The oppsite, if you throw them away,</p>
+
 <ul>
-<li><p><a href="http://blogs.msdn.com/b/ericlippert/archive/2003/10/28/53298.aspx">How many Microsoft employees does it take to change a lightbulb?</a></p>
-
-<p>Microsoft seems to be an old-fasion in software world to me. The software technics and theories have changed a lot since delivered software is not as popular as cloud ones. We should all know the differences. The key to the first one is stability, every change there is expensive, while the later one we need most is rapid developing and delivering.</p>
-
-<p>No matter what, I really admire Microsoft delivers softwares as complicated as windows and office, even having thousands of developers work on one project is a miracal, needs excellent software engineering with no doubt.</p></li>
+<li>throw away knowledge</li>
+<li>market leadership</li>
+<li>put yourself in danger, you may have no shippable code for sometime</li>
 </ul>
 
+
+<p>The old code can be used because,</p>
+
+<ul>
+<li>Architecture problems can be refactored, though it&rsquo;s not easy but you can still get it done.</li>
+<li>Performance issue can be solved by re-writing part of the code, not the whole.</li>
+<li>Ugly code is not a real issue.</li>
+</ul>
+
+
+<h1>More thoughts</h1>
+
+<p>This ariticle is good because it clearly pointed out the bias on legacy code. Though it keeps saying &ldquo;no need to rewrite&rdquo;, after indivisual understanded the bias, he can make the right desicion himself.</p>
+
+<p>Some thoughts on the oppsite side,</p>
+
+<ul>
+<li><p>The technics, tools, methedologies are developing fast comparing to old times. Writing from scratch costs less than before.</p></li>
+<li><p>The cost of delievering slow is becomming bigger.</p></li>
+<li><p>The team morale of maintaining a legacy code should be considered</p></li>
+</ul>
+
+
+<p>There should always be a certain threshold of choosing to rewrite. Avoid bias from each side, choose your own.</p>
 </div>
 
 </article>
@@ -176,8 +195,8 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://typd.github.io/blog/2013/10/14/articals-from-the-best-software-writing-i/';
-        var disqus_url = 'http://typd.github.io/blog/2013/10/14/articals-from-the-best-software-writing-i/';
+        var disqus_identifier = 'http://typd.github.io/blog/2013/10/24/rewrite-code-from-scratch/';
+        var disqus_url = 'http://typd.github.io/blog/2013/10/24/rewrite-code-from-scratch/';
         var disqus_script = 'embed.js';
       
     (function () {
