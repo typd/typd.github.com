@@ -22,6 +22,8 @@ Sometimes it bothers me how to write UI program cross-platform, or just get rid 
 
 + Latest version, Qt5.1
 
+<!-- more -->
+
 # Python solution
 
 Of course you don't have to write C++. PyQt and pySide are the py solutions.

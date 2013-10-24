@@ -10,6 +10,8 @@ categories:
 
 自己也做了读书笔记，不过是更按自己记忆所需，比如这个版本碎片化可读性强，转载下来：
 
+<!-- more -->
+
 http://blog.leezhong.com/reading/2013/10/06/pragmatic-thinking-and-learning.html
 
     培养幽默感，以建立更强大的隐喻。

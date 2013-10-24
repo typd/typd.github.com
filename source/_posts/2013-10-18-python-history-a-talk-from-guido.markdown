@@ -14,6 +14,8 @@ Guido was inspired by ABC. He commented on ABC's goods and bads.
 
 Python is originally for day to day work (yes, every language inventor says that).
 
+<!-- more -->
+
 He had good summary on the philosophies behinds python, and they're also useful for other tasks.
 
     Skunkworks (early days) Design philosophy

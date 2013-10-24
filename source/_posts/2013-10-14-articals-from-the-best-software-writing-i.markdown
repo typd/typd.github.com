@@ -20,6 +20,8 @@ The best software writing I is a book contains Joel Spolsky's selection and some
 
   Release the hackers!
 
+<!-- more -->
+
 + [How many Microsoft employees does it take to change a lightbulb?](http://blogs.msdn.com/b/ericlippert/archive/2003/10/28/53298.aspx)
 
   Microsoft seems to be an old-fasion in software world to me. The software technics and theories have changed a lot since delivered software is not as popular as cloud ones. We should all know the differences. The key to the first one is stability, every change there is expensive, while the later one we need most is rapid developing and delivering.
