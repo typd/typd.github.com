@@ -8,7 +8,7 @@ categories:
 
 As a developer, almost everyone has made a difficult choice, rewrite something from scratch. Joel Spolsky wrote [this](http://www.joelonsoftware.com/articles/fog0000000069.html) to explain why you shouldn't do it. There're some good reasons.
 
-# Artical summary
+# Article summary
 
 The very important, but hidden reason,
 
