@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-10-27T20:31:00+08:00</updated>
+  <updated>2013-10-28T20:19:39+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Community edition of PyCharm!]]></title>
+    <link href="http://typd.github.io/blog/2013/10/28/community-edition-of-pycharm/"/>
+    <updated>2013-10-28T19:10:00+08:00</updated>
+    <id>http://typd.github.io/blog/2013/10/28/community-edition-of-pycharm</id>
+    <content type="html"><![CDATA[<p>Just found the python IDE from IDEA, PyCharm, released a community edition last month. Community edition means FREE! As an environment friendly language, python is good for both beginners and seniors. IDEA shares a good thing!</p>
+
+<p>I knew IDEA from IntelliJ. The well known IDE for java, won much praise from others and me over eclipse. PyCharm has similar advantages:</p>
+
+<ul>
+<li>Simple UI, easy to use and understand</li>
+<li>Highly configurable, key shortcuts, rich plugins</li>
+<li>Fast, alghouth it consumes a lot memory</li>
+</ul>
+
+
+<p>Yes I can live without an IDE, but if I use one, these are pretty much I need most. I use vim for both ruby and python, with proper grammar highlights and indention. The biggest concern I have for it, is about refactoring. For a bigger size project, I believe an IDE can help to make life easier. No matter how wonderful your vim or emacs is, IDE is designed to be better than it. It&rsquo;s clear to me, an desktop application has less limitation than a terminal one.</p>
+
+<p>This free version is a good start for me. Let me see when I need the rich features from pro version, more framework build-in support, especially for web.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Rewrite code from scratch?]]></title>
