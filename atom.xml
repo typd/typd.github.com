@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-10-31T23:11:26+08:00</updated>
+  <updated>2013-10-31T23:14:24+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -20,7 +20,7 @@
     <id>http://typd.github.io/blog/2013/10/31/a-good-point-about-the-fresh-guy-for-a-project</id>
     <content type="html"><![CDATA[<p>Just heard this:</p>
 
-<blockquote><p>The newest person to the project is really useful, because of his fresh eyes, that would point out what&rsquo;s broken or fixing processes.</p></blockquote>
+<blockquote><p>The newest person to the project is really useful, because of his fresh eyes, that would point out what&rsquo;s broken or fix processes.</p></blockquote>
 
 <p>Good point! For engineering quality, culture and communication, it&rsquo;s recommended to do more code and architecture reviews cross teams. I heard some agile web companies even rotate developers among different projects. That sounds awesome to me, although it may have a slow start and bring in some uncertainty.</p>
 
