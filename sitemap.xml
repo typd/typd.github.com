@@ -47,8 +47,14 @@
         <lastmod>2013-10-28T20:19:19+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://typd.github.io/blog/2013/10/31/a-good-point-about-the-fresh-guy-for-a-project/
+        </loc>
+        <lastmod>2013-10-31T23:10:19+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://typd.github.io/blog/archives/</loc>
-        <lastmod>2013-10-28T20:33:38+08:00</lastmod>
+        <lastmod>2013-10-31T23:10:19+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/categories/</loc>
@@ -56,7 +62,7 @@
     </url>
     <url>
         <loc>http://typd.github.io/</loc>
-        <lastmod>2013-10-28T20:33:38+08:00</lastmod>
+        <lastmod>2013-10-31T23:10:19+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/robots.txt</loc>

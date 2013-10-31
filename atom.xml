@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-10-28T20:34:25+08:00</updated>
+  <updated>2013-10-31T23:11:26+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A good point about the fresh guy for a project]]></title>
+    <link href="http://typd.github.io/blog/2013/10/31/a-good-point-about-the-fresh-guy-for-a-project/"/>
+    <updated>2013-10-31T22:48:00+08:00</updated>
+    <id>http://typd.github.io/blog/2013/10/31/a-good-point-about-the-fresh-guy-for-a-project</id>
+    <content type="html"><![CDATA[<p>Just heard this:</p>
+
+<blockquote><p>The newest person to the project is really useful, because of his fresh eyes, that would point out what&rsquo;s broken or fixing processes.</p></blockquote>
+
+<p>Good point! For engineering quality, culture and communication, it&rsquo;s recommended to do more code and architecture reviews cross teams. I heard some agile web companies even rotate developers among different projects. That sounds awesome to me, although it may have a slow start and bring in some uncertainty.</p>
+
+<p>To have the guys as smart as developers to collaborate well, some social practices become neccessary and more important.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Community edition of PyCharm!]]></title>
