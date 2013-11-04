@@ -1,0 +1,358 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>The 12-factor app, all angles about building a robust app! - Yizhe Tang</title>
+	<meta name="author" content="Yizhe Tang">
+
+	
+	<meta name="description" content="The 12-factor App, All Angles About Building a Robust App! Just read The 12-factor app, published by heroku, talked about all angles about how you &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="http://feedpress.me/typd" rel="alternate" title="Yizhe Tang" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://typd.github.io/blog/2013/11/04/the-12-factor-app-all-angles-about-building-a-robust-app/">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-44831634-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+    
+        <img src="/images/la-small2.png" alt="Profile Picture" style="width: 160px;" />
+    
+</div>
+<hgroup>
+  <h1><a href="/">Yizhe Tang</a></h1>
+  
+  
+  
+    <span style="color:white">some thinking and writing</span>
+  
+</hgroup>
+
+<nav id="main-nav">
+<ul class="main-navigation">
+  <li><a href="/blog/archives">archives</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+		<a class="github" href="https://github.com/typd" title="GitHub">GitHub</a>
+		
+		
+		<a class="coderwall" href="https://coderwall.com/typd" title="Coderwall">Coderwall</a>
+		
+		
+		
+		
+		
+		
+		
+		<a class="douban" href="https://www.douban.com/people/typd" title="Douban">Douban</a>
+		
+		
+		<a class="rss" href="http://feedpress.me/typd" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">The 12-factor App, All Angles About Building a Robust App!</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Just read <a href="http://12factor.net/">The 12-factor app</a>, published by heroku, talked about all angles about how you should do and what you need to consider for building a robust app.</p>
+
+<p>Software developing is in an agile period. Development, deployment are happening fast. So as the tool set is also changing fast. Developers exchange their tools and methodologies, but I really think that&rsquo;s not enough. This is such a useful spec to summarise not just tools to use, but things to consider behind each part of an application.</p>
+
+<p>My abstract notes here, without the unnecessary long sentences.</p>
+
+<!-- more -->
+
+
+<h1>Codebase</h1>
+
+<ul>
+<li>Use version control</li>
+<li>There is always a one-to-one correlation between codebase and the app, but there will be many deploys of the app. A deploy is a running instance of the app.</li>
+</ul>
+
+
+<h1>Dependencies</h1>
+
+<ul>
+<li>Lib installed through a packaging system can be installed system-wide or vendoring/bundling</li>
+<li>Never relies on implicit existence of system-wide packages
+Declares all dependancies, completely and exactly, via a dependency declaration manifest.
+Use a dependency isolation tool.</li>
+<li>Never relies on system tools.
+E.g. curl, those tools should be vendored into the app.</li>
+</ul>
+
+
+<h1>Config</h1>
+
+<ul>
+<li>Requires strict separation of config from code
+
+<ul>
+<li>A test for it: whether the codebase could be made open source at any moment</li>
+<li>This does not include internal app config, e.g. config/routes.rb</li>
+</ul>
+</li>
+<li>Stores config in environment variables, because
+
+<ul>
+<li>easy to change between deploys without changing any code</li>
+<li>little chance of them being checked into code repo accidentally</li>
+<li>not language nor os standard</li>
+</ul>
+</li>
+</ul>
+
+
+<h1>Backing services</h1>
+
+<ul>
+<li>Any service the app consumes over the network as part of its normal operation.</li>
+<li>The code makes no distinction between local and third party services</li>
+</ul>
+
+
+<h1>Build, release, run</h1>
+
+<ul>
+<li>A codebase is transformed into a deploy through 3 stages:
+
+<ul>
+<li>Build stage: converts a code repo into an executable bundle.</li>
+<li>Release stage: takes the build and combines it with config.</li>
+<li>Run stage: runs the app in the execution environment.</li>
+</ul>
+</li>
+<li>Uses strict separation between the build, release, and run stages.</li>
+<li>Deployment tools typically offer release management tools, most notably the ability to roll back to a previous release.</li>
+<li>Every release should have a unique ID</li>
+<li>Runtime execution can happen automatically in cases such as a server reboot, or a crashed process being restarted. Therefore, the run stage should be kept to as few moving parts as possible.</li>
+<li>Builds are initiated by devs whenever new code is deployed. The build stage can be complex, because dev is driving it.</li>
+</ul>
+
+
+<h1>Processes</h1>
+
+<ul>
+<li>12-factor processes are stateless and share-nothing. Any data that needs to persist must be stored in a stateful backing service.</li>
+<li>Ram or disk of the process can be used as a brief, single-transaction cache. Never assumes anything cached in ram or disk will be available on a future request or job.</li>
+<li>No &ldquo;sticky sessions&rdquo;: cache user session data in ram and expecting future requests from the same visitor to be routed to the same process. Recommend a datastore offers time-expiration, memcached or redis.</li>
+</ul>
+
+
+<h1>Port binding</h1>
+
+<ul>
+<li>Completely self-contained, does not rely on runtime injection of a webserver into the execution environment to create a web-facing service. The web app exports HTTP as a service by binding to a port</li>
+</ul>
+
+
+<h1>Concurrency</h1>
+
+<ul>
+<li>Processes are a first class citizen.</li>
+<li>Adding more concurrency is simple because: share-nothing, horizontally partitionable nature</li>
+<li>Should never daemonize or write PID files. But rely on OS&rsquo;s process manager to manage output streams, respond to crashed processes, and handle user-initiated restarts and shutdowns.</li>
+</ul>
+
+
+<h1>Disposability</h1>
+
+<ul>
+<li>Disposable: can be started or stopped at a moment&rsquo;s notice.</li>
+<li>Processes should strive to minimize startup time.</li>
+<li>Processes shut down gracefully when they receive a SIGTERM signal from the process manager.</li>
+<li>Processes should also be robust against sudden death.</li>
+</ul>
+
+
+<h1>Dev/prod parity</h1>
+
+<ul>
+<li>Gaps between development and production
+
+<ul>
+<li>time gap: may take days, weeks, months to go into production</li>
+<li>personal gap: developer write code, ops deploy it</li>
+<li>tools gap: developers may use nginx, sqlite, osx, production may use apache, mysql, linux</li>
+</ul>
+</li>
+<li>Design for continuous deployment, to keep the gap small
+
+<ul>
+<li>time gap: may have it deployed fast after write code</li>
+<li>personal gap: dev are closely involved in deploying and watching it&rsquo;s behavior in production</li>
+<li>tools gap: make development and production as similar as possible</li>
+</ul>
+</li>
+<li>Resists the urge to use different backing services between development and production, because there may be tiny incompatibilities, cause to pass tests in local but fail in production. The cost is high over the lifetime.</li>
+</ul>
+
+
+<h1>Logs</h1>
+
+<ul>
+<li>Logs are the stream of aggregated, time-ordered events.</li>
+<li>Never concern with routing or storage of log. Each running process writes its event stream, unbuffered, to stdout. In staging or production, each process&#8217; stream will be captured, collated and routed to final destinations. These destinations are not visible to or configurable by the app, but managed by the execution environment. (Logplex and Fluent can help)</li>
+</ul>
+
+
+<h1>Admin processes</h1>
+
+<ul>
+<li>Developers may often wish to do one-off tasks. These should be run in an identical env as the app. They run against a release, useing the same code and config. Admin code must ship with application code to avoid synchronization issues.</li>
+<li>The same dependency isolation techniques should be used on all process types.</li>
+</ul>
+
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2013 - Yizhe Tang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+<script type="text/javascript">
+      var disqus_shortname = 'typd';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://typd.github.io/blog/2013/11/04/the-12-factor-app-all-angles-about-building-a-robust-app/';
+        var disqus_url = 'http://typd.github.io/blog/2013/11/04/the-12-factor-app-all-angles-about-building-a-robust-app/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+<!-- Clicky asynchronous tracking code -->
+<a title="Web Analytics" href="http://clicky.com/100664578"><img alt="Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(100664578);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100664578ns.gif" /></p></noscript>
+
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'typd.github.io'
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+
+
+		</div>
+	</div>
+</body>
+</html>
