@@ -1,6 +1,6 @@
 <div class="profilepic">
     {% if site.avatar %}
-        <img src="./images/la-small2.png" alt="Profile Picture" style="width: 160px;" />
+        <img src="{{ root_url }}/images/la-small2.png" alt="Profile Picture" style="width: 160px;" />
     {% else %}
         {% if site.email_md5 %}
         <img src="http://www.gravatar.com/avatar/{{ site.email_md5 }}?s=160" alt="Profile Picture" style="width: 160px;" />

@@ -10,9 +10,9 @@ categories:
 
 一个遗憾，今年只报上了迷你4km，争取赖着跑下半程。这次的比赛物品，发图留念，
 
-![](./images/posts/2013-10-19/1.jpg)
-![](./images/posts/2013-10-19/2.jpg)
-![](./images/posts/2013-10-19/3.jpg)
-![](./images/posts/2013-10-19/4.jpg)
-![](./images/posts/2013-10-19/5.jpg)
+![](/images/posts/2013-10-19/1.jpg)
+![](/images/posts/2013-10-19/2.jpg)
+![](/images/posts/2013-10-19/3.jpg)
+![](/images/posts/2013-10-19/4.jpg)
+![](/images/posts/2013-10-19/5.jpg)
 
