@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-11-05T00:24:29+08:00</updated>
+  <updated>2013-11-06T23:56:12+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -14,13 +14,66 @@
 
   
   <entry>
+    <title type="html"><![CDATA[the right way of logging]]></title>
+    <link href="http://typd.github.io/blog/2013/11/06/the-right-way-of-logging/"/>
+    <updated>2013-11-06T22:19:00+08:00</updated>
+    <id>http://typd.github.io/blog/2013/11/06/the-right-way-of-logging</id>
+    <content type="html"><![CDATA[<p>After read the 12-factor app spec, I took a close look to the section of logging. For an application, it feels so nature to me to write logs to a file. But I just feel something isn&rsquo;t right from my subconscious.</p>
+
+<ul>
+<li>Do I need a cleaner tool like log rotate, or just pretend they&rsquo;re small forever?</li>
+<li>To debug something, I&rsquo;m just forced to ssh across ocean and use a crappy vim on the host to find something weird.</li>
+</ul>
+
+
+<p>&ldquo;Elephant in the room&rdquo; is a good phrase here. Until I read <a href="http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/">this post</a> in the spec, things become clear. Now here&rsquo;s my understanding.</p>
+
+<!-- more -->
+
+
+<p>The application log looks like a stream, and should really be a stream. We normally append it to a file, just because that&rsquo;s the most obvious way of treating it. But it&rsquo;s defenitly not the only way. In fact for logging, the application&rsquo;s duty is done once it outputs to the stream. The logic of handling (append, rotate, clean) files, should (or say &ldquo;can&rdquo;) not be a part of the application.</p>
+
+<p>But what to do then if the application doesn&rsquo;t handle the log stream output. It&rsquo;s actually easier and more robust to take it out. Tools like Unix pipe, and <a href="http://logstash.net/">logstash</a> or <a href="https://github.com/fluent/fluentd">fluend</a> are more good at it than any application side logging lib.</p>
+
+<p>For simple file logging, you can use</p>
+
+<pre><code>$ mydaemon &gt;&gt; /var/log/mydaemon.log
+</code></pre>
+
+<p>For distributed logging,</p>
+
+<pre><code>$ mydaemon | logger
+</code></pre>
+
+<p>Or still want a log file</p>
+
+<pre><code>$ mydaemon | tee /var/log/mydaemon.log | logger
+</code></pre>
+
+<p>The &ldquo;logger&rdquo; is a placeholder for tools like logstash, which can be assembled into any kind of pipe line easily. Logstash has <a href="http://logstash.net/docs/1.2.2/">doc</a> and <a href="http://cookbook.logstash.net/">cookbooks</a>. Just choose the input, output, filter as you need.</p>
+
+<p>A typical setup may be:</p>
+
+<pre><code>log stream
+=&gt; shipper: send log through udp out of the host
+=&gt; message queue: redis, mongodb, etc.
+=&gt; parser: parse each line to get timestamp, attributes, etc. May ingest parse logic here
+=&gt; elastic search: build index according to the parse result
+=&gt; web ui: for centralized viewing, querying, alerting, etc.
+</code></pre>
+
+<p>Move the elephant out of the room.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[The 12-factor app, all angles about building a robust app!]]></title>
     <link href="http://typd.github.io/blog/2013/11/04/the-12-factor-app-all-angles-about-building-a-robust-app/"/>
     <updated>2013-11-04T23:41:00+08:00</updated>
     <id>http://typd.github.io/blog/2013/11/04/the-12-factor-app-all-angles-about-building-a-robust-app</id>
     <content type="html"><![CDATA[<p>Just read <a href="http://12factor.net/">The 12-factor app</a>, published by heroku, talked about all angles about how you should do and what you need to consider for building a robust app.</p>
 
-<p>Software developing is in an agile period. Development, deployment are happening fast. So as the tool set is also changing fast. Developers exchange their tools and methodologies, but I really think that&rsquo;s not enough. This is such a useful spec to summarise not just tools to use, but things to consider behind each part of an application.</p>
+<p>Software developing is in an agile period. Development, deployment are happening fast. So as the tool set is also changing fast. Developers exchange their tools and methodologies, but I really think that&rsquo;s not enough. This is such a useful spec to summarise not just tools to use, but the things to consider behind each part of an application.</p>
 
 <p>My abstract notes here, without the unnecessary long sentences.</p>
 

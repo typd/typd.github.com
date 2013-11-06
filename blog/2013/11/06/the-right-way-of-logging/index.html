@@ -5,11 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Yizhe Tang</title>
+	<title>the right way of logging - Yizhe Tang</title>
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="Oct 14th, 2013 Comments Articals From the Best Software Writing I The best software writing I is a book contains Joel Spolsky&rsquo;s selection and &hellip;">
+	<meta name="description" content="The Right Way of Logging After read the 12-factor app spec, I took a close look to the section of logging. For an application, it feels so nature to &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
 
 	<link href="http://feedpress.me/typd" rel="alternate" title="Yizhe Tang" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://typd.github.io/blog/page/2/">
+	<link rel="canonical" href="http://typd.github.io/blog/2013/11/06/the-right-way-of-logging/">
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -103,136 +103,77 @@
 				
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner">
-<div itemscope itemtype="http://schema.org/Blog">
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-14T22:51:00+08:00" data-updated="true" itemprop="datePublished">Oct 14<span>th</span>, 2013</time></div>
-		
-			<span class="comments"><a href="/blog/2013/10/14/articals-from-the-best-software-writing-i/#disqus_thread">Comments</a></span>
-		
-        <!-- include post/categories.html -->
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/10/14/articals-from-the-best-software-writing-i/" itemprop="url">Articals From the Best Software Writing I</a></h1>
-    <br/>
-	<div class="entry-content" itemprop="articleBody">
-		<p>The best software writing I is a book contains Joel Spolsky&rsquo;s selection and some comments of articals around 2004 or so, while this is the Joel of &ldquo;Joel on Software&rdquo;. I found the orginal posts&#8217; links are available in this doubaner&rsquo;s <a href="http://book.douban.com/review/1449189/">review</a>. Some worth a read, some worth to be shared,</p>
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+	<h1 class="title" itemprop="name">The Right Way of Logging</h1>
+	<div class="entry-content" itemprop="articleBody"><p>After read the 12-factor app spec, I took a close look to the section of logging. For an application, it feels so nature to me to write logs to a file. But I just feel something isn&rsquo;t right from my subconscious.</p>
 
 <ul>
-<li><p><a href="http://paulgraham.com/gh.html">Great Hackers</a> by Paul Graham, you know &ldquo;Hackers and Painters&rdquo;</p>
-
-<p>It&rsquo;s a long post with nice words.</p>
-
-<p>A great hacker has much much more productivity than a normal developer. Someone says there&rsquo;re 5 levels of developers, the productivity scales 10 between each 2 levels.</p>
-
-<p>Hackers have strong curiosity, the intention to know how things work.</p>
-
-<p>No guarantee on whether someone can become a hacker or not. Raw talent, habit, even personality decides your potential. It&rsquo;s even hard to identify if someone is a hacker.</p>
-
-<p>Release the hackers!</p></li>
+<li>Do I need a cleaner tool like log rotate, or just pretend they&rsquo;re small forever?</li>
+<li>To debug something, I&rsquo;m just forced to ssh across ocean and use a crappy vim on the host to find something weird.</li>
 </ul>
 
 
+<p>&ldquo;Elephant in the room&rdquo; is a good phrase here. Until I read <a href="http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/">this post</a> in the spec, things become clear. Now here&rsquo;s my understanding.</p>
 
-		
-		<a href="/blog/2013/10/14/articals-from-the-best-software-writing-i/" class="more-link">Continue →</a>
-	</div>
-
-</article>
+<!-- more -->
 
 
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
+<p>The application log looks like a stream, and should really be a stream. We normally append it to a file, just because that&rsquo;s the most obvious way of treating it. But it&rsquo;s defenitly not the only way. In fact for logging, the application&rsquo;s duty is done once it outputs to the stream. The logic of handling (append, rotate, clean) files, should (or say &ldquo;can&rdquo;) not be a part of the application.</p>
 
+<p>But what to do then if the application doesn&rsquo;t handle the log stream output. It&rsquo;s actually easier and more robust to take it out. Tools like Unix pipe, and <a href="http://logstash.net/">logstash</a> or <a href="https://github.com/fluent/fluentd">fluend</a> are more good at it than any application side logging lib.</p>
 
+<p>For simple file logging, you can use</p>
 
+<pre><code>$ mydaemon &gt;&gt; /var/log/mydaemon.log
+</code></pre>
 
+<p>For distributed logging,</p>
 
+<pre><code>$ mydaemon | logger
+</code></pre>
 
+<p>Or still want a log file</p>
 
+<pre><code>$ mydaemon | tee /var/log/mydaemon.log | logger
+</code></pre>
 
-  
+<p>The &ldquo;logger&rdquo; is a placeholder for tools like logstash, which can be assembled into any kind of pipe line easily. Logstash has <a href="http://logstash.net/docs/1.2.2/">doc</a> and <a href="http://cookbook.logstash.net/">cookbooks</a>. Just choose the input, output, filter as you need.</p>
 
+<p>A typical setup may be:</p>
 
-<time datetime="2013-10-13T22:51:00+08:00" data-updated="true" itemprop="datePublished">Oct 13<span>th</span>, 2013</time></div>
-		
-			<span class="comments"><a href="/blog/2013/10/13/du-shu-bi-ji-zhuan-zai-cheng-xu-yuan-de-si-wei-xun-lian/#disqus_thread">Comments</a></span>
-		
-        <!-- include post/categories.html -->
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/10/13/du-shu-bi-ji-zhuan-zai-cheng-xu-yuan-de-si-wei-xun-lian/" itemprop="url">读书笔记转载《程序员的思维修炼》</a></h1>
-    <br/>
-	<div class="entry-content" itemprop="articleBody">
-		<p>偶然看到别人的《程序员的思维修炼》读书笔记，想起来自己也读过，确实还不错。这本书帮助从程序员的角度对自身能力进行反思，道理并不复杂，很多时候生产力就来自于把简单的事情理清楚。经常反思自己是一种好的习惯，对所有人都是。</p>
+<pre><code>log stream
+=&gt; shipper: send log through udp out of the host
+=&gt; message queue: redis, mongodb, etc.
+=&gt; parser: parse each line to get timestamp, attributes, etc. May ingest parse logic here
+=&gt; elastic search: build index according to the parse result
+=&gt; web ui: for centralized viewing, querying, alerting, etc.
+</code></pre>
 
-<p>自己也做了读书笔记，不过是更按自己记忆所需，比如这个版本碎片化可读性强，转载下来：</p>
-
-
-		
-		<a href="/blog/2013/10/13/du-shu-bi-ji-zhuan-zai-cheng-xu-yuan-de-si-wei-xun-lian/" class="more-link">Continue →</a>
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-12T16:39:00+08:00" data-updated="true" itemprop="datePublished">Jul 12<span>th</span>, 2013</time></div>
-		
-			<span class="comments"><a href="/blog/2013/07/12/hello/#disqus_thread">Comments</a></span>
-		
-        <!-- include post/categories.html -->
-	</div>
-	<h1 class="title" itemprop="name"><a href="/blog/2013/07/12/hello/" itemprop="url">Hello</a></h1>
-    <br/>
-	<div class="entry-content" itemprop="articleBody">
-		<h1>hello world</h1>
-
-<p>this is the first line.</p>
-
-<p>this is the second line</p>
-
-		
-		
-	</div>
-
-</article>
-
+<p>Move the elephant out of the room.</p>
 </div>
-<nav id="pagenavi">
-    
-        <a href="/" class="prev">Prev</a>
-    
-    
-    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
-</nav></div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
 			</div>
 			<footer id="footer" class="inner"><p>
   Copyright &copy; 2013 - Yizhe Tang -
@@ -246,7 +187,10 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       var disqus_shortname = 'typd';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://typd.github.io/blog/2013/11/06/the-right-way-of-logging/';
+        var disqus_url = 'http://typd.github.io/blog/2013/11/06/the-right-way-of-logging/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
