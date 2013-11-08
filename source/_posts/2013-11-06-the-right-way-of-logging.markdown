@@ -6,12 +6,12 @@ comments: true
 categories: 
 ---
 
-After read the 12-factor app spec, I took a close look to the section of logging. For an application, it feels so nature to me to write logs to a file. But I just feel something isn't right from my subconscious.
+After read the 12-factor app spec, I took a close look to the section of logging. For an application, it feels so nature for me to write logs to a file. But I just feel something isn't right from my subconscious.
 
 - Do I need a cleaner tool like log rotate, or just pretend they're small forever?
 - To debug something, I'm just forced to ssh across ocean and use a crappy vim on the host to find something weird.
 
-"Elephant in the room" is a good phrase here. Until I read [this post](http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/) in the spec, things become clear. Now here's my understanding.
+"Elephant in the room". Until I read [this post](http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/) in the spec, things become clear. Now here's my understanding.
 
 <!-- more -->
 
