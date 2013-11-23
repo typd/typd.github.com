@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-After read the 12-factor app spec, I took a close look to the section of logging. For an application, it feels so nature for me to write logs to a file. But I just feel something isn't right from my subconscious.
+After read the 12-factor app spec, I took a close look to the logging section. For an application, it feels so nature to write logs to a file. But I just feel something isn't right.
 
 - Do I need a cleaner tool like log rotate, or just pretend they're small forever?
 - To debug something, I'm just forced to ssh across ocean and use a crappy vim on the host to find something weird.
@@ -15,7 +15,7 @@ After read the 12-factor app spec, I took a close look to the section of logging
 
 <!-- more -->
 
-The application log looks like a stream, and should really be a stream. We normally append it to a file, just because that's the most obvious way of treating it. But it's defenitly not the only way. In fact for logging, the application's duty is done once it outputs to the stream. The logic of handling (append, rotate, clean) files, should (or say "can") not be a part of the application.
+The application log looks like a stream, and then it should be a stream. We normally append it to a file, just because that's the most obvious way of treating it. But it's defenitly not the only way. In fact for logging, the application's duty is done once it outputs to the stream. The logic of handling (append, rotate, clean) files, should (or say "can") not be a part of the application.
 
 But what to do then if the application doesn't handle the log stream output. It's actually easier and more robust to take it out. Tools like Unix pipe, and [logstash](http://logstash.net/) or [fluend](https://github.com/fluent/fluentd) are more good at it than any application side logging lib.
 

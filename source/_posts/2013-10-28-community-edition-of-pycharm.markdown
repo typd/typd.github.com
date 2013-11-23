@@ -14,6 +14,6 @@ I knew IDEA from IntelliJ. The well known IDE for java, won much praise from oth
 - Highly configurable, key shortcuts, rich plugins
 - Fast, alghouth it consumes a lot memory
 
-Yes I can live without an IDE, but if I use one, these are pretty much I need most. I use vim for both ruby and python, with proper grammar highlights and indention. The biggest concern I have for it, is about refactoring. For a bigger size project, I believe an IDE can help to make life easier. No matter how wonderful your vim or emacs is, IDE is designed to be better than it. It's clear to me, an desktop application has less limitation than a terminal one.
+I can live without an IDE, but if I use one, these are pretty much I need most. I use vim for both ruby and python, with proper grammar highlights and indention. The biggest concern I have for it, is about refactoring. For a bigger size project, I believe an IDE can help to make life easier. No matter how wonderful your vim or emacs is, IDE is designed to be better than it. It's clear to me, an desktop application has less limitation than a terminal one.
 
 This free version is a good start for me. Let me see when I need the rich features from pro version, more framework build-in support, especially for web.

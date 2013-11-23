@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The 12-factor app, all angles about building a robust app!"
+title: "The 12-factor app, all angles about building a robust app"
 date: 2013-11-04 23:41
 comments: true
 categories: 
@@ -8,7 +8,7 @@ categories:
 
 Just read [The 12-factor app](http://12factor.net/), published by heroku, talked about all angles about how you should do and what you need to consider for building a robust app.
 
-Software developing is in an agile period. Development, deployment are happening fast. So as the tool set is also changing fast. Developers exchange their tools and methodologies, but I really think that's not enough. This is such a useful spec to summarise not just tools to use, but the things to consider behind each part of an application.
+Software development, deployment are happening fast. So as the tool set is also changing fast. Developers exchange their tools and methodologies, but seems that's not enough. This is a useful spec to summarise not just tools to use, but the things to consider behind each part of an application.
 
 My abstract notes here, without the unnecessary long sentences.
 
