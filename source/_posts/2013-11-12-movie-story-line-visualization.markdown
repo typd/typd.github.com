@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "movie story line visualization"
+title: "Movie story line visualization"
 date: 2013-11-12 22:32
 comments: true
 categories: 

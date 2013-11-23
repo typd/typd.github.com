@@ -1,13 +1,16 @@
 ---
-layout: page
+layout: post
 title: "My toolbelt"
-date: 2013-11-22 23:25
+date: 2013-11-23 13:16
 comments: true
-sharing: true
-footer: true
+categories: 
 ---
 
-Here are the tools with comments for my daily life and work. I will continuously update this list.
+Being a developer facing a screen almost all the awake time, sooner or later you'll know an up to date toolbelt will make your life easier.
+
+[Here are the tools](http://typd.github.io/pages/toolbelt/) I use for my daily life and work. Things are upgrading fast so that I'll update the list continuously.
+
+<!-- more -->
 
 # Laptop
 - mac: developer friendly, worth the price.

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "the right way of logging"
+title: "The right way of logging"
 date: 2013-11-06 22:19
 comments: true
 categories: 

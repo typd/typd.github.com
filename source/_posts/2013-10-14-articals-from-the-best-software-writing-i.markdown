@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "articals from The best software writing I"
+title: "Articals from The best software writing I"
 date: 2013-10-14 22:51
 comments: true
 categories: 
