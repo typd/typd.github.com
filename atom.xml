@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-11-23T13:42:42+08:00</updated>
+  <updated>2013-11-23T13:49:55+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -21,6 +21,103 @@
     <content type="html"><![CDATA[<p>Being a developer facing a screen almost all the awake time, sooner or later you&rsquo;ll know an up to date toolbelt will make your life easier.</p>
 
 <p><a href="http://typd.github.io/pages/toolbelt/">Here are the tools</a> I use for my daily life and work. Things are upgrading fast so that I&rsquo;ll update the list continuously.</p>
+
+<!-- more -->
+
+
+<h1>Laptop</h1>
+
+<ul>
+<li>mac: developer friendly, worth the price.</li>
+<li><a href="http://www.alfredapp.com/">Alfred</a>: shortcut to what you want</li>
+<li><a href="https://github.com/fikovnik/ShiftIt">Shiftit</a>: manage window size and position for OSX</li>
+<li><a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/autopager-chrome/mmgagnmbebdebebbcleklifnobamjonh?hl=zh-CN">Auto pager</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc?hl=zh-CN">Evernote button</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb">Vimium</a>: This is AWESOME! Use keyboard to open links rather than mouse.</li>
+</ul>
+</li>
+<li><a href="http://dropbox.com">dropbox</a></li>
+<li><a href="http://www.mac-downloader.com/">Folx</a>: download manager for mac</li>
+<li><a href="http://coppertino.com/vox/">Vox</a>: the best music player on mac as I know.</li>
+<li><a href="http://www.zsh.org/">zsh</a>: a better shell with many improvements than bash</li>
+<li><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>: provides nice themes for zsh, highly configurable</li>
+<li><a href="http://www.vim.org/">vim</a>: I&rsquo;m a vim user and still learning it. Haven&rsquo;t tried emacs yet.
+
+<ul>
+<li><a href="https://github.com/scrooloose/nerdtree">nerdtree</a>: a tree explorer plugin.</li>
+</ul>
+</li>
+<li><a href="http://www.jetbrains.com/idea/">IntelliJ</a>: a easy to use, highly configurable IDE for java. I prefer it to eclipse.</li>
+<li><a href="http://www.jetbrains.com/pycharm/">PyCharm</a>: IDE for python. A free version is available.</li>
+<li><a href="https://github.com/typd/cmd-dict">Command line En&lt;&ndash;>Zh dict</a>: own work</li>
+<li><a href="https://github.com/typd/cmd-search">Command line search tool</a>: own work, search text within files</li>
+</ul>
+
+
+<h1>Tool sites</h1>
+
+<ul>
+<li><a href="http://www.evernote.com">Evernote</a>: besides taking notes, I also use it as a bookmark system like del.icio.us</li>
+<li><a href="http://www.feedly.com">Feedly</a>: R.I.P. google reader</li>
+<li><a href="http://www.github.com">Github</a></li>
+<li><a href="http://www.douban.com">Douban</a>: I use it as a database for my read books and watched movies</li>
+</ul>
+
+
+<h1>Good stuff online</h1>
+
+<ul>
+<li><a href="http://rubyrogues.com/">Podcast &ndash; Ruby Rogus</a>: each week 4-6 rubiers pick a topic and share their thoughts</li>
+<li><a href="https://learn.thoughtbot.com/giantrobots">Podcast &ndash; Thoughbot Giant Robots</a>: weekly technical interview</li>
+</ul>
+
+
+<h1>Developing and engineering</h1>
+
+<h2>General</h2>
+
+<ul>
+<li><a href="http://python.org/">Python</a>: &ldquo;Explicit is better than implicit&rdquo;; prefer python3 to python2, as it has many improvements</li>
+<li><a href="https://www.ruby-lang.org/en/">Ruby</a>: &ldquo;Convention over configuration&rdquo;</li>
+<li><a href="http://pryrepl.org/">Pry</a>: a drop-in replacement to irb, many amazing features</li>
+<li><a href="http://git-scm.com">Git</a>: no more svn</li>
+</ul>
+
+
+<h2>Project monitoring</h2>
+
+<ul>
+<li><a href="http://logstash.net/">Logstash</a>: highly configurable tool to manage events and program logs</li>
+<li><a href="http://graphite.wikidot.com/">Graphite</a>: collect metrics from services and do scalable realtime graphing</li>
+</ul>
+
+
+<h2>Continuous integration</h2>
+
+<ul>
+<li><a href="http://jenkins-ci.org/">Jenkins</a>: still the best CI tool, easy to use, configurable, powerful</li>
+</ul>
+
+
+<h2>Machine Management</h2>
+
+<ul>
+<li><a href="https://github.com/saltstack/salt">Salt</a>: use config files to manage machines</li>
+<li><a href="http://docs.fabfile.org/en/1.8/">Fabric</a>: execute commands remotely over ssh</li>
+<li><a href="http://mmonit.com/monit/">Monit</a>: deployed to target machine for managing and monitor machine status</li>
+<li><a href="http://upstart.ubuntu.com/">Upstart</a>: a better system service management tool than System-V</li>
+</ul>
+
+
+<h2>Misc</h2>
+
+<ul>
+<li><a href="http://www.highcharts.com/">Highcharts</a>: a js library to render nice charts</li>
+</ul>
+
 ]]></content>
   </entry>
   
