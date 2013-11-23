@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-11-23T13:49:55+08:00</updated>
+  <updated>2013-11-23T13:53:04+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -122,7 +122,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[movie story line visualization]]></title>
+    <title type="html"><![CDATA[Movie story line visualization]]></title>
     <link href="http://typd.github.io/blog/2013/11/12/movie-story-line-visualization/"/>
     <updated>2013-11-12T22:32:00+08:00</updated>
     <id>http://typd.github.io/blog/2013/11/12/movie-story-line-visualization</id>
@@ -135,7 +135,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[the right way of logging]]></title>
+    <title type="html"><![CDATA[The right way of logging]]></title>
     <link href="http://typd.github.io/blog/2013/11/06/the-right-way-of-logging/"/>
     <updated>2013-11-06T22:19:00+08:00</updated>
     <id>http://typd.github.io/blog/2013/11/06/the-right-way-of-logging</id>
@@ -716,7 +716,7 @@ if __name__ == "__main__":
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[articals from The best software writing I]]></title>
+    <title type="html"><![CDATA[Articals from The best software writing I]]></title>
     <link href="http://typd.github.io/blog/2013/10/14/articals-from-the-best-software-writing-i/"/>
     <updated>2013-10-14T22:51:00+08:00</updated>
     <id>http://typd.github.io/blog/2013/10/14/articals-from-the-best-software-writing-i</id>
