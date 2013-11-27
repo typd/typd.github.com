@@ -5,11 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>My toolbelt - Yizhe Tang</title>
+	<title>Experience sharing from a senior dev lead - Yizhe Tang</title>
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="Here are the tools with comments for my daily life and work. I will continuously update this list. Laptop mac: developer friendly, worth the price. &hellip;">
+	<meta name="description" content="Experience Sharing From a Senior Dev Lead A senior dev lead of my company did a experience sharing to our office. Below are the highlights. &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
 
 	<link href="http://feedpress.me/typd" rel="alternate" title="Yizhe Tang" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://typd.github.io/pages/toolbelt/">
+	<link rel="canonical" href="http://typd.github.io/blog/2013/11/26/experience-sharing-from-a-senior-dev-lead/">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -105,107 +105,120 @@
 				
 			
 			<div class="mid-col-container">
-				<div id="content" class="inner"><article class="page">
-    
-    <h1 class="title">My Toolbelt</h1>
-    
-    <div class="entry-content"><p>Here are the tools with comments for my daily life and work. I will continuously update this list.</p>
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">Experience Sharing From a Senior Dev Lead</h1>
+	<div class="entry-content" itemprop="articleBody"><p>A senior dev lead of my company did a experience sharing to our office. Below are the highlights.</p>
 
-<h1>Laptop</h1>
+<h1>Incidents</h1>
 
-<ul>
-<li>mac: developer friendly, worth the price.</li>
-<li><a href="http://www.alfredapp.com/">Alfred</a>: shortcut to what you want</li>
-<li><a href="https://github.com/fikovnik/ShiftIt">Shiftit</a>: manage window size and position for OSX</li>
-<li><a href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>
+<p>He titled himslef the &ldquo;incident reporter&rdquo;, as he thinks this is an important role. Something he did for incidents</p>
 
 <ul>
-<li><a href="https://chrome.google.com/webstore/detail/autopager-chrome/mmgagnmbebdebebbcleklifnobamjonh?hl=zh-CN">Auto pager</a></li>
-<li><a href="https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc?hl=zh-CN">Evernote button</a></li>
-<li><a href="https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb">Vimium</a>: This is AWESOME! Use keyboard to open links rather than mouse.</li>
+<li>Monitor and be pro-active</li>
+<li>Log events as the incident evolves</li>
+<li>Post-mortem analysis and followup
+
+<ul>
+<li>Build better alerting, monitoring and tracking</li>
+<li>Look for other failure signs</li>
 </ul>
 </li>
-<li><a href="http://dropbox.com">dropbox</a></li>
-<li><a href="http://www.mac-downloader.com/">Folx</a>: download manager for mac</li>
-<li><a href="http://coppertino.com/vox/">Vox</a>: the best music player on mac as I know.</li>
-<li><a href="http://www.zsh.org/">zsh</a>: a better shell with many improvements than bash</li>
-<li><a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>: provides nice themes for zsh, highly configurable</li>
-<li><a href="http://www.vim.org/">vim</a>: I&rsquo;m a vim user and still learning it. Haven&rsquo;t tried emacs yet.
+<li>Fail blog</li>
+</ul>
+
+
+<p>And he also mentioned after incident&rsquo;ve happened, it&rsquo;s a good chance for you to go over the related log and find defects you didn&rsquo;t pay enough notice before.</p>
+
+<h1>The service checklist, when building a new service</h1>
 
 <ul>
-<li><a href="https://github.com/scrooloose/nerdtree">nerdtree</a>: a tree explorer plugin.</li>
+<li>Isolated, decomposed: do one thing, and do it right</li>
+<li>Documentation
+
+<ul>
+<li>API</li>
+<li>Discoverable</li>
+<li>Node list, deployment procedures</li>
 </ul>
 </li>
-<li><a href="http://www.jetbrains.com/idea/">IntelliJ</a>: a easy to use, highly configurable IDE for java. I prefer it to eclipse.</li>
-<li><a href="http://www.jetbrains.com/pycharm/">PyCharm</a>: IDE for python. A free version is available.</li>
-<li><a href="http://brew.sh/">Homebrew</a>: package manager for mac</li>
-<li><a href="https://github.com/typd/cmd-dict">Command line En&lt;&ndash;>Zh dict</a>: own work</li>
-<li><a href="https://github.com/typd/cmd-search">Command line search tool</a>: own work, search text within files</li>
+<li>Devable
+
+<ul>
+<li>Bootstrap procedure: as easy as possible</li>
+<li>Dev env should be as closely to prod as possible</li>
+</ul>
+</li>
+<li>Staging environment</li>
+<li>Load balancing / redundancy / self healing</li>
+<li>Fault tolerant: anything can fail
+
+<ul>
+<li>Infrastructure failures
+
+<ul>
+<li>disk, ram, network switches</li>
+<li>DNS stability</li>
+<li>data center failure (rack, power, network, disaster)</li>
+</ul>
+</li>
+<li>Software stack pattern failure
+
+<ul>
+<li>date bomb (leap year, leap second, cert expiration)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dependency slowness</li>
+<li>Auto start</li>
+<li>Automated deployment</li>
+<li>Automated tests</li>
+<li>Log management
+
+<ul>
+<li>logrotate</li>
+<li>centeralized logging</li>
+</ul>
+</li>
+<li>Self monitoring
+
+<ul>
+<li>heartbeat</li>
+<li>machine monitoring</li>
+<li>exception alerts (rate limit emails)</li>
+<li>metrics (metricsd, graphite)</li>
+</ul>
+</li>
 </ul>
 
 
-<h1>Tool sites</h1>
+<h1>Others</h1>
+
+<p>In early days, some star devs tend to be heroism. But that doesn&rsquo;t work well as company becomes mature. Some better practices as we&rsquo;ve grown up</p>
 
 <ul>
-<li><a href="http://www.evernote.com">Evernote</a>: besides taking notes, I also use it as a bookmark system like del.icio.us</li>
-<li><a href="http://www.feedly.com">Feedly</a>: R.I.P. google reader</li>
-<li><a href="http://www.github.com">Github</a></li>
-<li><a href="http://www.douban.com">Douban</a>: I use it as a database for my read books and watched movies</li>
+<li>Better documentation</li>
+<li>More communication
+
+<ul>
+<li>know what does each team focus</li>
+<li>prioritize the projects based on all teams&#8217; needs</li>
+</ul>
+</li>
+<li>Rotate dev among teams, balance the output and the underlying benefits</li>
 </ul>
 
 
-<h1>Good stuff online</h1>
+<h1>And more thoughts on him</h1>
 
 <ul>
-<li><a href="http://rubyrogues.com/">Podcast &ndash; Ruby Rogus</a>: each week 4-6 rubiers pick a topic and share their thoughts</li>
-<li><a href="https://learn.thoughtbot.com/giantrobots">Podcast &ndash; Thoughbot Giant Robots</a>: weekly technical interview</li>
-</ul>
-
-
-<h1>Developing and engineering</h1>
-
-<h2>General</h2>
-
-<ul>
-<li><a href="http://python.org/">Python</a>: &ldquo;Explicit is better than implicit&rdquo;; prefer python3 to python2, as it has many improvements</li>
-<li><a href="https://www.ruby-lang.org/en/">Ruby</a>: &ldquo;Convention over configuration&rdquo;</li>
-<li><a href="http://pryrepl.org/">Pry</a>: a drop-in replacement to irb, many amazing features</li>
-<li><a href="http://git-scm.com">Git</a>: no more svn</li>
-</ul>
-
-
-<h2>Project monitoring</h2>
-
-<ul>
-<li><a href="http://logstash.net/">Logstash</a>: highly configurable tool to manage events and program logs</li>
-<li><a href="http://graphite.wikidot.com/">Graphite</a>: collect metrics from services and do scalable realtime graphing</li>
-</ul>
-
-
-<h2>Continuous integration</h2>
-
-<ul>
-<li><a href="http://jenkins-ci.org/">Jenkins</a>: still the best CI tool, easy to use, configurable, powerful</li>
-</ul>
-
-
-<h2>Machine Management</h2>
-
-<ul>
-<li><a href="https://github.com/saltstack/salt">Salt</a>: use config files to manage machines</li>
-<li><a href="http://docs.fabfile.org/en/1.8/">Fabric</a>: execute commands remotely over ssh</li>
-<li><a href="http://mmonit.com/monit/">Monit</a>: deployed to target machine for managing and monitor machine status</li>
-<li><a href="http://upstart.ubuntu.com/">Upstart</a>: a better system service management tool than System-V</li>
-</ul>
-
-
-<h2>Misc</h2>
-
-<ul>
-<li><a href="http://www.highcharts.com/">Highcharts</a>: a js library to render nice charts</li>
+<li>Good attitude on work</li>
+<li>Logical thinking, right judgement, and good perception on tech.</li>
+<li>Absolutely smart. I have to say that&rsquo;s a gift not everyone has, or trainable.</li>
 </ul>
 
 </div>
+
 </article>
 
 	<div class="share">
@@ -225,7 +238,6 @@
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 </section>
-
 </div>
 			</div>
 			<footer id="footer" class="inner"><p>
@@ -241,8 +253,8 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://typd.github.io/pages/toolbelt/index.html';
-        var disqus_url = 'http://typd.github.io/pages/toolbelt/index.html';
+        var disqus_identifier = 'http://typd.github.io/blog/2013/11/26/experience-sharing-from-a-senior-dev-lead/';
+        var disqus_url = 'http://typd.github.io/blog/2013/11/26/experience-sharing-from-a-senior-dev-lead/';
         var disqus_script = 'embed.js';
       
     (function () {
