@@ -26,6 +26,7 @@ Here are the tools with comments for my daily life and work. I will continuously
   - [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
 - [IntelliJ](http://www.jetbrains.com/idea/): a easy to use, highly configurable IDE for java. I prefer it to eclipse.
 - [PyCharm](http://www.jetbrains.com/pycharm/): IDE for python. A free version is available.
+- [Homebrew](http://brew.sh/): package manager for mac
 - [Command line En<->Zh dict](https://github.com/typd/cmd-dict): own work
 - [Command line search tool](https://github.com/typd/cmd-search): own work, search text within files
 
