@@ -5,11 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Experience sharing from a senior dev lead - Yizhe Tang</title>
+	<title>The fight will - Yizhe Tang</title>
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="Experience Sharing From a Senior Dev Lead A senior dev lead of my company did a experience sharing to our office. Below are the highlights. &hellip;">
+	<meta name="description" content="The Fight Will Just watched this documentary of Jeremy Lin, highlights the crazy days of him last year. The story looks like all other inspiration &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
 
 	<link href="http://feedpress.me/typd" rel="alternate" title="Yizhe Tang" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://typd.github.io/blog/2013/11/26/experience-sharing-from-a-senior-dev-lead/">
+	<link rel="canonical" href="http://typd.github.io/blog/2013/11/30/the-fight-will/">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -106,120 +106,25 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">Experience Sharing From a Senior Dev Lead</h1>
-	<div class="entry-content" itemprop="articleBody"><p>A senior dev lead of my company did a experience sharing to our office. Below are the highlights.</p>
-
-<h1>Incidents</h1>
-
-<p>He titled himslef the &ldquo;incident reporter&rdquo;, as he thinks this is an important role. Something he did for incidents</p>
+    <h1 class="title" itemprop="name">The Fight Will</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Just watched <a href="http://www.letv.com/ptv/vplay/2181407.html">this documentary</a> of Jeremy Lin, highlights the crazy days of him last year. The story looks like all other inspiration ones,</p>
 
 <ul>
-<li>Monitor and be pro-active</li>
-<li>Log events as the incident evolves</li>
-<li>Post-mortem analysis and followup
-
-<ul>
-<li>Build better alerting, monitoring and tracking</li>
-<li>Look for other failure signs</li>
-</ul>
-</li>
-<li>Fail blog</li>
+<li>He has played well all before graduating from Harvard, until has to think about the future.</li>
+<li>Luckily Golden States team gave an offer. But mostly because he played with the son of the team&rsquo;s new owner. Been cut finally.</li>
+<li>Been picked again. Travel between lower level league and main league back and force several times. Been cut again.</li>
+<li>Got another offer from struggling NY. Screw up a game. Slept on a short couch before the possible last game in career, at the edge of being cut the 3rd time.</li>
+<li>For someone stands right besides the dream, but others give you no hope, would think he has nothing to lose. If this is the last game, you&rsquo;ll be very concentrated and do all you can. After scored, he thought &ldquo;they have no reason to cut me now&rdquo;. That emotion pushed him to a new level.</li>
+<li>Then everyone knows him. Before the game with Kobe, Kobe was asked about him and answered in a fuzzy or ambiguous way, &ldquo;I don&rsquo;t know who he is, who you&rsquo;re talking about&rdquo;. Anyone wants to survive on the league should not accept that. After the game, he was asked &ldquo;do you think Kobe knows you now?&rdquo;. He was tempted to say &ldquo;who the hell is Kobe?&rdquo;, but then he thought &ldquo;what would Jesus do?&rdquo;, answered &ldquo;you need to ask Kobe&rdquo;.</li>
 </ul>
 
-
-<p>And he also mentioned after incident&rsquo;ve happened, it&rsquo;s a good chance for you to go over the related log and find defects you didn&rsquo;t pay enough notice before.</p>
 
 <!-- more -->
 
 
-<h1>The service checklist, when building a new service</h1>
+<p>Lin got to a new level after the journey. &ldquo;You don&rsquo;t get better if you win all the time. You get better when you lose. You look like yourself more. Go through tough time, that&rsquo;s a perfect plan&rdquo;.</p>
 
-<ul>
-<li>Isolated, decomposed: do one thing, and do it right</li>
-<li>Documentation
-
-<ul>
-<li>API</li>
-<li>Discoverable</li>
-<li>Node list, deployment procedures</li>
-</ul>
-</li>
-<li>Devable
-
-<ul>
-<li>Bootstrap procedure: as easy as possible</li>
-<li>Dev env should be as closely to prod as possible</li>
-</ul>
-</li>
-<li>Staging environment</li>
-<li>Load balancing / redundancy / self healing</li>
-<li>Fault tolerant: anything can fail
-
-<ul>
-<li>Infrastructure failures
-
-<ul>
-<li>disk, ram, network switches</li>
-<li>DNS stability</li>
-<li>data center failure (rack, power, network, disaster)</li>
-</ul>
-</li>
-<li>Software stack pattern failure
-
-<ul>
-<li>date bomb (leap year, leap second, cert expiration)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Dependency slowness</li>
-<li>Auto start</li>
-<li>Automated deployment</li>
-<li>Automated tests</li>
-<li>Log management
-
-<ul>
-<li>logrotate</li>
-<li>centeralized logging</li>
-</ul>
-</li>
-<li>Self monitoring
-
-<ul>
-<li>heartbeat</li>
-<li>machine monitoring</li>
-<li>exception alerts (rate limit emails)</li>
-<li>metrics (metricsd, graphite)</li>
-</ul>
-</li>
-</ul>
-
-
-<h1>Others</h1>
-
-<p>In early days, some star devs tend to be heroism. But that doesn&rsquo;t work well as company becomes mature. Some better practices as we&rsquo;ve grown up</p>
-
-<ul>
-<li>Better documentation</li>
-<li>More communication
-
-<ul>
-<li>know what does each team focus</li>
-<li>prioritize the projects based on all teams&#8217; needs</li>
-</ul>
-</li>
-<li>Rotate dev among teams, balance the output and the underlying benefits</li>
-</ul>
-
-
-<h1>And more thoughts on him</h1>
-
-<ul>
-<li>Good attitude on work</li>
-<li>Logical thinking, right judgement, and good perception on tech.</li>
-<li>Absolutely smart. I have to say that&rsquo;s a gift not everyone has, or trainable.</li>
-</ul>
-
+<p>I&rsquo;ve watched several other NBA players&#8217; documentaries before, too. All of these can bring you strong emotion with exciting shots, slum dunks, especially when you relate them to the stories behind scene. The competition sports then look like a reality show more. Money, ethnic, culture, nationality are involved to the game. Just as complex as life. But after you have accepted that, it&rsquo;s still simple: your strength helps you to get on the stage, your faith determines where you gonna stop.</p>
 </div>
 
 </article>
@@ -256,8 +161,8 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://typd.github.io/blog/2013/11/26/experience-sharing-from-a-senior-dev-lead/';
-        var disqus_url = 'http://typd.github.io/blog/2013/11/26/experience-sharing-from-a-senior-dev-lead/';
+        var disqus_identifier = 'http://typd.github.io/blog/2013/11/30/the-fight-will/';
+        var disqus_url = 'http://typd.github.io/blog/2013/11/30/the-fight-will/';
         var disqus_script = 'embed.js';
       
     (function () {
