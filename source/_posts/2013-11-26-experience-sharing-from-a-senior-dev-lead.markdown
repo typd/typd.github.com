@@ -21,6 +21,8 @@ He titled himslef the "incident reporter", as he thinks this is an important rol
 
 And he also mentioned after incident've happened, it's a good chance for you to go over the related log and find defects you didn't pay enough notice before.
 
+<!-- more -->
+
 #The service checklist, when building a new service
 
 - Isolated, decomposed: do one thing, and do it right
