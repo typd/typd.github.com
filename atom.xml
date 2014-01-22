@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2013-12-22T00:23:19+08:00</updated>
+  <updated>2014-01-22T23:07:19+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,64 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Non blocking pipe]]></title>
+    <link href="http://typd.github.io/blog/2014/01/22/non-blocking-pipe/"/>
+    <updated>2014-01-22T21:54:00+08:00</updated>
+    <id>http://typd.github.io/blog/2014/01/22/non-blocking-pipe</id>
+    <content type="html"><![CDATA[<p>Met a problem of linux pipe from daily work, finally got me to write a small tool to get rid of it. Worth to note.</p>
+
+<h1>Motivation</h1>
+
+<p>I&rsquo;ve built a central logging system based on logstash. It looks like this, basically,</p>
+
+<br/>
+
+
+<p><img src="http://typd.github.io/images/posts/2014-01-22/1.png" alt="" /></p>
+
+<br/>
+
+
+<p>Then every program use logstash as a shipper to redirect its log into the broker, which is a redis as message queue. As this <a href="http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/">blog</a> recommended, treatting log as stream rather than files, linux pipe make it possible to guide the stream to anywhere easily.</p>
+
+<pre><code>application | java -jar logstash.jar agent -f logstash.conf
+</code></pre>
+
+<p>The problem occurs when the redis was accidently down, causes</p>
+
+<ul>
+<li>Logstash blocked, which is a designed behavior of <a href="http://logstash.net/docs/1.3.3/life-of-an-event">logstash</a>. It says &ldquo;dropping messages or unlimited queue lenght are both undesirable behavior&rdquo;, so simply leaves no option and get it blocked.</li>
+<li>Then caused upstream application blocked, too! This is done by OS after the pipe buffer is filled up. This is a more serious problem as it&rsquo;s not easy to change OS default behavior.</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h1>Solution?</h1>
+
+<p>Two possible solutions</p>
+
+<ul>
+<li>Introduce a log file, start logstash as a independent service to monitor it. This is the opposed way of the above blog recommended. This brings unnecessary disk IO, and you may need other things to avoid the log file getting too big, etc.</li>
+<li>Make the pipe non-blocking. But how?</li>
+</ul>
+
+
+<h1>How</h1>
+
+<p>After investigation, logstash doesn&rsquo;t provide non-blocking option, described as above, although it should be easy to do. Why not write one? Here&rsquo;s the result,</p>
+
+<pre><code>application | non_blocking_pipe java -jar logstash.jar agent -f logstash.conf
+</code></pre>
+
+<p>&ldquo;non_blocking_pipe&rdquo; is a middleware to read input from upstream, and send to downstream. It uses a fixed size internal queue. If downstream becomes blocked or slower than upstream, just drop the messages and remain reading inputs. A sidenote, why not do &ldquo;application | non_blocking_pipe | downstream&rdquo;, it&rsquo;s because the middle component has to own the downstream as a subprocess, in order to know if it&rsquo;s blocked.</p>
+
+<p><a href="https://github.com/typd/non-blocking-pipe">Code available here</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Reading notes of More Joel on Software]]></title>

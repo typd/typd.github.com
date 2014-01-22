@@ -5,11 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Articals from The best software writing I - Yizhe Tang</title>
+	<title>Non blocking pipe - Yizhe Tang</title>
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="Articals From the Best Software Writing I The best software writing I is a book contains Joel Spolsky&rsquo;s selection and some comments of &hellip;">
+	<meta name="description" content="Non Blocking Pipe Met a problem of linux pipe from daily work, finally got me to write a small tool to get rid of it. Worth to note. Motivation I& &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
 
 	<link href="http://feedpress.me/typd" rel="alternate" title="Yizhe Tang" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://typd.github.io/blog/2013/10/14/articals-from-the-best-software-writing-i/">
+	<link rel="canonical" href="http://typd.github.io/blog/2014/01/22/non-blocking-pipe/">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -106,35 +106,57 @@
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">Articals From the Best Software Writing I</h1>
-	<div class="entry-content" itemprop="articleBody"><p>The best software writing I is a book contains Joel Spolsky&rsquo;s selection and some comments of articals around 2004 or so, while this is the Joel of &ldquo;Joel on Software&rdquo;. I found the orginal posts&#8217; links are available in this doubaner&rsquo;s <a href="http://book.douban.com/review/1449189/">review</a>. Some worth a read, some worth to be shared,</p>
+    <h1 class="title" itemprop="name">Non Blocking Pipe</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Met a problem of linux pipe from daily work, finally got me to write a small tool to get rid of it. Worth to note.</p>
+
+<h1>Motivation</h1>
+
+<p>I&rsquo;ve built a central logging system based on logstash. It looks like this, basically,</p>
+
+<br/>
+
+
+<p><img src="/images/posts/2014-01-22/1.png" alt="" /></p>
+
+<br/>
+
+
+<p>Then every program use logstash as a shipper to redirect its log into the broker, which is a redis as message queue. As this <a href="http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/">blog</a> recommended, treatting log as stream rather than files, linux pipe make it possible to guide the stream to anywhere easily.</p>
+
+<pre><code>application | java -jar logstash.jar agent -f logstash.conf
+</code></pre>
+
+<p>The problem occurs when the redis was accidently down, causes</p>
 
 <ul>
-<li><p><a href="http://paulgraham.com/gh.html">Great Hackers</a> by Paul Graham, you know &ldquo;Hackers and Painters&rdquo;</p>
-
-<p>It&rsquo;s a long post with nice words.</p>
-
-<p>A great hacker has much much more productivity than a normal developer. Someone says there&rsquo;re 5 levels of developers, the productivity scales 10 between each 2 levels.</p>
-
-<p>Hackers have strong curiosity, the intention to know how things work.</p>
-
-<p>No guarantee on whether someone can become a hacker or not. Raw talent, habit, even personality decides your potential. It&rsquo;s even hard to identify if someone is a hacker.</p>
-
-<p>Release the hackers!</p></li>
+<li>Logstash blocked, which is a designed behavior of <a href="http://logstash.net/docs/1.3.3/life-of-an-event">logstash</a>. It says &ldquo;dropping messages or unlimited queue lenght are both undesirable behavior&rdquo;, so simply leaves no option and get it blocked.</li>
+<li>Then caused upstream application blocked, too! This is done by OS after the pipe buffer is filled up. This is a more serious problem as it&rsquo;s not easy to change OS default behavior.</li>
 </ul>
 
 
 <!-- more -->
 
 
+<h1>Solution?</h1>
+
+<p>Two possible solutions</p>
+
 <ul>
-<li><p><a href="http://blogs.msdn.com/b/ericlippert/archive/2003/10/28/53298.aspx">How many Microsoft employees does it take to change a lightbulb?</a></p>
-
-<p>Microsoft seems to be an old-fasion in software world to me. The software technics and theories have changed a lot since delivered software is not as popular as cloud ones. We should all know the differences. The key to the first one is stability, every change there is expensive, while the later one we need most is rapid developing and delivering.</p>
-
-<p>No matter what, I really admire Microsoft delivers softwares as complicated as windows and office, even having thousands of developers work on one project is a miracal, needs excellent software engineering with no doubt.</p></li>
+<li>Introduce a log file, start logstash as a independent service to monitor it. This is the opposed way of the above blog recommended. This brings unnecessary disk IO, and you may need other things to avoid the log file getting too big, etc.</li>
+<li>Make the pipe non-blocking. But how?</li>
 </ul>
 
+
+<h1>How</h1>
+
+<p>After investigation, logstash doesn&rsquo;t provide non-blocking option, described as above, although it should be easy to do. Why not write one? Here&rsquo;s the result,</p>
+
+<pre><code>application | non_blocking_pipe java -jar logstash.jar agent -f logstash.conf
+</code></pre>
+
+<p>&ldquo;non_blocking_pipe&rdquo; is a middleware to read input from upstream, and send to downstream. It uses a fixed size internal queue. If downstream becomes blocked or slower than upstream, just drop the messages and remain reading inputs. A sidenote, why not do &ldquo;application | non_blocking_pipe | downstream&rdquo;, it&rsquo;s because the middle component has to own the downstream as a subprocess, in order to know if it&rsquo;s blocked.</p>
+
+<p><a href="https://github.com/typd/non-blocking-pipe">Code available here</a>.</p>
 </div>
 
 </article>
@@ -171,8 +193,8 @@ Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Sha
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://typd.github.io/blog/2013/10/14/articals-from-the-best-software-writing-i/';
-        var disqus_url = 'http://typd.github.io/blog/2013/10/14/articals-from-the-best-software-writing-i/';
+        var disqus_identifier = 'http://typd.github.io/blog/2014/01/22/non-blocking-pipe/';
+        var disqus_url = 'http://typd.github.io/blog/2014/01/22/non-blocking-pipe/';
         var disqus_script = 'embed.js';
       
     (function () {
