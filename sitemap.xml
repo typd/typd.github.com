@@ -2,110 +2,114 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://typd.github.io/blog/2013/07/12/hello/</loc>
-        <lastmod>2013-10-13T22:52:15+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://typd.github.io/blog/2013/10/13/du-shu-bi-ji-zhuan-zai-cheng-xu-yuan-de-si-wei-xun-lian/
         </loc>
-        <lastmod>2013-10-24T15:52:43+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://typd.github.io/blog/2013/10/14/articals-from-the-best-software-writing-i/
         </loc>
-        <lastmod>2013-11-23T13:51:26+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/10/16/qt-and-pyqt/</loc>
-        <lastmod>2013-10-24T16:05:09+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://typd.github.io/blog/2013/10/16/a-data-science-sharing-from-hilary-mason-of-bit-dot-ly/
         </loc>
-        <lastmod>2013-10-16T23:53:11+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/10/18/python-history-a-talk-from-guido/</loc>
-        <lastmod>2013-10-24T16:04:57+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/10/19/beijing-marathon-again/</loc>
-        <lastmod>2013-10-28T20:33:38+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/10/20/my-2013-beijing-marathon/</loc>
-        <lastmod>2013-10-24T16:04:41+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/10/24/rewrite-code-from-scratch/</loc>
-        <lastmod>2013-10-24T23:27:31+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/10/28/community-edition-of-pycharm/</loc>
-        <lastmod>2013-11-14T22:17:42+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://typd.github.io/blog/2013/10/31/a-good-point-about-the-fresh-guy-for-a-project/
         </loc>
-        <lastmod>2013-10-31T23:14:19+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://typd.github.io/blog/2013/11/04/the-12-factor-app-all-angles-about-building-a-robust-app/
         </loc>
-        <lastmod>2013-11-14T22:19:23+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/11/06/the-right-way-of-logging/</loc>
-        <lastmod>2013-11-23T13:51:54+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/11/12/movie-story-line-visualization/</loc>
-        <lastmod>2013-11-23T13:51:59+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/11/23/my-toolbelt/</loc>
-        <lastmod>2013-11-23T13:49:02+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://typd.github.io/blog/2013/11/26/experience-sharing-from-a-senior-dev-lead/
         </loc>
-        <lastmod>2013-12-01T20:01:27+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/11/30/the-fight-will/</loc>
-        <lastmod>2013-12-01T20:01:17+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2013/12/20/reading-notes-of-more-joel-on-software/</loc>
-        <lastmod>2013-12-22T00:20:55+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/2014/01/22/non-blocking-pipe/</loc>
-        <lastmod>2014-01-22T23:07:18+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://typd.github.io/blog/2014/02/24/nathan-marzs-sharing/</loc>
+        <lastmod>2014-02-24T23:28:22+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/archives/</loc>
-        <lastmod>2014-01-22T23:07:18+08:00</lastmod>
+        <lastmod>2014-02-24T23:28:22+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/categories/</loc>
-        <lastmod>2013-10-12T16:40:15+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/</loc>
-        <lastmod>2014-01-22T23:07:18+08:00</lastmod>
+        <lastmod>2014-02-24T23:28:22+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/pages/toolbelt/</loc>
-        <lastmod>2013-11-23T22:11:33+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/robots.txt</loc>
-        <lastmod>2013-10-12T16:40:16+08:00</lastmod>
+        <lastmod>2014-01-24T11:10:41+08:00</lastmod>
     </url>
 </urlset>
