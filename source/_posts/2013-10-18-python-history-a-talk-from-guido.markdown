@@ -18,23 +18,23 @@ Python is originally for day to day work (yes, every language inventor says that
 
 He had good summary on the philosophies behinds python, and they're also useful for other tasks.
 
-    Skunkworks (early days) Design philosophy
-    - Borrow ideas whenever it makes sense
-    - As simple as possible, no simpler (Einstein)
-    - Do one thing well (UNIX)
-    - Don't fret about performance (fix it later)
-    - Go with the flow (don't fight env)
-    - Perfection is the enemy of the good
-    - Cutting corners is okay (get back to it later)
+> Skunkworks (early days) Design philosophy
+>> - Borrow ideas whenever it makes sense
+>> - As simple as possible, no simpler (Einstein)
+>> - Do one thing well (UNIX)
+>> - Don't fret about performance (fix it later)
+>> - Go with the flow (don't fight env)
+>> - Perfection is the enemy of the good
+>> - Cutting corners is okay (get back to it later)
 
-    User-centric design philosophy
-    - Avoid platform ties, but not religiously
-    - Don't bother the user with details
-    - Discourage but allow coding to the platform
-    - Offer multiple levels of extensibility
-    - Errors should not be fatal, if possible
-    - Errors should never pass silently
-    - Don't blame the user for bugs in python
+> User-centric design philosophy
+>> - Avoid platform ties, but not religiously
+>> - Don't bother the user with details
+>> - Discourage but allow coding to the platform
+>> - Offer multiple levels of extensibility
+>> - Errors should not be fatal, if possible
+>> - Errors should never pass silently
+>> - Don't blame the user for bugs in python
 
 Also, he recalled the process of python community growing up. That's the main reason of python's success.
 
