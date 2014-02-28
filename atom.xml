@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2014-02-28T12:59:08+08:00</updated>
+  <updated>2014-03-01T00:34:10+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Zen of programming]]></title>
+    <link href="http://typd.github.io/blog/2014/02/28/zen-of-programming/"/>
+    <updated>2014-02-28T23:36:00+08:00</updated>
+    <id>http://typd.github.io/blog/2014/02/28/zen-of-programming</id>
+    <content type="html"><![CDATA[<p>When many things become mature, they start to get a simple philosophy, but cover a lot of thoughts underneath. That&rsquo;s the abstraction of all complexities. Like Zen.</p>
+
+<p>This phenomenon can be seen on some hand made craft, like a program from a programmer. But it&rsquo;s always difficult to expose the beauty of it, with an easy, friendly way that non-programmer can recognize. Or say, only real master with deep love of life can do it right. Like <a href="http://www.baroque.me/">this one</a>.</p>
+
+<p>It&rsquo;s hard to express my admiration on this.</p>
+
+<ul>
+<li>Need sounds on while you watching the balls.</li>
+<li>The circles, strings, with right speed, are playing Bach&rsquo;s Cello Suites in a way I&rsquo;ve never thought of.</li>
+<li>Just as beautiful as Bach&rsquo;s Cello Suites.</li>
+</ul>
+
+
+<p>From the <a href="http://blog.chenalexander.com/2011/baroque-bach-cello/">author&rsquo;s words</a>, you can know the complexities behind scene. Also some <a href="http://work.chenalexander.com/">other works</a> from <a href="http://work.chenalexander.com/bio">him</a>. If you still remember the <a href="http://www.google.com/logos/2011/lespaul.html">string logo of google</a>, yes, it&rsquo;s created by him.</p>
+
+<p>A mature person should also own a simple mind, be generous, friendly to others and himself.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Nathan Marz's sharing]]></title>
@@ -1220,19 +1244,6 @@ L型模式的CPU有一种「空闲循环」程序，如果没有更紧迫的事�
 
 抓住方向盘，不要自动驾驶。
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[hello]]></title>
-    <link href="http://typd.github.io/blog/2013/07/12/hello/"/>
-    <updated>2013-07-12T16:39:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/07/12/hello</id>
-    <content type="html"><![CDATA[<h1>hello world</h1>
-
-<p>this is the first line.</p>
-
-<p>this is the second line</p>
 ]]></content>
   </entry>
   
