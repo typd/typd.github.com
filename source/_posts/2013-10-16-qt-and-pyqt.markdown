@@ -29,7 +29,7 @@ Sometimes it bothers me how to write UI program cross-platform, or just get rid 
 Of course you don't have to write C++. PyQt and pySide are the py solutions.
 
 - PyQt
-  - Uses same verion number as Qt, PyQt4 is for Qt4, PyQt5 is for PyQt5. 
+  - Uses same verion number as Qt, PyQt4 is for Qt4, PyQt5 is for Qt5. 
   - Owned by riverbank, a uk company.
   - Licenses including GPL v3 and a commercial license. Which means for commercial usages, pay it [here](http://www.riverbankcomputing.co.uk/commercial/buy)
 - pySide
