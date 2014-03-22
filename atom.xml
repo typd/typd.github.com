@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2014-03-16T20:54:42+08:00</updated>
+  <updated>2014-03-22T12:20:26+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -1093,7 +1093,7 @@ E.g. curl, those tools should be vendored into the app.</li>
 <li>PyQt
 
 <ul>
-<li>Uses same verion number as Qt, PyQt4 is for Qt4, PyQt5 is for PyQt5.</li>
+<li>Uses same verion number as Qt, PyQt4 is for Qt4, PyQt5 is for Qt5.</li>
 <li>Owned by riverbank, a uk company.</li>
 <li>Licenses including GPL v3 and a commercial license. Which means for commercial usages, pay it <a href="http://www.riverbankcomputing.co.uk/commercial/buy">here</a></li>
 </ul>
