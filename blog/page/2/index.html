@@ -9,7 +9,7 @@
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="Nov 4th, 2013 The 12-factor App, All Angles About Building a Robust App Just read The 12-factor app, published by heroku, talked about all angles &hellip;">
+	<meta name="description" content="Nov 6th, 2013 The Right Way of Logging After read the 12-factor app spec, I took a close look to the logging section. For an application, it feels &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,6 +107,44 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		
+		<span class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-06T22:19:00+08:00" data-updated="true" itemprop="datePublished">Nov 6<span>th</span>, 2013</time></span>
+        <!-- include post/categories.html -->
+	</div>
+    <h1 class="title" itemprop="name"><a href="/blog/2013/11/06/the-right-way-of-logging/" itemprop="url">The Right Way of Logging</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>After read the 12-factor app spec, I took a close look to the logging section. For an application, it feels so nature to write logs to a file. But I just feel something isn&rsquo;t right.</p>
+
+<ul>
+<li>Do I need a cleaner tool like log rotate, or just pretend they&rsquo;re small forever?</li>
+<li>To debug something, I&rsquo;m just forced to ssh across ocean and use a crappy vim on the host to find something weird.</li>
+</ul>
+
+
+<p>&ldquo;Elephant in the room&rdquo;. Until I read <a href="http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/">this post</a> in the spec, things become clear. Now here&rsquo;s my understanding.</p>
+
+
+		
+		<a href="/blog/2013/11/06/the-right-way-of-logging/" class="more-link">Read more</a>
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -443,51 +481,6 @@
 
 		
 		<a href="/blog/2013/10/16/qt-and-pyqt/" class="more-link">Read more</a>
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		
-		<span class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-14T22:51:00+08:00" data-updated="true" itemprop="datePublished">Oct 14<span>th</span>, 2013</time></span>
-        <!-- include post/categories.html -->
-	</div>
-    <h1 class="title" itemprop="name"><a href="/blog/2013/10/14/articals-from-the-best-software-writing-i/" itemprop="url">Articals From the Best Software Writing I</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>The best software writing I is a book contains Joel Spolsky&rsquo;s selection and some comments of articals around 2004 or so, while this is the Joel of &ldquo;Joel on Software&rdquo;. I found the orginal posts&#8217; links are available in this doubaner&rsquo;s <a href="http://book.douban.com/review/1449189/">review</a>. Some worth a read, some worth to be shared,</p>
-
-<ul>
-<li><p><a href="http://paulgraham.com/gh.html">Great Hackers</a> by Paul Graham, you know &ldquo;Hackers and Painters&rdquo;</p>
-
-<p>It&rsquo;s a long post with nice words.</p>
-
-<p>A great hacker has much much more productivity than a normal developer. Someone says there&rsquo;re 5 levels of developers, the productivity scales 10 between each 2 levels.</p>
-
-<p>Hackers have strong curiosity, the intention to know how things work.</p>
-
-<p>No guarantee on whether someone can become a hacker or not. Raw talent, habit, even personality decides your potential. It&rsquo;s even hard to identify if someone is a hacker.</p>
-
-<p>Release the hackers!</p></li>
-</ul>
-
-
-
-		
-		<a href="/blog/2013/10/14/articals-from-the-best-software-writing-i/" class="more-link">Read more</a>
 	</div>
 
 </article>

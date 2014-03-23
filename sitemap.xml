@@ -101,8 +101,14 @@
         <lastmod>2014-03-16T20:52:57+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://typd.github.io/blog/2014/03/23/solving-hard-things-early-from-facebook-vp/
+        </loc>
+        <lastmod>2014-03-23T23:45:07+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://typd.github.io/blog/archives/</loc>
-        <lastmod>2014-03-22T12:18:07+08:00</lastmod>
+        <lastmod>2014-03-23T23:45:07+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/blog/categories/</loc>
@@ -110,7 +116,7 @@
     </url>
     <url>
         <loc>http://typd.github.io/</loc>
-        <lastmod>2014-03-22T12:18:07+08:00</lastmod>
+        <lastmod>2014-03-23T23:45:07+08:00</lastmod>
     </url>
     <url>
         <loc>http://typd.github.io/pages/toolbelt/</loc>
