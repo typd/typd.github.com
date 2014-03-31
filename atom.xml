@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2014-03-23T23:45:46+08:00</updated>
+  <updated>2014-03-31T23:47:46+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Michael Jordan's 3rd Champion]]></title>
+    <link href="http://typd.github.io/blog/2014/03/31/michael-jordans-3rd-champion/"/>
+    <updated>2014-03-31T23:33:00+08:00</updated>
+    <id>http://typd.github.io/blog/2014/03/31/michael-jordans-3rd-champion</id>
+    <content type="html"><![CDATA[<p>仔细读完了<a href="http://my.hupu.com/zhangjiawei/blog/6424835.html">这篇</a>文章，介绍公牛第三冠的幕前幕后。92-93还不是我看球的年纪，但以现在的理解，读起来感同身受。</p>
+
+<p>竞技体育从来不止于体育本身，运动提供平台，加上太多技术的、战术的、心理的、团队的、社会的因素。不同层次的球员，不同层次的理解，在面对不同的问题。这到底是团队运动，神如乔丹也不能以一敌五，但神如乔丹可以理解比赛，推动队友。</p>
+
+<p>像之前一篇里老师讲的，体育比赛和交响乐相似，因为足够复杂，才足够吸引人。简单的东西容易腻，复杂的东西看也看不完。</p>
+
+<p>北京金隅昨天夺冠，37的老马还能找到和带领球队，真是幸事。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Solving Hard Things Early From Facebook Vp]]></title>
@@ -1115,118 +1130,6 @@ E.g. curl, those tools should be vendored into the app.</li>
 <li>A good researcher needs to have a practical tool set, and good engineering sense</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Qt and PyQt]]></title>
-    <link href="http://typd.github.io/blog/2013/10/16/qt-and-pyqt/"/>
-    <updated>2013-10-16T18:46:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/10/16/qt-and-pyqt</id>
-    <content type="html"><![CDATA[<p>Sometimes it bothers me how to write UI program cross-platform, or just get rid of Visual Studio. Qt has been referenced a lot for that. Here are some notes based on my experience, understanding of Qt, pyQt.</p>
-
-<h1>What&rsquo;s Qt</h1>
-
-<ul>
-<li><p>Quoted, <a href="http://qt-project.org/">Qt</a> is a cross-platform application and UI framework for developers using C++ or QML, a CSS &amp; JavaScript like language.</p></li>
-<li><p>Owned by Nokia previously, then was sold to Digia.</p></li>
-<li><p>Natively, you need to write C++.</p></li>
-<li><p>Qt Creator is the supporting Qt IDE. Within it, Qt Designer is used for composing UI. Seems it looks pretty much like the WinForm drag down support from Visual Studio.</p></li>
-<li><p>Highlights: cross-platform, native appearance based on platform, which means by using same code base, the release program may look like a windows program on windows, and a mac one on mac.</p></li>
-<li><p>Latest version, Qt5.1</p></li>
-</ul>
-
-
-<!-- more -->
-
-
-<h1>Python solution</h1>
-
-<p>Of course you don&rsquo;t have to write C++. PyQt and pySide are the py solutions.</p>
-
-<ul>
-<li>PyQt
-
-<ul>
-<li>Uses same verion number as Qt, PyQt4 is for Qt4, PyQt5 is for Qt5.</li>
-<li>Owned by riverbank, a uk company.</li>
-<li>Licenses including GPL v3 and a commercial license. Which means for commercial usages, pay it <a href="http://www.riverbankcomputing.co.uk/commercial/buy">here</a></li>
-</ul>
-</li>
-<li>pySide
-
-<ul>
-<li>License LGPL, no need to pay for commercial usage</li>
-<li>Seems not under actively developing, release for Qt5 is still not ready yet, <a href="http://qt-project.org/wiki/PySide_Roadmap">pySide roadmap</a></li>
-</ul>
-</li>
-</ul>
-
-
-<p>I choose <a href="http://www.riverbankcomputing.com/software/pyqt/download5">PyQt5</a>.</p>
-
-<h1>Setup them</h1>
-
-<p>Things to do</p>
-
-<ul>
-<li>Install Qt5, which contains Qt Creator
-
-<ul>
-<li><a href="http://qt-project.org/downloads">download</a></li>
-</ul>
-</li>
-<li>Install PyQt
-
-<ul>
-<li>note, I had problem with python3, python2 works fine</li>
-<li>Install SIP, seems SIP is used for converting C++ code to python
-
-<ul>
-<li><a href="http://www.riverbankcomputing.com/software/sip/download">download</a></li>
-<li>note, the hg checked out version has a problem on sip.h, the tar ball works fine</li>
-<li>python configurate.py &amp;&amp; make &amp;&amp; make install</li>
-<li>add sip executor to your PATH</li>
-</ul>
-</li>
-<li>Install PyQt5
-
-<ul>
-<li><a href="http://www.riverbankcomputing.co.uk/software/pyqt/download5">download</a></li>
-<li>python configurate.py &amp;&amp; make &amp;&amp; make install</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<h1>Examples</h1>
-
-<p>PyQt examples are included in the tar ball, PyQt-gpl-5.1/examples. Start it from PyQt-gpl-5.1/examples/qtdemo/qtdemo.py</p>
-
-<p>An example can be as simple as</p>
-
-<pre><code>import sys
-
-from PyQt5.QtWidgets import QApplication
-from PyQt5.QtWidgets import QWidget
-
-class Window(QWidget):
-    def __init__(self, parent=None):
-        super(Window, self).__init__(parent)
-        self.resize(360, 150)
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = Window()
-    window.show();
-    app.exec_()
-</code></pre>
-
-<h1>Some more</h1>
-
-<p>Qt, PyQt, pySide seems all these are not well maintained. The offical sides are as convinient as I suppose they should be. Instructions, readmes, sample code contains some bug and mistakes more or less.</p>
 ]]></content>
   </entry>
   
