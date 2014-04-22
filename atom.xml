@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2014-04-22T13:48:12+08:00</updated>
+  <updated>2014-04-22T14:11:07+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -14,13 +14,47 @@
 
   
   <entry>
+    <title type="html"><![CDATA[What makes a good engineering culture?]]></title>
+    <link href="http://typd.github.io/blog/2014/04/22/what-makes-a-good-engineering-culture/"/>
+    <updated>2014-04-22T13:58:00+08:00</updated>
+    <id>http://typd.github.io/blog/2014/04/22/what-makes-a-good-engineering-culture</id>
+    <content type="html"><![CDATA[<p>I had many posts talk about engineering culture. Here&rsquo;s <a href="http://goo.gl/2VlzmQ">a good one</a> from others summaries the characters of a good culture.</p>
+
+<blockquote><ul>
+<li>Optimize for iteration speed
+
+<ul>
+<li>Team-wise, fast iteration speed means having a set of strong leaders to help coordinate and drive team efforts</li>
+</ul>
+</li>
+<li>Push relentlessly toward automation
+
+<ul>
+<li>deploying, testing, etc</li>
+</ul>
+</li>
+<li>Build the right software abstractions</li>
+<li>Develop a focus on high code quality with code reviews</li>
+<li>Maintain a respectful work environment</li>
+<li>Build shared ownership of code</li>
+<li>Allot 20% time</li>
+<li>Build a culture of learning and continuous improvement</li>
+<li>Hire the best</li>
+</ul>
+</blockquote>
+
+<p>This can be check list.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[About onboarding process]]></title>
     <link href="http://typd.github.io/blog/2014/04/22/about-onboarding-process/"/>
     <updated>2014-04-22T13:45:00+08:00</updated>
     <id>http://typd.github.io/blog/2014/04/22/about-onboarding-process</id>
     <content type="html"><![CDATA[<p>When joining a new place, many devs may have similar situation as <a href="http://goo.gl/8n7hZv">this artical</a> described:</p>
 
-<blockquote><p> I found myself wading through a codebase laced with technical debt and augmented with little documentation and no unit tests, written in a Java-like language called ActionScript that I wasn’t familiar with. I had two weeks to build and launch a feature already promised to video publishers, a feature that would allow them to schedule when their online videos would go on the air.</p></blockquote>
+<blockquote><p>I found myself wading through a codebase laced with technical debt and augmented with little documentation and no unit tests, written in a Java-like language called ActionScript that I wasn’t familiar with. I had two weeks to build and launch a feature already promised to video publishers, a feature that would allow them to schedule when their online videos would go on the air.</p></blockquote>
 
 <p>And later some better onboarding experiences made him think what a good process should be.</p>
 
@@ -119,7 +153,7 @@
 </ul>
 </blockquote>
 
-<p>It&rsquo;s very good point that you should know the pros and cons of the management style you chose.</p>
+<p>It&rsquo;s a very good point that you should know the pros and cons of the management style you chose.</p>
 
 <h1>For early management</h1>
 
@@ -1071,23 +1105,6 @@ E.g. curl, those tools should be vendored into the app.</li>
 
 
 <p>很满足。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Beijing marathon again]]></title>
-    <link href="http://typd.github.io/blog/2013/10/19/beijing-marathon-again/"/>
-    <updated>2013-10-19T19:36:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/10/19/beijing-marathon-again</id>
-    <content type="html"><![CDATA[<p>时隔六年，终于再次报上了北马！明天是个好天气！在我的北马记忆里，有清北起跑前的斗气，TAM起跑时的广阔感，途中一个化工大的教授赶着铁环跑半程，不知道今年还在不在。</p>
-
-<p>一个遗憾，今年只报上了迷你4km，争取赖着跑下半程。这次的比赛物品，发图留念，</p>
-
-<p><img src="http://typd.github.io/images/posts/2013-10-19/1.jpg" alt="" />
-<img src="http://typd.github.io/images/posts/2013-10-19/2.jpg" alt="" />
-<img src="http://typd.github.io/images/posts/2013-10-19/3.jpg" alt="" />
-<img src="http://typd.github.io/images/posts/2013-10-19/4.jpg" alt="" />
-<img src="http://typd.github.io/images/posts/2013-10-19/5.jpg" alt="" /></p>
 ]]></content>
   </entry>
   
