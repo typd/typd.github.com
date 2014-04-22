@@ -13,7 +13,7 @@ Information technology is a fast industry now. Companies come and go. People kee
 > - Every early stage company thinks it has reinvented management. In fact they have not! 
 > - Management is not about who is who’s boss. Management is the opportunity to explicitly choose tradeoffs. No silver bullet for all!
 
-It's very good point that you should know the pros and cons of the management style you chose.
+It's a very good point that you should know the pros and cons of the management style you chose.
 
 # For early management
 
