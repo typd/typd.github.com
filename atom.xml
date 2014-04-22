@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2014-04-22T11:22:25+08:00</updated>
+  <updated>2014-04-22T13:48:12+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[About onboarding process]]></title>
+    <link href="http://typd.github.io/blog/2014/04/22/about-onboarding-process/"/>
+    <updated>2014-04-22T13:45:00+08:00</updated>
+    <id>http://typd.github.io/blog/2014/04/22/about-onboarding-process</id>
+    <content type="html"><![CDATA[<p>When joining a new place, many devs may have similar situation as <a href="http://goo.gl/8n7hZv">this artical</a> described:</p>
+
+<blockquote><p> I found myself wading through a codebase laced with technical debt and augmented with little documentation and no unit tests, written in a Java-like language called ActionScript that I wasn’t familiar with. I had two weeks to build and launch a feature already promised to video publishers, a feature that would allow them to schedule when their online videos would go on the air.</p></blockquote>
+
+<p>And later some better onboarding experiences made him think what a good process should be.</p>
+
+<p><strong>First, does it worth to invest time to onboarding process?</strong></p>
+
+<blockquote><p> The onboarding process is an opportunity to direct the learning and the activity of a new hire toward what the team believes matters most.</p></blockquote>
+
+<p><strong>Quora&rsquo;s goals when designing the process</strong></p>
+
+<ul>
+<li>Ramp up a new employee as quickly as possible</li>
+<li>Impart the startup’s culture and values</li>
+<li>Expose the new employee to the breadth of fundamentals needed to succeed
+
+<ul>
+<li>Those engineers who learned the fundamental tools and abstractions well will do better</li>
+</ul>
+</li>
+<li>Socially integrate the new employee onto the team</li>
+</ul>
+
+
+<p>There&rsquo;re more details to describe how they archive these goals.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What is design about?]]></title>
@@ -1054,107 +1088,6 @@ E.g. curl, those tools should be vendored into the app.</li>
 <img src="http://typd.github.io/images/posts/2013-10-19/3.jpg" alt="" />
 <img src="http://typd.github.io/images/posts/2013-10-19/4.jpg" alt="" />
 <img src="http://typd.github.io/images/posts/2013-10-19/5.jpg" alt="" /></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Python history, a talk from Guido]]></title>
-    <link href="http://typd.github.io/blog/2013/10/18/python-history-a-talk-from-guido/"/>
-    <updated>2013-10-18T23:17:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/10/18/python-history-a-talk-from-guido</id>
-    <content type="html"><![CDATA[<p>This <a href="http://bit.ly/nsaEak">talk</a> titled &ldquo;History of Python&rdquo; is from Guido at Dropbox, before he joined Dropbox. It&rsquo;s a great talk, especially for python fans like me.</p>
-
-<h1>Notes</h1>
-
-<p>Guido was inspired by ABC. He commented on ABC&rsquo;s goods and bads.</p>
-
-<p>Python is originally for day to day work (yes, every language inventor says that).</p>
-
-<!-- more -->
-
-
-<p>He had good summary on the philosophies behinds python, and they&rsquo;re also useful for other tasks.</p>
-
-<blockquote><p>Skunkworks (early days) Design philosophy</p>
-
-<blockquote><ul>
-<li>Borrow ideas whenever it makes sense</li>
-<li>As simple as possible, no simpler (Einstein)</li>
-<li>Do one thing well (UNIX)</li>
-<li>Don&rsquo;t fret about performance (fix it later)</li>
-<li>Go with the flow (don&rsquo;t fight env)</li>
-<li>Perfection is the enemy of the good</li>
-<li>Cutting corners is okay (get back to it later)</li>
-</ul>
-</blockquote>
-
-<p>User-centric design philosophy</p>
-
-<blockquote><ul>
-<li>Avoid platform ties, but not religiously</li>
-<li>Don&rsquo;t bother the user with details</li>
-<li>Discourage but allow coding to the platform</li>
-<li>Offer multiple levels of extensibility</li>
-<li>Errors should not be fatal, if possible</li>
-<li>Errors should never pass silently</li>
-<li>Don&rsquo;t blame the user for bugs in python</li>
-</ul>
-</blockquote></blockquote>
-
-<p>Also, he recalled the process of python community growing up. That&rsquo;s the main reason of python&rsquo;s success.</p>
-
-<p>In Q&amp;A section,</p>
-
-<ul>
-<li>Didn&rsquo;t know unicode at early days</li>
-<li>About pyc files:
-
-<ul>
-<li>the first version of python doesn&rsquo;t have pyc, it parses the module first, but,
-
-<ul>
-<li>the parser is relatively slow</li>
-<li>need much memory</li>
-</ul>
-</li>
-<li>some may release pyc file to avoid source code leak, but there&rsquo;re pasers can decode pyc well</li>
-<li>python3 only have one directory for pyc files</li>
-</ul>
-</li>
-<li>Regrets about python
-
-<ul>
-<li>lambda can be done in other ways</li>
-<li>reduce() method is hard to read</li>
-<li>unicode for python2</li>
-</ul>
-</li>
-<li>Alternative python implementations
-
-<ul>
-<li>always encourage others</li>
-<li>pypy is written by increadible smart peoples, sometimes they&rsquo;re too smart for their own good, they write really complicated stuff, &hellip; some code has explosion of cleverness, you hope it&rsquo;s right, if not, there&rsquo;s only one person in the world can debug it</li>
-</ul>
-</li>
-<li>Q: back to early days, will you do unit testing, what would it look like?
-
-<ul>
-<li>In 96-98, we made long effects to add tests, before that, very few tests</li>
-<li>Not much sense about testing in early days</li>
-</ul>
-</li>
-<li>Python2 and python3
-
-<ul>
-<li>In 5 years, everybody gonna use py3</li>
-</ul>
-</li>
-</ul>
-
-
-<h1>Others</h1>
-
-<p>I&rsquo;ve seen Guido&rsquo;s talk several times, and luckily seen in person once. He&rsquo;s a typical geek to me, has his own style, talks slowly and logically, mature, respect the audiences, and love to interact with community. And he&rsquo;s  pratical, you can know that from this talk. He may not like to do &ldquo;really&rdquo; smart things to amaze the crowd.</p>
 ]]></content>
   </entry>
   
