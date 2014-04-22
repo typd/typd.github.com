@@ -63,6 +63,7 @@ Here are the tools with comments for my daily life and work. I will continuously
 ## Project monitoring
 - [Logstash](http://logstash.net/): highly configurable tool to manage events and program logs
 - [Graphite](http://graphite.wikidot.com/): collect metrics from services and do scalable realtime graphing
+  - [Metricsd](https://github.com/mojodna/metricsd): a metrics aggregator for Graphite that supports counters, histograms and meters
 - [NewRelic](http://www.newrelic.com): track program, website, mobile app performance with different prices
 
 ## Website tool
