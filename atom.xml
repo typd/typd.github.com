@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2014-03-31T23:47:46+08:00</updated>
+  <updated>2014-04-22T10:40:01+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What is design about?]]></title>
+    <link href="http://typd.github.io/blog/2014/04/14/what-is-design-about/"/>
+    <updated>2014-04-14T15:47:00+08:00</updated>
+    <id>http://typd.github.io/blog/2014/04/14/what-is-design-about</id>
+    <content type="html"><![CDATA[<p>This is a <a href="http://goo.gl/bcjRYc">good talk</a> tells &ldquo;what is design about&rdquo;.</p>
+
+<ul>
+<li>Focus, deliver quality</li>
+<li>Compromise</li>
+<li>Think about the context</li>
+<li>Worry about the right thing: users&#8217; problem, not yours
+
+<ul>
+<li>Design thinking must trickle down
+
+<ul>
+<li>&ldquo;Great design is a symptom of a design-led org structure &amp; engineering process&rdquo;</li>
+<li>Design is not democratic</li>
+<li>Design is not beautiful pictures either: can&rsquo;t separate engineering and design</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Design is about: understanding humans, and make things for humans
+
+<ul>
+<li>psychology</li>
+<li>neuroscience</li>
+<li>linguistics</li>
+<li>sociology</li>
+<li>philosophy</li>
+</ul>
+</li>
+<li>Empathy, details matter</li>
+</ul>
+
+
+<p>The presenter gave a good example of washing machine at the end. Remind me of designing an interface in programming.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Michael Jordan's 3rd Champion]]></title>
@@ -1113,23 +1155,6 @@ E.g. curl, those tools should be vendored into the app.</li>
 <h1>Others</h1>
 
 <p>I&rsquo;ve seen Guido&rsquo;s talk several times, and luckily seen in person once. He&rsquo;s a typical geek to me, has his own style, talks slowly and logically, mature, respect the audiences, and love to interact with community. And he&rsquo;s  pratical, you can know that from this talk. He may not like to do &ldquo;really&rdquo; smart things to amaze the crowd.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A data science sharing from Hilary Mason of bit.ly]]></title>
-    <link href="http://typd.github.io/blog/2013/10/16/a-data-science-sharing-from-hilary-mason-of-bit-dot-ly/"/>
-    <updated>2013-10-16T23:17:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/10/16/a-data-science-sharing-from-hilary-mason-of-bit-dot-ly</id>
-    <content type="html"><![CDATA[<p>This is a <a href="https://bitly.com/A5Mjsv">good talk</a> from Chief Scientist at bit.ly. It&rsquo;s interesting to use and present your data wisely indeed. And I&rsquo;m more interested at the factors make this a good talk</p>
-
-<ul>
-<li>The solid work and thinking behind</li>
-<li>A logical structure of the talk</li>
-<li>The attibute of sharing, not just showing off the done work or owned data</li>
-<li>A good researcher needs to have a practical tool set, and good engineering sense</li>
-</ul>
-
 ]]></content>
   </entry>
   
