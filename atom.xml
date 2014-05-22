@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2014-04-28T22:44:07+08:00</updated>
+  <updated>2014-05-22T23:13:05+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Catch up the change]]></title>
+    <link href="http://typd.github.io/blog/2014/05/20/catch-up-the-change/"/>
+    <updated>2014-05-20T13:38:00+08:00</updated>
+    <id>http://typd.github.io/blog/2014/05/20/catch-up-the-change</id>
+    <content type="html"><![CDATA[<p>A senior co-worker gave a talk about his work and philosophy, which is interesting.</p>
+
+<p>His team called &ldquo;DevOps&rdquo; has build the internal development infrastructure, similar to AWS (manage machines) and heroku (service container), and other common tools. Those are useful and critical, but &ldquo;not the goal of the team&rdquo;. The motivation was not to build the Paas (internal heroku) itself, but to unify the developers way of handling the details around a service, like deployment, dependencies, logging, etc. (heroku has a high level <a href="http://12factor.net/">spec to explain the idea</a>). We don&rsquo;t want to sacrifice either speed or quality. To achieve that, building the service container platform is a smart choice, for coaching devs, and improving quality. So the idea behind, is really about improving the tech culture.</p>
+
+<p>Jump out of there, this &ldquo;implicit&rdquo; way of doing things is rather &ldquo;interesting&rdquo;. The modern software development is creative and collaborative, especially for quality ones. It has become a social practise in many ways. Not only the market, requirements, dev language, tools, knowledge are changing, people also come and go. It&rsquo;s not always pratical to &ldquo;force&rdquo; all acting in a certain way. But you can &ldquo;lead&rdquo; the majority to catch up the change.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What makes a good engineering culture?]]></title>
@@ -139,9 +152,9 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Solving Hard Things Early From Facebook Vp]]></title>
+    <title type="html"><![CDATA['Solving hard things early' from Facebook VP]]></title>
     <link href="http://typd.github.io/blog/2014/03/23/solving-hard-things-early-from-facebook-vp/"/>
-    <updated>2014-03-23T00:00:00+08:00</updated>
+    <updated>2014-03-23T23:31:00+08:00</updated>
     <id>http://typd.github.io/blog/2014/03/23/solving-hard-things-early-from-facebook-vp</id>
     <content type="html"><![CDATA[<p>Information technology is a fast industry now. Companies come and go. People keep thinking about new strategy of management in such rapid growing. <a href="http://ondrejka.net/">Facebook engineering VP</a> gives an <a href="http://firstround.com/article/Facebook-VP-of-Engineering-on-Solving-Hard-Things-Early">experience sharing</a> talk, which has many good points. Below are some quotes with my comments.</p>
 
@@ -1067,44 +1080,6 @@ E.g. curl, those tools should be vendored into the app.</li>
 
 
 <p>There should always be a certain threshold of choosing to rewrite. Avoid bias from each side, choose your own.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[My 2013 Beijing Marathon]]></title>
-    <link href="http://typd.github.io/blog/2013/10/20/my-2013-beijing-marathon/"/>
-    <updated>2013-10-20T16:49:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/10/20/my-2013-beijing-marathon</id>
-    <content type="html"><![CDATA[<p>我的第三次北马顺利完赛，贴着迷你的号牌跑完半程，时间2小时51分，比较上两次的30分和10分差了不少。但当然还是很有成就感，比赛中的记录：</p>
-
-<ul>
-<li><p>坐地铁从前门进入，人很多绕了很久。迷你选手没有给安排物品托运，所以我也准备好轻装外衣，跑步时背着跑。事实上不少全程半程选手也顾不得存包就上路，有些甚至没有轻装的准备，个别是背着不合理的书包跑。个人饮料是可以带入广场的，我带了瓶小乐虎，本打算喝完进广场，喝不下就扔掉，既然没人管也就没舍得扔，干脆路上喝完再扔。早餐吃了一块巧克力，另一块背着走。入场区厕所很多，很方便。</p></li>
-<li><p>8点准时起跑，没有排队太久，很快就排到了出发线。可刚跑起来就发现问题，本来不得不背着衣服跑赛前就隐隐不爽，徒步可以，但负重跑步还没有类似经历。跑起来发现这个阿迪的袋子绳子太长，会上下跳动，相当不爽，要保证左右平衡，试了好几种背法，最终还是背在后面，左右绳在脖子多挂一层，相对颠簸较小。</p></li>
-</ul>
-
-
-<!-- more -->
-
-
-<ul>
-<li><p>背包不再去想，开始一会就觉得不是太好，很快开始出汗。觉得有些意外按上两次经验应该不会这么快累，况且今天天气很好。速度保持的比较稳，按2个半小时的期待，应该7分钟一公里，心里觉得一开始就差不多这个速度，后面再看余力。</p></li>
-<li><p>到了大概2、3公里，还真是有些累了，试着走走。确实这个距离是绝少有人走的。印象中的疲劳期应该在4-8km，我调低了心理期待，也许这几年真的退化很多，现在体力不适合20km，那这次就跑多少算多少，8km，10km都行。</p></li>
-<li><p>过了一小段疲劳期，很快到了迷你终点，还是很满意的。至少8km没问题。之后慢慢节奏有些感觉了，背包虽然没法避免，但其实可以降低它的影响，屁股幅度小一些，重心再平一些，袋子的颠簸也会小，这样它的影响确实不算很大。前面的路程其实可以跑的好一点。</p></li>
-<li><p>6到10公里下来还算顺利，很快喝完了乐虎，还拿了几次场外饮料。发现跑起来真的很缺水。这几公里也认识到这次真的不轻松，累了就走一走恢复，也不能停太久爬身体节奏改变，总体平均速度还是很稳定的。大概是9点15到10km。</p></li>
-<li><p>9点半到12km。膝盖没不适感，体力还有一些，知道半程完赛没问题，只是时间不要太晚。10到18km也没有想太多，背包已经不是问题了，阻碍的只是体力。14km的时候吃了整块巧克力，似乎稍晚了一点。</p></li>
-<li><p>18km的时候感到胜利在望，想把体力在最后3km用掉，心想后面可以靠意志坚持跑下来。但最终还是需要夹着走路恢复，说明已经是体力问题，这次发挥了全部，没有好遗憾的。</p></li>
-<li><p>虽然后面几公里道路已经陆续解封，跑步的人流还在，到达半程的时候还是很高兴。退步难避免，实力还在，完赛是一个锚点，意味着以后还会挑战或者保持这个距离。一路上老头老太太大有人在，这个成绩于我来说还有很大上升空间，甚至超过以往</p>
-
-<ul>
-<li>背包从全程来说确实还是有负担，要同时顾及身体和背包的重心。如果能创造条件托运最好。</li>
-<li>如果赛前简单试试节奏，会让前5km跑的比这次略微好一点。</li>
-<li>最关键的，没有诀窍，不过是规律训练。就我所知只要规律训练，长距离对普通体质的人不算难事，年龄也不是阻碍，路上的老头老太太不见得有太好的条件，不外乎规律训练。规律训练之后才会遇到体质和年龄瓶颈。</li>
-</ul>
-</li>
-</ul>
-
-
-<p>很满足。</p>
 ]]></content>
   </entry>
   
