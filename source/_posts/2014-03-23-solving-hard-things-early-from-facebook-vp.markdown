@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""Solving hard things early" from Facebook VP"
+title: "'Solving hard things early' from Facebook VP"
 date: 2014-03-23 23:31
 comments: true
 categories: 

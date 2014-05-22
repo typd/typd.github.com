@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-Here are the tools with comments for my daily life and work. I will continuously update this list.
+Here are the tools with comments for my daily life and work. I will update this list continuously.
 
 # Laptop
 - mac: developer friendly, worth the price.
@@ -19,19 +19,15 @@ Here are the tools with comments for my daily life and work. I will continuously
   - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb): This is AWESOME! Use keyboard to open links rather than mouse.
   - [1Password](https://agilebits.com/onepassword): or Mac OS keychain
 - [dropbox](http://dropbox.com)
-- [Folx](http://www.mac-downloader.com/): download manager for mac
+- [Folx](http://www.mac-downloader.com/): fast downloading tool 
 - [Vox](http://coppertino.com/vox/): the best music player on mac as I know.
-- [vim](http://www.vim.org/): I'm a vim user and still learning it. Haven't tried emacs yet.
-  - [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
-- [Command line En<->Zh dict](https://github.com/typd/cmd-dict): own work
-- [Command line search tool](https://github.com/typd/cmd-search): own work, search text within files
 
 # Tool sites
 - [Evernote](http://www.evernote.com): besides taking notes, I also use it as a bookmark system like del.icio.us
-- [Feedspot](http://www.feedspot.com): switched from feedly, google reader to it.
+- [Feedspot](http://www.feedspot.com): switched from feedly and google reader to it
 - [Github](http://www.github.com)
-- [Douban](http://www.douban.com): I use it as a database for my read books and watched movies
-- [1Checker](http://www.1checker.com/): check English spelling and grammar. Worth a try before sending long email.
+- [Douban](http://www.douban.com): I use it as a database for read books and watched movies
+- [SurveyMonky](https://www.surveymonkey.com/)
 
 # Good stuff online
 - [Podcast - Ruby Rogus](http://rubyrogues.com/): each week 4-6 rubiers pick a topic and share their thoughts
@@ -45,8 +41,6 @@ Here are the tools with comments for my daily life and work. I will continuously
 
 # Developing and engineering
 ## General
-- [zsh](http://www.zsh.org/): a better shell with many improvements than bash
-  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh): provides nice themes for zsh, highly configurable
 - [Homebrew](http://brew.sh/): package manager for mac
 - [Python](http://python.org/): "Explicit is better than implicit"; prefer python3 to python2, as it has many improvements
 - [Ruby](https://www.ruby-lang.org/en/): "Convention over configuration"
@@ -55,9 +49,22 @@ Here are the tools with comments for my daily life and work. I will continuously
 - [Scala](http://www.scala-lang.org/): modern java, take the advantage of JVM
 - [Node.js](http://nodejs.org/): easy for small sites
 - [Git](http://git-scm.com): no more svn
+- [AWS](http://aws.amazon.com/): Iaas, infrastructure as a service
+- [Heroku](http://www.heroku.com/): Paas, platform as a service. Haven't used it yet
+
+## Shell
+- [zsh](http://www.zsh.org/): a better shell with many improvements than bash
+  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh): provides nice themes for zsh, highly configurable
+- [vim](http://www.vim.org/): I'm a vim user and still learning it. Haven't tried emacs yet.
+  - [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
+- [Command line En<->Zh dict](https://github.com/typd/cmd-dict): own work
+- [Command line search tool](https://github.com/typd/cmd-search): own work, search text within files
+- tree
+- [ExplainShell](http://explainshell.com/): explain shell commands
+  - [Explain shell from console](https://github.com/schneems/explain_shell): a tool to open it from console
 
 ## IDE
-- [IntelliJ](http://www.jetbrains.com/idea/): a easy to use, highly configurable IDE for java. I prefer it to eclipse.
+- [IntelliJ](http://www.jetbrains.com/idea/): easy to use, highly configurable IDE for java. I prefer it to eclipse.
 - [PyCharm](http://www.jetbrains.com/pycharm/): IDE for python. A free version is available.
 
 ## Project monitoring
@@ -82,4 +89,3 @@ Here are the tools with comments for my daily life and work. I will continuously
 
 ## Misc
 - [Highcharts](http://www.highcharts.com/): a js library to render nice charts
-
