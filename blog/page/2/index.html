@@ -9,7 +9,7 @@
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="Dec 20th, 2013 Reading Notes of More Joel on Software 日复一日写程序，扪心自问，从junior到senior，积累的是什么。Joel Spolsky就是一个略带奇葩乐于分享能满足我好奇心的人，More Joel on &hellip;">
+	<meta name="description" content="Jan 22nd, 2014 Non Blocking Pipe Met a problem of linux pipe from daily work, finally got me to write a small tool to get rid of it. Worth to note. &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,6 +107,61 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		
+		<span class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-22T21:54:00+08:00" data-updated="true" itemprop="datePublished">Jan 22<span>nd</span>, 2014</time></span>
+        <!-- include post/categories.html -->
+	</div>
+    <h1 class="title" itemprop="name"><a href="/blog/2014/01/22/non-blocking-pipe/" itemprop="url">Non Blocking Pipe</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Met a problem of linux pipe from daily work, finally got me to write a small tool to get rid of it. Worth to note.</p>
+
+<h1>Motivation</h1>
+
+<p>I&rsquo;ve built a central logging system based on logstash. It looks like this, basically,</p>
+
+<br/>
+
+
+<p><img src="/images/posts/2014-01-22/1.png" alt="" /></p>
+
+<br/>
+
+
+<p>Then every program use logstash as a shipper to redirect its log into the broker, which is a redis as message queue. As this <a href="http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/">blog</a> recommended, treatting log as stream rather than files, linux pipe make it possible to guide the stream to anywhere easily.</p>
+
+<pre><code>application | java -jar logstash.jar agent -f logstash.conf
+</code></pre>
+
+<p>The problem occurs when the redis was accidently down, causes</p>
+
+<ul>
+<li>Logstash blocked, which is a designed behavior of <a href="http://logstash.net/docs/1.3.3/life-of-an-event">logstash</a>. It says &ldquo;dropping messages or unlimited queue lenght are both undesirable behavior&rdquo;, so simply leaves no option and get it blocked.</li>
+<li>Then caused upstream application blocked, too! This is done by OS after the pipe buffer is filled up. This is a more serious problem as it&rsquo;s not easy to change OS default behavior.</li>
+</ul>
+
+
+
+		
+		<a href="/blog/2014/01/22/non-blocking-pipe/" class="more-link">Read more</a>
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -486,46 +541,6 @@
 
 		
 		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		
-		<span class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-24T11:18:00+08:00" data-updated="true" itemprop="datePublished">Oct 24<span>th</span>, 2013</time></span>
-        <!-- include post/categories.html -->
-	</div>
-    <h1 class="title" itemprop="name"><a href="/blog/2013/10/24/rewrite-code-from-scratch/" itemprop="url">Rewrite Code From Scratch?</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>As a developer, almost everyone has made a difficult choice, rewrite something from scratch. Joel Spolsky wrote <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">this</a> to explain why you shouldn&rsquo;t do it. There&rsquo;re some good reasons.</p>
-
-<h1>Article summary</h1>
-
-<p>The very important, but hidden reason,</p>
-
-<blockquote><p>It&rsquo;s hard to read code than to write it.</p></blockquote>
-
-<p>It&rsquo;s definitly true. But no need to blame developers or the one made the rewrite decision. It&rsquo;s a nature fact in software. You don&rsquo;t necessarily have gone with the last version process, no memory, just code, may have spec or not, may have the code owner or not.</p>
-
-<p>Then you may have bias to make the decision.</p>
-
-
-		
-		<a href="/blog/2013/10/24/rewrite-code-from-scratch/" class="more-link">Read more</a>
 	</div>
 
 </article>

@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2014-05-22T23:13:05+08:00</updated>
+  <updated>2014-05-29T14:25:59+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learn from Smartisan T1 Conference]]></title>
+    <link href="http://typd.github.io/blog/2014/05/29/learn-from-smartisan-t1-conference/"/>
+    <updated>2014-05-29T11:02:00+08:00</updated>
+    <id>http://typd.github.io/blog/2014/05/29/learn-from-smartisan-t1-conference</id>
+    <content type="html"><![CDATA[<p>事隔几天，看完了<a href="http://v.youku.com/v_show/id_XNzE0Nzc0OTQ0.html">老罗的Smartisan T1发布会</a>。时长两个半小时只一个人演讲，能吸引我在屏幕前不换台，当然是有其牛逼之处的。</p>
+
+<h1>对行业本身的信息</h1>
+
+<ul>
+<li>电子消费品的全行业产业链可谓已经十分成熟。芯片、机型制造、相机、电池、系统、客服、物流，哪怕是大家各自标榜的“人性化”设计，其实都有足够成熟、专业的分解提供商，真正“自家”的，大概主要是拍板产品理念，对各提供商产品的使用、组装，和必要的软件开发。当然这也不简单，不过还是有些攒机之感。</li>
+<li>苹果太成功，让大家心悦诚服的追赶。苹果固然有产业链中积累的优势，但后起者都信心满满觉得可以超越。雷军说苹果卖服务，老罗说卖软件，但都不认为是那漂亮的硬件本身，这点起码是靠谱的。</li>
+</ul>
+
+
+<h1>演讲和营销策略</h1>
+
+<ul>
+<li>说老罗会演讲，恐怕大多数人不会反对，以前&#8221;老罗英语学校&#8221;的第一年演讲也不错</li>
+<li>作为后起的&#8221;小厂商&#8221;，营销策略尤为重要，这里做的也很聪明
+
+<ul>
+<li>&ldquo;我很懂每一个环节，芯片、声音、相机、设计、软件等等&#8221;（当然你说还不够）</li>
+<li>&ldquo;我用了最牛逼的芯片，声音调试，相机调试，设计，你可以不相信我，但谁谁谁你认识吧，不否认吧，软件我做的，我演示给你看；我就是搅局者，别以为别家每个环节都是自己做的，他们也不过是组装商，还没有好的选择品味。&rdquo;</li>
+<li>额外的心理营销，找到独特的痛点：捐助openSSL，门票抵现，防摔保险，背夹电池</li>
+</ul>
+</li>
+</ul>
+
+
+<h1>一些感受</h1>
+
+<ul>
+<li>手机固然是兵家必争之地，如此激烈的竞争中还能创新，确实值得佩服。即便是用了那么多外包的服务，不可否认这个团队认真的思考了方方面面，组装也是品味要求</li>
+<li>另一方面，产业链确实更成熟了，设计的作用日渐突出，这也是很多快速发展事务中更迭尤其快的部分。设计的创新可以带动一个产业</li>
+<li>也不难理解越来越多的设计资源集中在了电子产品上，更多资金、人力投入让这个产业的设计水准可以与汽车、家居等设计集中领领域比较。<a href="http://v.youku.com/v_show/id_XNTIwMjg0MTky.html">工业设计的发展过程本身也很有意思</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Catch up the change]]></title>
@@ -1025,61 +1066,6 @@ E.g. curl, those tools should be vendored into the app.</li>
 <p>I can live without an IDE, but if I use one, these are pretty much I need most. I use vim for both ruby and python, with proper grammar highlights and indention. The biggest concern I have for it, is about refactoring. For a bigger size project, I believe an IDE can help to make life easier. No matter how wonderful your vim or emacs is, IDE is designed to be better than it. It&rsquo;s clear to me, an desktop application has less limitation than a terminal one.</p>
 
 <p>This free version is a good start for me. Let me see when I need the rich features from pro version, more framework build-in support, especially for web.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rewrite code from scratch?]]></title>
-    <link href="http://typd.github.io/blog/2013/10/24/rewrite-code-from-scratch/"/>
-    <updated>2013-10-24T11:18:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/10/24/rewrite-code-from-scratch</id>
-    <content type="html"><![CDATA[<p>As a developer, almost everyone has made a difficult choice, rewrite something from scratch. Joel Spolsky wrote <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">this</a> to explain why you shouldn&rsquo;t do it. There&rsquo;re some good reasons.</p>
-
-<h1>Article summary</h1>
-
-<p>The very important, but hidden reason,</p>
-
-<blockquote><p>It&rsquo;s hard to read code than to write it.</p></blockquote>
-
-<p>It&rsquo;s definitly true. But no need to blame developers or the one made the rewrite decision. It&rsquo;s a nature fact in software. You don&rsquo;t necessarily have gone with the last version process, no memory, just code, may have spec or not, may have the code owner or not.</p>
-
-<p>Then you may have bias to make the decision.</p>
-
-<!-- more -->
-
-
-<p>The old code is valuable because they are used, tested, bug found and fixed. The oppsite, if you throw them away,</p>
-
-<ul>
-<li>throw away knowledge</li>
-<li>market leadership</li>
-<li>put yourself in danger, you may have no shippable code for sometime</li>
-</ul>
-
-
-<p>The old code can be used because,</p>
-
-<ul>
-<li>Architecture problems can be refactored, though it&rsquo;s not easy but you can still get it done.</li>
-<li>Performance issue can be solved by re-writing part of the code, not the whole.</li>
-<li>Ugly code is not a real issue.</li>
-</ul>
-
-
-<h1>More thoughts</h1>
-
-<p>This ariticle is good because it clearly pointed out the bias on legacy code. Though it keeps saying &ldquo;no need to rewrite&rdquo;, after indivisual understanded the bias, he can make the right desicion himself.</p>
-
-<p>Some thoughts on the oppsite side,</p>
-
-<ul>
-<li><p>The technics, tools, methedologies are developing fast comparing to old times. Writing from scratch costs less than before.</p></li>
-<li><p>The cost of delievering slow is becomming bigger.</p></li>
-<li><p>The team morale of maintaining a legacy code should be considered</p></li>
-</ul>
-
-
-<p>There should always be a certain threshold of choosing to rewrite. Avoid bias from each side, choose your own.</p>
 ]]></content>
   </entry>
   
