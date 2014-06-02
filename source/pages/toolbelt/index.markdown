@@ -19,7 +19,6 @@ Here are the tools with comments for my daily life and work. I will update this 
   - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb): This is AWESOME! Use keyboard to open links rather than mouse.
   - [1Password](https://agilebits.com/onepassword): or Mac OS keychain
 - [dropbox](http://dropbox.com)
-- [Folx](http://www.mac-downloader.com/): fast downloading tool 
 - [Vox](http://coppertino.com/vox/): the best music player on mac as I know.
 
 # Tool sites
@@ -27,7 +26,7 @@ Here are the tools with comments for my daily life and work. I will update this 
 - [Feedspot](http://www.feedspot.com): switched from feedly and google reader to it
 - [Github](http://www.github.com)
 - [Douban](http://www.douban.com): I use it as a database for read books and watched movies
-- [SurveyMonky](https://www.surveymonkey.com/)
+- [SurveyMonkey](https://www.surveymonkey.com/)
 
 # Good stuff online
 - [Podcast - Ruby Rogus](http://rubyrogues.com/): each week 4-6 rubiers pick a topic and share their thoughts
@@ -50,7 +49,7 @@ Here are the tools with comments for my daily life and work. I will update this 
 - [Node.js](http://nodejs.org/): easy for small sites
 - [Git](http://git-scm.com): no more svn
 - [AWS](http://aws.amazon.com/): Iaas, infrastructure as a service
-- [Heroku](http://www.heroku.com/): Paas, platform as a service. Haven't used it yet
+- [Heroku](http://www.heroku.com/): Paas, platform as a service.
 
 ## Shell
 - [zsh](http://www.zsh.org/): a better shell with many improvements than bash
@@ -64,14 +63,12 @@ Here are the tools with comments for my daily life and work. I will update this 
   - [Explain shell from console](https://github.com/schneems/explain_shell): a tool to open it from console
 
 ## IDE
-- [IntelliJ](http://www.jetbrains.com/idea/): easy to use, highly configurable IDE for java. I prefer it to eclipse.
-- [PyCharm](http://www.jetbrains.com/pycharm/): IDE for python. A free version is available.
+- [IntelliJ](http://www.jetbrains.com/idea/): java and scala
 
 ## Project monitoring
 - [Logstash](http://logstash.net/): highly configurable tool to manage events and program logs
 - [Graphite](http://graphite.wikidot.com/): collect metrics from services and do scalable realtime graphing
   - [Metricsd](https://github.com/mojodna/metricsd): a metrics aggregator for Graphite that supports counters, histograms and meters
-- [NewRelic](http://www.newrelic.com): track program, website, mobile app performance with different prices
 
 ## Website tool
 - [UserVoice](https://www.uservoice.com/): easy tool to collect user feedback
@@ -84,8 +81,8 @@ Here are the tools with comments for my daily life and work. I will update this 
 ## Machine Management
 - [Salt](https://github.com/saltstack/salt): use config files to manage machines
 - [Fabric](http://docs.fabfile.org/en/1.8/): execute commands remotely over ssh
-- [Monit](http://mmonit.com/monit/): deployed to target machine for managing and monitor machine status
 - [Upstart](http://upstart.ubuntu.com/): a better system service management tool than System-V
+- [Monit](http://mmonit.com/monit/): deployed to target machine for managing and monitor machine status
 
 ## Misc
 - [Highcharts](http://www.highcharts.com/): a js library to render nice charts
