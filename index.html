@@ -9,7 +9,7 @@
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="May 29th, 2014 Learn From Smartisan T1 Conference 事隔几天，看完了老罗的Smartisan T1发布会。时长两个半小时只一个人演讲，能吸引我在屏幕前不换台，当然是有其牛逼之处的。 对行业本身的信息 电子消费品的全行业产业链可谓已经十分成熟。芯片、 &hellip;">
+	<meta name="description" content="Jun 2nd, 2014 How App Works on Heroku Heroku is a lead service in the Paas field. The 12 factor app is a good summarize of their experiences on how &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -107,6 +107,71 @@
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		
+		<span class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-02T22:32:00+08:00" data-updated="true" itemprop="datePublished">Jun 2<span>nd</span>, 2014</time></span>
+        <!-- include post/categories.html -->
+	</div>
+    <h1 class="title" itemprop="name"><a href="/blog/2014/06/02/how-app-works-on-heroku/" itemprop="url">How App Works on Heroku</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Heroku is a lead service in the Paas field. The <a href="http://12factor.net/">12 factor app</a> is a good summarize of their experiences on how to build a service. Util I&rsquo;ve read <a href="https://devcenter.heroku.com/articles/how-heroku-works">this &ldquo;how heroku works&rdquo; spec</a>, and deployed a service recently, now I know more or less how they achieve that.</p>
+
+<blockquote><h1>Deploy</h1>
+
+<ul>
+<li>Applications consist of your source code, a description of any dependencies, and a Procfile.</li>
+<li>Procfiles list process types &ndash; named commands that you may want executed.</li>
+<li>Deploying applications involves sending the application to Heroku using git.</li>
+<li>Buildpacks lie behind the slug compilation process. Buildpacks take your application, its dependencies, and the language runtime, and produce slugs.</li>
+<li>A slug is a bundle of your source, fetched dependencies, the language runtime, and compiled/generated output of the build system &ndash; ready for execution.</li>
+<li>Config vars contain customizable configuration data that can be changed independently of your source code. The configuration is exposed to a running application via environment variables.</li>
+<li>Add-ons are third party, specialized, value-added cloud services that can be easily attached to an application, extending its functionality.</li>
+<li>A release is a combination of a slug (your application), config vars and add-ons. Heroku maintains an append-only ledger of releases you make.</li>
+</ul>
+
+
+<h1>Runtime</h1>
+
+<ul>
+<li>Dynos are isolated, virtualized unix containers, that provide the environment required to run an application.</li>
+<li>Your application’s dyno formation is the total number of currently-executing dynos, divided between the various process types you have scaled.</li>
+<li>The dyno manager is responsible for managing dynos across all applications running on Heroku.</li>
+<li>Applications with only a single web dyno sleep after one hour of inactivity by the dyno manager. Scaling to multiple web dynos will avoid this.</li>
+<li>One-off Dynos are temporary dynos that run with their input/output attached to your local terminal. They’re loaded with your latest release.</li>
+<li>Each dyno gets its own ephemeral filesystem &ndash; with a fresh copy of the most recent release. It can be used as temporary scratchpad, but changes to the filesystem are not reflected to other dynos.</li>
+<li>Logplex automatically collates log entries from all the running dynos of your app, as well as other components such as the routers, providing a single source of activity.</li>
+<li>Scaling an application involves varying the number of dynos of each process type.</li>
+</ul>
+</blockquote>
+
+<h1>About heroku</h1>
+
+<ul>
+<li>As a Paas, I think it&rsquo;s more friendly than Google App Engine. And the specs are good.</li>
+<li>No judgement on the stability, real service cost yet.</li>
+</ul>
+
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -590,65 +655,6 @@
 <p>From the <a href="http://blog.chenalexander.com/2011/baroque-bach-cello/">author&rsquo;s words</a>, you can know the complexities behind scene. Also some <a href="http://work.chenalexander.com/">other works</a> from <a href="http://work.chenalexander.com/bio">him</a>. If you still remember the <a href="http://www.google.com/logos/2011/lespaul.html">string logo of google</a>, yes, it&rsquo;s created by him.</p>
 
 <p>When a person become mature, he&rsquo;ll also get a simple mind, be generous, friendly to others and himself.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		
-		<span class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-24T23:02:00+08:00" data-updated="true" itemprop="datePublished">Feb 24<span>th</span>, 2014</time></span>
-        <!-- include post/categories.html -->
-	</div>
-    <h1 class="title" itemprop="name"><a href="/blog/2014/02/24/nathan-marzs-sharing/" itemprop="url">Nathan Marz&#8217;s Sharing</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p><a href="http://nathanmarz.com">Nathan Marz</a> is the author of <a href="https://github.com/nathanmarz/storm">storm</a>. Just read an interview of him from &ldquo;Programmer&rdquo; magazine. Here&rsquo;re the <a href="http://nathanmarz.com/blog/interview-with-programmer-magazine.html">English</a> and <a href="http://www.csdn.net/article/2014-02-05/2818311-Storm-Nathan-Marz">Chinese</a> version. Some quotes here.</p>
-
-<blockquote><p>Q: How to improve your skills as a programmer?</p>
-
-<p>A: I get better by doing a lot of programming and trying new things. One of the best ways to become a better programmer is to learn new programming languages. By learn I mean more than just learning the syntax of the language, I mean understanding the language&rsquo;s idioms and writing something substantial in it. &hellip;</p>
-
-<p><br/></p>
-
-<p>Q: Main lessons you learned in the last few years of your professional career?</p>
-
-<p>A: Feedback is everything. For product development and managing a team.</p>
-
-<p><br/></p>
-
-<p>Q: Process of building a software system?</p>
-
-<p>A: The general idea is to avoid making &ldquo;general&rdquo; or &ldquo;extensible&rdquo; solutions until you have a very deep understanding of the problem domain. &hellip; The sequence is &ldquo;First make it possible. Then make it beautiful. Then make it fast.&rdquo;</p>
-
-<p><br/></p>
-
-<p>Q: What are the best programmers in common do you think?</p>
-
-<p>A: The best programmers are obsessed with improving as programmers. They love exploring new programming languages and new ideas. Another key trait of great programmers is a &ldquo;getting stuff done&rdquo; mentality. It&rsquo;s far more important to get something working than to make the perfect design. Plus a great programmer recognizes that you can&rsquo;t make a perfect design without first having something working that you can learn from.</p>
-
-<p><br/></p>
-
-<p>Q: What do you do in improve your writing skill?</p>
-
-<p>A: Write a lot. Get feedback. Read a lot and try to learn from great writers.</p></blockquote>
-
-<p>Sometimes, experience is important not because it tells something new, but because it confirms something you know.</p>
 
 		
 		

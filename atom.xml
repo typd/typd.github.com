@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2014-05-30T10:43:44+08:00</updated>
+  <updated>2014-06-02T23:01:14+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How app works on heroku]]></title>
+    <link href="http://typd.github.io/blog/2014/06/02/how-app-works-on-heroku/"/>
+    <updated>2014-06-02T22:32:00+08:00</updated>
+    <id>http://typd.github.io/blog/2014/06/02/how-app-works-on-heroku</id>
+    <content type="html"><![CDATA[<p>Heroku is a lead service in the Paas field. The <a href="http://12factor.net/">12 factor app</a> is a good summarize of their experiences on how to build a service. Util I&rsquo;ve read <a href="https://devcenter.heroku.com/articles/how-heroku-works">this &ldquo;how heroku works&rdquo; spec</a>, and deployed a service recently, now I know more or less how they achieve that.</p>
+
+<blockquote><h1>Deploy</h1>
+
+<ul>
+<li>Applications consist of your source code, a description of any dependencies, and a Procfile.</li>
+<li>Procfiles list process types &ndash; named commands that you may want executed.</li>
+<li>Deploying applications involves sending the application to Heroku using git.</li>
+<li>Buildpacks lie behind the slug compilation process. Buildpacks take your application, its dependencies, and the language runtime, and produce slugs.</li>
+<li>A slug is a bundle of your source, fetched dependencies, the language runtime, and compiled/generated output of the build system &ndash; ready for execution.</li>
+<li>Config vars contain customizable configuration data that can be changed independently of your source code. The configuration is exposed to a running application via environment variables.</li>
+<li>Add-ons are third party, specialized, value-added cloud services that can be easily attached to an application, extending its functionality.</li>
+<li>A release is a combination of a slug (your application), config vars and add-ons. Heroku maintains an append-only ledger of releases you make.</li>
+</ul>
+
+
+<h1>Runtime</h1>
+
+<ul>
+<li>Dynos are isolated, virtualized unix containers, that provide the environment required to run an application.</li>
+<li>Your application’s dyno formation is the total number of currently-executing dynos, divided between the various process types you have scaled.</li>
+<li>The dyno manager is responsible for managing dynos across all applications running on Heroku.</li>
+<li>Applications with only a single web dyno sleep after one hour of inactivity by the dyno manager. Scaling to multiple web dynos will avoid this.</li>
+<li>One-off Dynos are temporary dynos that run with their input/output attached to your local terminal. They’re loaded with your latest release.</li>
+<li>Each dyno gets its own ephemeral filesystem &ndash; with a fresh copy of the most recent release. It can be used as temporary scratchpad, but changes to the filesystem are not reflected to other dynos.</li>
+<li>Logplex automatically collates log entries from all the running dynos of your app, as well as other components such as the routers, providing a single source of activity.</li>
+<li>Scaling an application involves varying the number of dynos of each process type.</li>
+</ul>
+</blockquote>
+
+<h1>About heroku</h1>
+
+<ul>
+<li>As a Paas, I think it&rsquo;s more friendly than Google App Engine. And the specs are good.</li>
+<li>No judgement on the stability, real service cost yet.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learn from Smartisan T1 Conference]]></title>
@@ -1044,28 +1089,6 @@ E.g. curl, those tools should be vendored into the app.</li>
 <p>Good point! For engineering quality, culture and communication, it&rsquo;s recommended to do more code and architecture reviews cross teams. I heard some agile web companies even rotate developers among different projects. That sounds awesome to me, although it may have a slow start and bring in some uncertainty.</p>
 
 <p>To have the guys as smart as developers to collaborate well, some social practices become neccessary and more important.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Community edition of PyCharm!]]></title>
-    <link href="http://typd.github.io/blog/2013/10/28/community-edition-of-pycharm/"/>
-    <updated>2013-10-28T19:10:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/10/28/community-edition-of-pycharm</id>
-    <content type="html"><![CDATA[<p>Just found the python IDE from IDEA, PyCharm, released a community edition last month. Community edition means FREE! As an environment friendly language, python is good for both beginners and seniors. IDEA shares a good thing!</p>
-
-<p>I knew IDEA from IntelliJ. The well known IDE for java, won much praise from others and me over eclipse. PyCharm has similar advantages:</p>
-
-<ul>
-<li>Simple UI, easy to use and understand</li>
-<li>Highly configurable, key shortcuts, rich plugins</li>
-<li>Fast, alghouth it consumes a lot memory</li>
-</ul>
-
-
-<p>I can live without an IDE, but if I use one, these are pretty much I need most. I use vim for both ruby and python, with proper grammar highlights and indention. The biggest concern I have for it, is about refactoring. For a bigger size project, I believe an IDE can help to make life easier. No matter how wonderful your vim or emacs is, IDE is designed to be better than it. It&rsquo;s clear to me, an desktop application has less limitation than a terminal one.</p>
-
-<p>This free version is a good start for me. Let me see when I need the rich features from pro version, more framework build-in support, especially for web.</p>
 ]]></content>
   </entry>
   

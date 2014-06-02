@@ -1,0 +1,235 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>How app works on heroku - Yizhe Tang</title>
+	<meta name="author" content="Yizhe Tang">
+
+	
+	<meta name="description" content="How App Works on Heroku Heroku is a lead service in the Paas field. The 12 factor app is a good summarize of their experiences on how to build a &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="http://feedpress.me/typd" rel="alternate" title="Yizhe Tang" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://typd.github.io/blog/2014/06/02/how-app-works-on-heroku/">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-44831634-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+    
+        <img src="/images/la-small2.png" alt="Profile Picture" style="width: 160px;" />
+    
+</div>
+<hgroup>
+  <h1><a href="/">Yizhe Tang</a></h1>
+  
+  
+  
+    <span style="color:white">thinking and writing</span>
+  
+</hgroup>
+
+<nav id="main-nav">
+<ul class="main-navigation">
+  <li><a href="/blog/archives">archives</a></li>
+  <li><a href="/pages/toolbelt">my-toolbelt</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+		<a class="github" href="https://github.com/typd" title="GitHub">GitHub</a>
+		
+		
+		<a class="coderwall" href="https://coderwall.com/typd" title="Coderwall">Coderwall</a>
+		
+		
+		
+		
+		
+		
+		
+		<a class="douban" href="https://www.douban.com/people/typd" title="Douban">Douban</a>
+		
+		
+		<a class="rss" href="http://feedpress.me/typd" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">How App Works on Heroku</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Heroku is a lead service in the Paas field. The <a href="http://12factor.net/">12 factor app</a> is a good summarize of their experiences on how to build a service. Util I&rsquo;ve read <a href="https://devcenter.heroku.com/articles/how-heroku-works">this &ldquo;how heroku works&rdquo; spec</a>, and deployed a service recently, now I know more or less how they achieve that.</p>
+
+<blockquote><h1>Deploy</h1>
+
+<ul>
+<li>Applications consist of your source code, a description of any dependencies, and a Procfile.</li>
+<li>Procfiles list process types &ndash; named commands that you may want executed.</li>
+<li>Deploying applications involves sending the application to Heroku using git.</li>
+<li>Buildpacks lie behind the slug compilation process. Buildpacks take your application, its dependencies, and the language runtime, and produce slugs.</li>
+<li>A slug is a bundle of your source, fetched dependencies, the language runtime, and compiled/generated output of the build system &ndash; ready for execution.</li>
+<li>Config vars contain customizable configuration data that can be changed independently of your source code. The configuration is exposed to a running application via environment variables.</li>
+<li>Add-ons are third party, specialized, value-added cloud services that can be easily attached to an application, extending its functionality.</li>
+<li>A release is a combination of a slug (your application), config vars and add-ons. Heroku maintains an append-only ledger of releases you make.</li>
+</ul>
+
+
+<h1>Runtime</h1>
+
+<ul>
+<li>Dynos are isolated, virtualized unix containers, that provide the environment required to run an application.</li>
+<li>Your application’s dyno formation is the total number of currently-executing dynos, divided between the various process types you have scaled.</li>
+<li>The dyno manager is responsible for managing dynos across all applications running on Heroku.</li>
+<li>Applications with only a single web dyno sleep after one hour of inactivity by the dyno manager. Scaling to multiple web dynos will avoid this.</li>
+<li>One-off Dynos are temporary dynos that run with their input/output attached to your local terminal. They’re loaded with your latest release.</li>
+<li>Each dyno gets its own ephemeral filesystem &ndash; with a fresh copy of the most recent release. It can be used as temporary scratchpad, but changes to the filesystem are not reflected to other dynos.</li>
+<li>Logplex automatically collates log entries from all the running dynos of your app, as well as other components such as the routers, providing a single source of activity.</li>
+<li>Scaling an application involves varying the number of dynos of each process type.</li>
+</ul>
+</blockquote>
+
+<h1>About heroku</h1>
+
+<ul>
+<li>As a Paas, I think it&rsquo;s more friendly than Google App Engine. And the specs are good.</li>
+<li>No judgement on the stability, real service cost yet.</li>
+</ul>
+
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2014 - Yizhe Tang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+<script type="text/javascript">
+      var disqus_shortname = 'typd';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://typd.github.io/blog/2014/06/02/how-app-works-on-heroku/';
+        var disqus_url = 'http://typd.github.io/blog/2014/06/02/how-app-works-on-heroku/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- Clicky asynchronous tracking code -->
+<a title="Web Analytics" href="http://clicky.com/100664578"><img alt="Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(100664578);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100664578ns.gif" /></p></noscript>
+
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'typd.github.io'
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+
+
+		</div>
+	</div>
+</body>
+</html>
