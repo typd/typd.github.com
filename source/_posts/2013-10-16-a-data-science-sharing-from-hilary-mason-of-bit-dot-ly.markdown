@@ -10,7 +10,7 @@ This is a [good talk](https://bitly.com/A5Mjsv) from Chief Scientist at bit.ly. 
 
 + The solid work and thinking behind
 + A logical structure of the talk
-+ The attibute of sharing, not just showing off the done work or owned data
++ The attitude of sharing, not just showing off the done work or owned data
 + A good researcher needs to have a practical tool set, and good engineering sense
 
 
