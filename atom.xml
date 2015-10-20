@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2015-10-19T23:16:39+08:00</updated>
+  <updated>2015-10-21T00:08:46+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Revelution OS]]></title>
+    <link href="http://typd.github.io/blog/2015/10/20/revelution-os/"/>
+    <updated>2015-10-20T23:56:00+08:00</updated>
+    <id>http://typd.github.io/blog/2015/10/20/revelution-os</id>
+    <content type="html"><![CDATA[<p><a href="http://www.bilibili.com/video/av909925/">Revolution OS</a> is a movie about the birth of GNU, Linux, open source definition and so on.</p>
+
+<p>Free software movement and Open Source</p>
+
+<ul>
+<li>Free software movement aims to the attitude of life. Open source is more about publishing the source code of software.
+
+<ul>
+<li>&ldquo;GNU is an operating system that is free software—that is, it respects users&#8217; freedom. The development of GNU made it possible to use a computer without software that would trample your freedom.&rdquo; <a href="http://www.gnu.org/">http://www.gnu.org/</a></li>
+<li>Open source definition <a href="http://opensource.org/osd/">http://opensource.org/osd/</a></li>
+</ul>
+</li>
+</ul>
+
+
+<p>GNU and Linux</p>
+
+<ul>
+<li>GNU tended to release people from using private software. It completed the software first, but stucked on writing the kernel. Then linux came out to be a perfect kernel fit. People combined those two and called GNU/Linux. Later on, other distributions of linux like SuSE/Linux, Red Hat linux came out.</li>
+<li>Linus said himself is an &ldquo;engineer&rdquo;, while Richard Stallman is a &ldquo;philosopher&rdquo;.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How app works on heroku]]></title>
@@ -1074,21 +1104,6 @@ E.g. curl, those tools should be vendored into the app.</li>
 <li>The same dependency isolation techniques should be used on all process types.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A good point about the fresh guy for a project]]></title>
-    <link href="http://typd.github.io/blog/2013/10/31/a-good-point-about-the-fresh-guy-for-a-project/"/>
-    <updated>2013-10-31T22:48:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/10/31/a-good-point-about-the-fresh-guy-for-a-project</id>
-    <content type="html"><![CDATA[<p>Just heard this:</p>
-
-<blockquote><p>The newest person to the project is really useful, because of his fresh eyes, that would point out what&rsquo;s broken or fix processes.</p></blockquote>
-
-<p>Good point! For engineering quality, culture and communication, it&rsquo;s recommended to do more code and architecture reviews cross teams. I heard some agile web companies even rotate developers among different projects. That sounds awesome to me, although it may have a slow start and bring in some uncertainty.</p>
-
-<p>To have the guys as smart as developers to collaborate well, some social practices become neccessary and more important.</p>
 ]]></content>
   </entry>
   
