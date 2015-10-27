@@ -10,6 +10,8 @@ footer: true
 Here's a list from day-to-day reading or watching, worth to mark with simple notes.
 
 # 一席
+- [赵闯 - 我有一只霸王龙](http://yixi.tv/lecture/242)
+  - Full of passion about drawing dinosaurs
 - [周浩 - 以纪录片之名](http://yixi.tv/lecture/202)
   - 从摄影师，转为拍纪录片。避免程式化的摄影、记录
 - [止庵 - 惜别](http://yixi.tv/lecture/183)
