@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2015-10-29T00:28:30+08:00</updated>
+  <updated>2015-11-01T14:21:57+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -23,17 +23,17 @@
 <p>As he said, the motivation was the illness of the web security industry.</p>
 
 <ul>
-<li>Web companies value themselves by holding worthy user info</li>
-<li>But they care more about business than the responsibility/security of those</li>
-<li>Only big companies would have security stuff. But even though they are far away from doing a good job.</li>
+<li>Web companies value themselves by how much user info they hold</li>
+<li>But they care more about their business rather than the responsibility/safety</li>
+<li>Only big companies would have security stuff. Even though they are far from doing a good job.</li>
 <li>Users should care the security, but their interests are disturbed away, by the companies. Users don&rsquo;t/can&rsquo;t really know about the scenes behind.</li>
 <li>The companies ignore security issues even more as users don&rsquo;t care.</li>
 </ul>
 
 
-<p>That&rsquo;s the dead lock. And this is a bad ecosystem of the hackers. They would take the advantage of the leaks rather than report back to the source, which don&rsquo;t care too much.</p>
+<p>That&rsquo;s a dead lock. Also that&rsquo;s a bad ecosystem of the hackers. They would take the advantage of the leaks rather than report back to the source, which don&rsquo;t care too much.</p>
 
-<p>To jump out there, someone should do &ldquo;the right thing&rdquo; remarkably. That is, attract hackers to report leaks to the source through a public influential channel. And make companies treat them seriously, then open the leaks after solving.</p>
+<p>To jump out there, someone should do &ldquo;the right thing&rdquo; remarkably. That is, attract hackers to report leaks to the source through a public influential channel. Make companies treat them seriously, and open to public after fixing.</p>
 
 <p>Easier said than done. Technicals, influence, and patience are needed.</p>
 
