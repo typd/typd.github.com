@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Dive into Guava</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white-typd.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+<section data-markdown>
+  <script type="text/template">
+# Dive into Guava
+
+<p>Yizhe Tang @ RC.RD meituan</p>
+<p>2015-11-12</p>
+  </script>
+</section>
+
+<section>
+<h2>Start from "Null"</h2>
+    <pre><code data-trim>
+Map&lt;String, Object&gt; params = parseParam(paramString);
+if (params != null) { // why?
+    String value = params.get(key);
+    if (value != null) // why?
+        doSomething(value);
+}
+    </pre></code>
+
+</section>
+
+<section data-markdown>
+  <script type="text/template">
+## Start from "Null"
+
+<blockquote>
+Null is confusing
+</blockquote>
+
+- collection.get(key)
+  - the value is null
+  - not in collection
+- functions
+  - failure
+  - success, just null value
+- for users
+  - NullPointerException
+
+  </script>
+</section>
+
+<section data-markdown>
+  <script type="text/template">
+## Optional&lt;T&gt; from Guava
+
+- Replace a nullable T reference with a non-null value
+- Why?
+  - Explicitly check and get it out
+  - Force to handle absent case
+
+  </script>
+</section>
+
+<section>
+    <h2>Optional&lt;T&gt; from Guava</h2>
+
+    old way
+
+    <pre><code data-trim>
+String result = getSomethingMayReturnNull();
+if (result == null) // may easily forget
+    result = "default";
+print(result.toString());
+    </code></pre>
+
+    with Optional&lt;T&gt;
+
+    <pre><code data-trim>
+String result = null;
+Optional&lt;String&gt;  opt = tryToGet();
+if (opt.isPresent())
+    result = opt.get(); // .get() throw exception if not present
+else
+    result = "default";
+print(result.toString());
+
+// Shorter
+String result = tryToGet().or("default");
+print(result.toString());
+    </code></pre>
+</section>
+
+<section>
+    <h2>Optional&lt;T&gt; from Guava</h2>
+
+    Use case in Guava
+    <pre><code data-trim>
+// com.google.common.io.File.java
+public Optional&lt;Long&gt; sizeIfKnown()
+
+// com.google.common.net.MediaType.java
+public Optional&lt;Charset&gt; charset()
+
+// com.google.common.base.Enums.java
+public static &lt;T extends Enum&lt;T&gt;&gt; Optional&lt;T&gt;
+    getIfPresent(Class&lt;T&gt; enumClass, String value)
+
+// com.google.common.collect.BinaryTreeTraverser.java
+public abstract Optional&lt;T&gt; rightChild(T root);
+    </code></pre>
+
+Whenever "try to get" something, no guaranteed result
+
+    <pre><code data-trim>
+
+public Optional&lt;IP&gt; tryToResolveDomain(String domain)
+
+    </code></pre>
+</section>
+
+<section>
+    <h2>Optional&lt;T&gt; interface</h2>
+
+    <pre><code data-trim>
+// static creation
+Optional&lt;String&gt; strOpt = Optional.absent();
+strOpt = Optional.fromNullable(null);
+strOpt = Optional.of("string");
+
+// check and get
+if (strOpt.isPresent())
+    string = strOpt.get();
+
+// injection
+str = strOpt.or("default");
+str = strOpt.orNull();
+    </code></pre>
+</section>
+
+<section>
+<h2>Dive into <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/base/Optional.java">Optional.java</a></h2>
+
+Simplified version
+    <pre><code data-trim>
+// abstract, template, serializable class
+public abstract class Optional&lt;T&gt; implements Serializable
+    // static creators
+    public static &lt;T&gt; Optional&lt;T&gt; absent() {
+        return Absent.withType();
+    }
+
+    public static &lt;T&gt; Optional&lt;T&gt; of(T reference) {
+        // early check, Preconditions.checkNotNull();
+        return new Present&lt;T&gt;(checkNotNull(reference));
+    }
+    
+    public static &lt;T&gt; Optional&lt;T&gt; fromNullable(T nullableReference) {
+        return (nullableReference == null) ?
+            Optional.&lt;T&gt;absent() : new Present&lt;T&gt;(nullableReference);
+    }
+
+    public abstract boolean isPresent();
+    public abstract T get();
+    public abstract T or(T defaultValue);
+    public abstract T orNull();
+}
+    </code></pre>
+</section>
+
+<section>
+    <h2>Dive into <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/base/Optional.java">Optional.java</a></h2>
+    <img src="./img/optional-model.png" />
+</section>
+
+<section>
+<h2>Dive into <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/base/Present.java">Present.java</a></h2>
+
+    <pre><code data-trim>
+// final, non-public class
+// hold a value
+final class Present&lt;T&gt; extends Optional&lt;T&gt; {
+    private final T reference;
+
+    Present(T reference) { // the only constructor
+        this.reference = reference;
+    }
+
+    // explicit @Override annotation
+    @Override
+    public boolean isPresent() {
+        return true;
+    }
+
+    @Override
+    public T get() {
+        return reference;
+    }
+
+    @Override
+    public T or(T defaultValue) {
+        checkNotNull( // check null, Preconditions.checkNotNull();
+            defaultValue,
+            "use Optional.orNull() instead of Optional.or(null)"); // with hint
+        return reference;
+    }
+    
+    @Override
+    public T orNull() {
+        return reference;
+    }
+}
+
+    </code></pre>
+</section>
+
+<section>
+    <h2>Dive into <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/base/Absent.java">Absent.java</a></h2>
+
+    <pre><code data-trim>
+// final, non-public class
+final class Absent&lt;T&gt; extends Optional&lt;T&gt; {
+    // singleton
+    static final Absent&lt;Object&gt; INSTANCE = new Absent&lt;Object&gt;();
+
+    // private constructor for singleton
+    private Absent() {}
+
+    // method to convert type
+    static &lt;T&gt; Optional&lt;T&gt; withType() {
+        return (Optional&lt;T&gt;) INSTANCE;
+    }
+
+    @Override
+    public boolean isPresent() {
+        return false;
+    }
+
+    @Override
+    public T get() {
+        // indicates programming error, fail fast
+        throw new IllegalStateException(
+            "Optional.get() cannot be called on an absent value");
+    }
+
+    @Override
+    public T or(T defaultValue) {
+        return checkNotNull(defaultValue,
+            "use Optional.orNull() instead of Optional.or(null)");
+    }
+
+    @Override
+    public T orNull() {
+        return null;
+    }
+}
+    </code></pre>
+</section>
+
+<section>
+    <h2>Null pattern</h2>
+
+<blockquote>
+To avoid unpleasent null checks, a replacement offers "do nothing behavior"
+</blockquote>
+
+<img src="./img/null-pattern.png" />
+<br/>
+
+    <pre><code data-trim>
+@Autowired
+MetricsClient client;
+if (client != null)
+    client.send();
+
+// with "null pattern"
+// inject a DumbMetricsClient (extends MetricsClient) for non-prod envs
+@Autowired
+MetricsClient client;
+// do real job or nothing
+client.send();
+    </code></pre>
+</section>
+
+<section>
+    <h2>The other example: Joiner</h2>
+    <pre><code data-trim>
+Joiner.on("|").skipNulls().join("1", null, "3"); // "1|3"
+
+Joiner.on("|").useForNull("*").join("1", null, "3"); // "1|*|3"
+    </code></pre>
+</section>
+
+<section data-markdown>
+  <script type="text/template">
+## Joiner is
+
+- immutable: config methods will always return a new instance
+  - thread safe
+  - usable as a static final constant
+  </script>
+</section>
+
+<section>
+    <h2>Dive into <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/base/Joiner.java">Joiner.java</a></h2>
+    <pre><code data-trim>
+public class Joiner {
+    private final String separator;
+
+    // constructors
+    private Joiner(String separator) { // hide constructor
+        this.separator = checkNotNull(separator);
+    }
+    private Joiner(Joiner prototype) {
+      this.separator = prototype.separator;
+    }
+    public static Joiner on(String separator) {
+        return new Joiner(separator);
+    }
+
+    // action
+    public final String join(Iterator&lt;?&gt; parts) {
+        return appendTo(new StringBuilder(), parts).toString();
+    }
+
+    public &lt;A extends Appendable&gt; A appendTo(A appendable, Iterator&lt;?&gt; parts)
+            throws IOException {
+        checkNotNull(appendable); // check
+        if (parts.hasNext()) {
+            appendable.append(toString(parts.next()));
+            while (parts.hasNext()) {
+                appendable.append(separator);
+                appendable.append(toString(parts.next()));
+            }
+        }
+        return appendable;
+    }
+
+    CharSequence toString(Object part) {
+        checkNotNull(part);
+        return (part instanceof CharSequence) ? (CharSequence) part : part.toString();
+    }
+
+    public Joiner skipNulls() {
+        ...
+    }
+    public Joiner useForNull(final String nullText) {
+        ...
+    }
+}
+    </code></pre>
+</section>
+
+<section>
+    <h2>Dive into <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/base/Joiner.java">Joiner.java</a></h2>
+    <pre><code data-trim>
+public class Joiner {
+    ...
+
+    public Joiner useForNull(final String nullText) {
+        checkNotNull(nullText);
+        // anonymous class, many functional programming are done through this
+        return new Joiner(this) {
+            @Override
+            CharSequence toString(Object part) {
+                return (part == null) ? nullText : Joiner.this.toString(part);
+            }
+
+            @Override
+            public Joiner useForNull(String nullText) {
+                // can't do this then 
+                throw new UnsupportedOperationException("already specified useForNull");
+            }
+
+            @Override
+            public Joiner skipNulls() {
+                // can't do this then 
+                throw new UnsupportedOperationException("already specified useForNull");
+            }
+        };
+    }
+
+    ...
+}
+    </code></pre>
+</section>
+
+<section>
+    <h2>Dive into <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/base/Joiner.java">Joiner.java</a></h2>
+    <pre><code data-trim>
+public class Joiner {
+    ...
+
+    public Joiner skipNulls() {
+        return new Joiner(this) {
+            @Override
+            public &lt;A extends Appendable&gt; A appendTo(A appendable, Iterator&lt;?&gt; parts)
+                    throws IOException {
+                checkNotNull(appendable, "appendable");
+                checkNotNull(parts, "parts");
+                while (parts.hasNext()) {
+                    Object part = parts.next();
+                    if (part != null) {
+                        appendable.append(Joiner.this.toString(part));
+                        break;
+                    }
+                }
+                while (parts.hasNext()) {
+                  Object part = parts.next();
+                  if (part != null) {
+                      appendable.append(separator);
+                      appendable.append(Joiner.this.toString(part));
+                  }
+                }
+                return appendable;
+            }
+
+            @Override
+            public Joiner useForNull(String nullText) {
+                throw new UnsupportedOperationException(
+                    "already specified skipNulls");
+            }
+        };
+    }
+
+    ...
+}
+    </code></pre>
+</section>
+
+<section>
+    <h2>Decorator pattern</h2>
+
+<blockquote>
+Extend the functionality of a certain object statically, or at run-time, independently of other instances of the same class
+</blockquote>
+
+<img src="./img/decorator2.png" />
+</section>
+
+<section data-markdown>
+  <script type="text/template">
+## Other goods
+
+- Guava
+  - Strings
+  - Cache
+  - Collections
+- JodaTime
+  </script>
+</section>
+
+<section data-markdown>
+  <script type="text/template">
+# Q & A
+  </script>
+</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
