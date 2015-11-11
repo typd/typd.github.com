@@ -116,7 +116,7 @@ else
     result = "default";
 print(result.toString());
 
-// Shorter
+// shorter
 String result = tryToGet().or("default");
 print(result.toString());
     </code></pre>
@@ -156,8 +156,8 @@ public Optional&lt;IP&gt; tryToResolveDomain(String domain)
     <pre><code data-trim>
 // static creation
 Optional&lt;String&gt; strOpt = Optional.absent();
-strOpt = Optional.fromNullable(null);
 strOpt = Optional.of("string");
+strOpt = Optional.fromNullable(valueOrNull);
 
 // check and get
 if (strOpt.isPresent())
@@ -182,7 +182,7 @@ public abstract class Optional&lt;T&gt; implements Serializable
     }
 
     public static &lt;T&gt; Optional&lt;T&gt; of(T reference) {
-        // early check, Preconditions.checkNotNull();
+        // early check to fail fast, Preconditions.checkNotNull();
         return new Present&lt;T&gt;(checkNotNull(reference));
     }
     
@@ -291,12 +291,11 @@ final class Absent&lt;T&gt; extends Optional&lt;T&gt; {
 <section>
     <h2>Null pattern</h2>
 
+<img src="./img/null-pattern.png" />
+
 <blockquote>
 To avoid unpleasent null checks, a replacement offers "do nothing behavior"
 </blockquote>
-
-<img src="./img/null-pattern.png" />
-<br/>
 
     <pre><code data-trim>
 @Autowired
@@ -305,7 +304,7 @@ if (client != null)
     client.send();
 
 // with "null pattern"
-// inject a DumbMetricsClient (extends MetricsClient) for non-prod envs
+// inject a DumbMetricsClient (extends MetricsClient) 
 @Autowired
 MetricsClient client;
 // do real job or nothing
@@ -315,6 +314,19 @@ client.send();
 
 <section>
     <h2>The other example: Joiner</h2>
+Old way
+    <pre><code data-trim>
+StringBuilder builder = new StringBuilder();
+if (parts.length &gt; 1)
+    builder.append(parts[0]);
+for (int i = 1; i &lt;= parts.length - 1; i++) {
+    builder.append("|");
+    builder.append(parts[i]);
+}
+builder.toString();
+    </code></pre>
+
+With Joiner
     <pre><code data-trim>
 Joiner.on("|").skipNulls().join("1", null, "3"); // "1|3"
 
@@ -334,6 +346,9 @@ Joiner.on("|").useForNull("*").join("1", null, "3"); // "1|*|3"
 
 <section>
     <h2>Dive into <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/base/Joiner.java">Joiner.java</a></h2>
+    <pre><code data-trim>
+Joiner.on("|").skipNulls().join("1", null, "3"); // "1|3"
+    </code></pre>
     <pre><code data-trim>
 public class Joiner {
     private final String separator;
@@ -478,6 +493,15 @@ Extend the functionality of a certain object statically, or at run-time, indepen
   - Cache
   - Collections
 - JodaTime
+  </script>
+</section>
+
+
+<section data-markdown>
+  <script type="text/template">
+## Code as Poetry
+
+<img src="./img/python.png" />
   </script>
 </section>
 
