@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2015-11-12T00:11:59+08:00</updated>
+  <updated>2015-11-15T23:11:14+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dive into Guava]]></title>
+    <link href="http://typd.github.io/blog/2015/11/15/dive-into-guava/"/>
+    <updated>2015-11-15T11:00:00+08:00</updated>
+    <id>http://typd.github.io/blog/2015/11/15/dive-into-guava</id>
+    <content type="html"><![CDATA[<p>Back to basic, a talk I gave to team</p>
+
+<iframe src="./res/dive-into-guava-talk/index.me.html" width="800" height="300" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</iframe>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Security industry intro]]></title>
@@ -921,59 +934,6 @@
 <p><img src="http://imgs.xkcd.com/comics/movie_narrative_charts.png" alt="" /></p>
 
 <p>I&rsquo;ve interviewed a candidate from a research department of that company. He showed me this graph and said his project was about automatically generating store line graph like this. Use algorithms like DP, to re-order and group the character lines, reduce cross point count, etc. Those ideas make sense to me.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The right way of logging]]></title>
-    <link href="http://typd.github.io/blog/2013/11/06/the-right-way-of-logging/"/>
-    <updated>2013-11-06T22:19:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/11/06/the-right-way-of-logging</id>
-    <content type="html"><![CDATA[<p>After read the 12-factor app spec, I took a close look to the logging section. For an application, it feels so nature to write logs to a file. But I just feel something isn&rsquo;t right.</p>
-
-<ul>
-<li>Do I need a cleaner tool like log rotate, or just pretend they&rsquo;re small forever?</li>
-<li>To debug something, I&rsquo;m just forced to ssh across ocean and use a crappy vim on the host to find something weird.</li>
-</ul>
-
-
-<p>&ldquo;Elephant in the room&rdquo;. Until I read <a href="http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/">this post</a> in the spec, things become clear. Now here&rsquo;s my understanding.</p>
-
-<!-- more -->
-
-
-<p>The application log looks like a stream, and then it should be a stream. We normally append it to a file, just because that&rsquo;s the most obvious way of treating it. But it&rsquo;s defenitly not the only way. In fact for logging, the application&rsquo;s duty is done once it outputs to the stream. The logic of handling (append, rotate, clean) files, should (or say &ldquo;can&rdquo;) not be a part of the application.</p>
-
-<p>But what to do then if the application doesn&rsquo;t handle the log stream output. It&rsquo;s actually easier and more robust to take it out. Tools like Unix pipe, and <a href="http://logstash.net/">logstash</a> or <a href="https://github.com/fluent/fluentd">fluend</a> are more good at it than any application side logging lib.</p>
-
-<p>For simple file logging, you can use</p>
-
-<pre><code>$ mydaemon &gt;&gt; /var/log/mydaemon.log
-</code></pre>
-
-<p>For distributed logging,</p>
-
-<pre><code>$ mydaemon | logger
-</code></pre>
-
-<p>Or still want a log file</p>
-
-<pre><code>$ mydaemon | tee /var/log/mydaemon.log | logger
-</code></pre>
-
-<p>The &ldquo;logger&rdquo; is a placeholder for tools like logstash, which can be assembled into any kind of pipe line easily. Logstash has <a href="http://logstash.net/docs/1.2.2/">doc</a> and <a href="http://cookbook.logstash.net/">cookbooks</a>. Just choose the input, output, filter as you need.</p>
-
-<p>A typical setup may be:</p>
-
-<pre><code>log stream
-=&gt; shipper: send log through udp out of the host
-=&gt; message queue: redis, mongodb, etc.
-=&gt; parser: parse each line to get timestamp, attributes, etc. May ingest parse logic here
-=&gt; elastic search: build index according to the parse result
-=&gt; web ui: for centralized viewing, querying, alerting, etc.
-</code></pre>
-
-<p>Move the elephant out of the room.</p>
 ]]></content>
   </entry>
   
