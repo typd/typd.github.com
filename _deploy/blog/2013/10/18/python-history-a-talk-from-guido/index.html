@@ -1,0 +1,293 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Python history, a talk from Guido - Yizhe Tang</title>
+	<meta name="author" content="Yizhe Tang">
+
+	
+	<meta name="description" content="Python History, a Talk From Guido This talk titled &ldquo;History of Python&rdquo; is from Guido at Dropbox, before he joined Dropbox. It&rsquo;s a &hellip;">
+	
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="http://feedpress.me/typd" rel="alternate" title="Yizhe Tang" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://typd.github.io/blog/2013/10/18/python-history-a-talk-from-guido/">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/typd.css" rel="stylesheet" type="text/css">
+	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+	<script src="./javascripts/jquery-1.11.3.min.js"></script>
+	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-44831634-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+    
+        <img src="/images/la-small2.png" alt="Profile Picture" style="width: 160px;" />
+    
+</div>
+<hgroup>
+  <h1><a href="/">Yizhe Tang</a></h1>
+  
+  
+  
+    <span style="color:white">thinking and writing</span>
+  
+</hgroup>
+
+<nav id="main-nav">
+<ul class="main-navigation">
+  <li><a href="/blog/archives">archives</a></li>
+  <li><a href="/pages/toolbelt">my-toolbelt</a></li>
+  <li><a href="/pages/remarkable">remarkable-list</a></li>
+</ul>
+
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+		
+		
+		
+		<a class="github" href="https://github.com/typd" title="GitHub">GitHub</a>
+		
+		
+		<a class="coderwall" href="https://coderwall.com/typd" title="Coderwall">Coderwall</a>
+		
+		
+		
+		
+		
+		
+		
+		<a class="douban" href="https://www.douban.com/people/typd" title="Douban">Douban</a>
+		
+		
+		<a class="rss" href="http://feedpress.me/typd" title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>				
+			</div>
+		</div>	
+		<div class="mid-col">
+			
+				
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">Python History, a Talk From Guido</h1>
+	<div class="entry-content" itemprop="articleBody"><p>This <a href="http://bit.ly/nsaEak">talk</a> titled &ldquo;History of Python&rdquo; is from Guido at Dropbox, before he joined Dropbox. It&rsquo;s a great talk, especially for python fans like me.</p>
+
+<h1>Notes</h1>
+
+<p>Guido was inspired by ABC. He commented on ABC&rsquo;s goods and bads.</p>
+
+<p>Python is originally for day to day work (yes, every language inventor says that).</p>
+
+<!-- more -->
+
+
+<p>He had good summary on the philosophies behinds python, and they&rsquo;re also useful for other tasks.</p>
+
+<blockquote><p>Skunkworks (early days) Design philosophy</p>
+
+<blockquote><ul>
+<li>Borrow ideas whenever it makes sense</li>
+<li>As simple as possible, no simpler (Einstein)</li>
+<li>Do one thing well (UNIX)</li>
+<li>Don&rsquo;t fret about performance (fix it later)</li>
+<li>Go with the flow (don&rsquo;t fight env)</li>
+<li>Perfection is the enemy of the good</li>
+<li>Cutting corners is okay (get back to it later)</li>
+</ul>
+</blockquote>
+
+<p>User-centric design philosophy</p>
+
+<blockquote><ul>
+<li>Avoid platform ties, but not religiously</li>
+<li>Don&rsquo;t bother the user with details</li>
+<li>Discourage but allow coding to the platform</li>
+<li>Offer multiple levels of extensibility</li>
+<li>Errors should not be fatal, if possible</li>
+<li>Errors should never pass silently</li>
+<li>Don&rsquo;t blame the user for bugs in python</li>
+</ul>
+</blockquote></blockquote>
+
+<p>Also, he recalled the process of python community growing up. That&rsquo;s the main reason of python&rsquo;s success.</p>
+
+<p>In Q&amp;A section,</p>
+
+<ul>
+<li>Didn&rsquo;t know unicode at early days</li>
+<li>About pyc files:
+
+<ul>
+<li>the first version of python doesn&rsquo;t have pyc, it parses the module first, but,
+
+<ul>
+<li>the parser is relatively slow</li>
+<li>need much memory</li>
+</ul>
+</li>
+<li>some may release pyc file to avoid source code leak, but there&rsquo;re pasers can decode pyc well</li>
+<li>python3 only have one directory for pyc files</li>
+</ul>
+</li>
+<li>Regrets about python
+
+<ul>
+<li>lambda can be done in other ways</li>
+<li>reduce() method is hard to read</li>
+<li>unicode for python2</li>
+</ul>
+</li>
+<li>Alternative python implementations
+
+<ul>
+<li>always encourage others</li>
+<li>pypy is written by increadible smart peoples, sometimes they&rsquo;re too smart for their own good, they write really complicated stuff, &hellip; some code has explosion of cleverness, you hope it&rsquo;s right, if not, there&rsquo;s only one person in the world can debug it</li>
+</ul>
+</li>
+<li>Q: back to early days, will you do unit testing, what would it look like?
+
+<ul>
+<li>In 96-98, we made long effects to add tests, before that, very few tests</li>
+<li>Not much sense about testing in early days</li>
+</ul>
+</li>
+<li>Python2 and python3
+
+<ul>
+<li>In 5 years, everybody gonna use py3</li>
+</ul>
+</li>
+</ul>
+
+
+<h1>Others</h1>
+
+<p>I&rsquo;ve seen Guido&rsquo;s talk several times, and luckily seen in person once. He&rsquo;s a typical geek to me, has his own style, talks slowly and logically, mature, respect the audiences, and love to interact with community. And he&rsquo;s  pratical, you can know that from this talk. He may not like to do &ldquo;really&rdquo; smart things to amaze the crowd.</p>
+</div>
+
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	
+	<a class="addthis_counter addthis_pill_style"></a>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+
+
+<section id="comment">
+    <h1 class="title">Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</section>
+</div>
+			</div>
+			<footer id="footer" class="inner"><p>
+  Copyright &copy; 2016 - Yizhe Tang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a></footer>
+			
+
+<script type="text/javascript">
+      var disqus_shortname = 'typd';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://typd.github.io/blog/2013/10/18/python-history-a-talk-from-guido/';
+        var disqus_url = 'http://typd.github.io/blog/2013/10/18/python-history-a-talk-from-guido/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- Clicky asynchronous tracking code -->
+<a title="Web Analytics" href="http://clicky.com/100664578"><img alt="Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+<script type="text/javascript">
+var clicky_site_ids = clicky_site_ids || [];
+clicky_site_ids.push(100664578);
+(function() {
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//static.getclicky.com/js';
+  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+})();
+</script>
+<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100664578ns.gif" /></p></noscript>
+
+<!-- Start of Woopra Code -->
+<script>
+(function(){
+    var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+})("woopra");
+
+woopra.config({
+    domain: 'typd.github.io'
+});
+woopra.track();
+</script>
+<!-- End of Woopra Code -->
+
+
+		</div>
+	</div>
+</body>
+</html>
