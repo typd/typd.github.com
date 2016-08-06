@@ -27,7 +27,10 @@
 	<link href="/stylesheets/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
-	<script src="/javascripts/jquery-1.11.3.min.js"></script>
+    <!-- use external jquery is faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="/javascripts/jquery-1.11.3.min.js"></script> -->
+    
 	<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -121,11 +124,6 @@
 </article>
 
 
-<section id="comment">
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-</section>
-
 </div>
 			</div>
 			<footer id="footer" class="inner"><p>
@@ -135,25 +133,10 @@
 </p>
 
 </footer>
-			
+			<!-- NOTE disqus is not accessable -->
+<!-- 
 
-<script type="text/javascript">
-      var disqus_shortname = 'typd';
-      
-        
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://typd.github.io/blog/2013/10/31/a-good-point-about-the-fresh-guy-for-a-project/';
-        var disqus_url = 'http://typd.github.io/blog/2013/10/31/a-good-point-about-the-fresh-guy-for-a-project/';
-        var disqus_script = 'embed.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
+ -->
 
 
 
