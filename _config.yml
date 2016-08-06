@@ -46,6 +46,7 @@ paginate: 10          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read more"  # "Continue reading" link text at the bottom of excerpted articles
+page_sharing: false
 
 titlecase: true       # Converts page and post titles to titlecase
 
@@ -90,16 +91,9 @@ google_plus_one_size: medium
 googleplus_user:
 googleplus_hidden: false
 
-# Pinboard
-pinboard_user: 
-pinboard_count: 3
-
-# Delicious
-delicious_user:
-delicious_count: 3
-
 # Disqus Comments
-disqus_short_name: typd
+# NOTE 2016-08 by Yizhe, disqus is not accessable
+disqus_short_name: 
 disqus_show_comment_count: false
 
 # Google Analytics

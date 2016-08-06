@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Remarkable list"
+title: "Picks"
 date: 2015-10-19 22:09
 comments: true
 sharing: true
 footer: true
 ---
 
-Here's a list from day-to-day reading or watching, worth to mark with simple notes.
+This is a list of day-to-day picks,
 
 # 一席
 - [赵闯 - 我有一只霸王龙](http://yixi.tv/lecture/242)

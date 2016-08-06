@@ -1,66 +1,64 @@
 ---
 layout: page
-title: "My toolbelt"
+title: "Toolbelt"
 date: 2013-11-22 23:25
 comments: true
 sharing: true
 footer: true
 ---
 
-Here are the tools with comments for my daily life and work. I will update this list continuously.
+Tools for life and work.
 
 # Laptop
-- mac: developer friendly, worth the price.
-- [Alfred](http://www.alfredapp.com/): shortcut to what you want
-- [Shiftit](https://github.com/fikovnik/ShiftIt): manage window size and position for OSX
+- mac: developer friendly
+- [Alfred](http://www.alfredapp.com/)
+- [Shiftit](https://github.com/fikovnik/ShiftIt)
 - [Chrome](https://www.google.com/intl/en/chrome/browser/)
   - [Auto pager](https://chrome.google.com/webstore/detail/autopager-chrome/mmgagnmbebdebebbcleklifnobamjonh?hl=zh-CN)
   - [Evernote button](https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc?hl=zh-CN)
-  - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb): This is AWESOME! Use keyboard to open links rather than mouse.
-  - [1Password](https://agilebits.com/onepassword): or Mac OS keychain
+  - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)
 - [dropbox](http://dropbox.com)
-- [Vox](http://coppertino.com/vox/): the best music player on mac as I know.
+- [Vox](http://coppertino.com/vox/)
 
 # Tool sites
-- [Evernote](http://www.evernote.com): besides taking notes, I also use it as a bookmark system like del.icio.us
-- [Feedspot](http://www.feedspot.com): switched from feedly and google reader to it
+- [Evernote](http://www.evernote.com)
+- [Feedspot](http://www.feedspot.com)
 - [Github](http://www.github.com)
-- [Douban](http://www.douban.com): I use it as a database for read books and watched movies
+- [Douban](http://www.douban.com)
 - [SurveyMonkey](https://www.surveymonkey.com/)
 
 # Good stuff online
-- [Podcast - Ruby Rogus](http://rubyrogues.com/): each week 4-6 rubiers pick a topic and share their thoughts
-- [Podcast - Thoughbot Giant Robots](https://learn.thoughtbot.com/giantrobots): weekly technical interview
+- [Podcast - Ruby Rogus](http://rubyrogues.com/)
+- [Podcast - Thoughbot Giant Robots](https://learn.thoughtbot.com/giantrobots)
 
 # Mobile
 - WeChat
-- Baidu Map
 - Dianping
 - Evernote
 
 # Developing and engineering
 ## General
-- [Homebrew](http://brew.sh/): package manager for mac
-- [Python](http://python.org/): "Explicit is better than implicit"; prefer python3 to python2, as it has many improvements
+- [Homebrew](http://brew.sh/): package manager of mac
+- [Python](http://python.org/): "Explicit is better than implicit"
 - [Ruby](https://www.ruby-lang.org/en/): "Convention over configuration"
   - [rbenv](https://github.com/sstephenson/rbenv): manage ruby versions
-  - [Pry](http://pryrepl.org/): a drop-in replacement to irb, many amazing features
-- [Scala](http://www.scala-lang.org/): modern java, take the advantage of JVM
-- [Node.js](http://nodejs.org/): easy for small sites
+  - [Pry](http://pryrepl.org/): a drop-in replacement to irb
+- [Scala](http://www.scala-lang.org/)
+- [Node.js](http://nodejs.org/)
 - [Git](http://git-scm.com): no more svn
-- [AWS](http://aws.amazon.com/): Iaas, infrastructure as a service
-- [Heroku](http://www.heroku.com/): Paas, platform as a service.
+- [AWS](http://aws.amazon.com/)
+- [Heroku](http://www.heroku.com/)
 
 ## Shell
-- [zsh](http://www.zsh.org/): a better shell with many improvements than bash
-  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh): provides nice themes for zsh, highly configurable
-- [vim](http://www.vim.org/): I'm a vim user and still learning it. Haven't tried emacs yet.
-  - [nerdtree](https://github.com/scrooloose/nerdtree): a tree explorer plugin.
+- [zsh](http://www.zsh.org/): a better shell
+  - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh): nice themes of zsh, highly configurable
+- [vim](http://www.vim.org/)
+  - [nerdtree](https://github.com/scrooloose/nerdtree)
 - [Command line En<->Zh dict](https://github.com/typd/cmd-dict): own work
-- [Command line search tool](https://github.com/typd/cmd-search): own work, search text within files
+- [Command line search tool](https://github.com/typd/cmd-search): own work
 - tree
-- [ExplainShell](http://explainshell.com/): explain shell commands
-  - [Explain shell from console](https://github.com/schneems/explain_shell): a tool to open it from console
+- [ExplainShell](http://explainshell.com/)
+  - [Explain shell from console](https://github.com/schneems/explain_shell)
 
 ## IDE
 - [IntelliJ](http://www.jetbrains.com/idea/): java and scala
@@ -68,15 +66,15 @@ Here are the tools with comments for my daily life and work. I will update this 
 ## Project monitoring
 - [Logstash](http://logstash.net/): highly configurable tool to manage events and program logs
 - [Graphite](http://graphite.wikidot.com/): collect metrics from services and do scalable realtime graphing
-  - [Metricsd](https://github.com/mojodna/metricsd): a metrics aggregator for Graphite that supports counters, histograms and meters
+  - [Metricsd](https://github.com/mojodna/metricsd): a metrics aggregator
 
 ## Website tool
-- [UserVoice](https://www.uservoice.com/): easy tool to collect user feedback
-- [Disqus](http://disqus.com/): comments system for small sites
-- [Google Analytics](http://www.google.com/analytics/): still good
+- [UserVoice](https://www.uservoice.com/): collect user feedbacks
+- [Disqus](http://disqus.com/): comments system
+- [Google Analytics](http://www.google.com/analytics/)
 
 ## Continuous integration
-- [Jenkins](http://jenkins-ci.org/): still the best CI tool, easy to use, configurable, powerful
+- [Jenkins](http://jenkins-ci.org/)
 
 ## Machine Management
 - [Salt](https://github.com/saltstack/salt): use config files to manage machines
@@ -85,4 +83,4 @@ Here are the tools with comments for my daily life and work. I will update this 
 - [Monit](http://mmonit.com/monit/): deployed to target machine for managing and monitor machine status
 
 ## Misc
-- [Highcharts](http://www.highcharts.com/): a js library to render nice charts
+- [Highcharts](http://www.highcharts.com/): JS lib of renderring charts
