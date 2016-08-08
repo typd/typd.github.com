@@ -6,7 +6,9 @@ comments: true
 categories: 
 ---
 
-Back to basic, a talk I gave to team
+Back to basic, dive into guava:
 
-<iframe src="./res/dive-into-guava-talk/index.me.html" width="800" height="300" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+<!-- more -->
+
+<iframe src="/res/dive-into-guava-talk/index.me.html" width="800" height="300" scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
 </iframe>
