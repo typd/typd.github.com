@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2016-08-07T22:45:57+08:00</updated>
+  <updated>2016-08-08T21:17:21+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[General development pattern]]></title>
+    <link href="http://typd.github.io/blog/2016/08/08/general-development-pattern/"/>
+    <updated>2016-08-08T14:14:00+08:00</updated>
+    <id>http://typd.github.io/blog/2016/08/08/general-development-pattern</id>
+    <content type="html"><![CDATA[<p>Basic stuff, summarize the workflow of development, <a href="http://typd.github.io/res/general-development-pattern/General-development-pattern.pdf">General development pattern</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dive into Guava]]></title>
@@ -926,19 +935,6 @@
 <li><a href="http://www.highcharts.com/">Highcharts</a>: a js library to render nice charts</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Movie story line visualization]]></title>
-    <link href="http://typd.github.io/blog/2013/11/12/movie-story-line-visualization/"/>
-    <updated>2013-11-12T22:32:00+08:00</updated>
-    <id>http://typd.github.io/blog/2013/11/12/movie-story-line-visualization</id>
-    <content type="html"><![CDATA[<p>I was just watching a conf video which mentioned a graph I&rsquo;ve seen before.</p>
-
-<p><img src="http://imgs.xkcd.com/comics/movie_narrative_charts.png" alt="" /></p>
-
-<p>I&rsquo;ve interviewed a candidate from a research department of that company. He showed me this graph and said his project was about automatically generating store line graph like this. Use algorithms like DP, to re-order and group the character lines, reduce cross point count, etc. Those ideas make sense to me.</p>
 ]]></content>
   </entry>
   
