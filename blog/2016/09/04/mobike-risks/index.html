@@ -5,11 +5,11 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>What makes a good engineering culture? - Yizhe Tang</title>
+	<title>摩拜单车风控分析 - Yizhe Tang</title>
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="What Makes a Good Engineering Culture? I had many posts talk about engineering culture. Here&rsquo;s a good one from others summaries the characters &hellip;">
+	<meta name="description" content="摩拜单车风控分析 最近身边的出行类产品一下子出现了很多，其中最吸引我的还是没有车桩的摩拜单车mobike。我也深度试用了一把，不禁想到风控本行，把单车这样的高频工具通过网络自由借用，风险无疑是极大的。这个案例很有意思，下面从风控的视角分析： 产品分析 试用数据：4段行程，累计28.2公里，2. &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
 
 	<link href="http://feedpress.me/typd" rel="alternate" title="Yizhe Tang" type="application/atom+xml">
 	
-	<link rel="canonical" href="http://typd.github.io/blog/2014/04/22/what-makes-a-good-engineering-culture/">
+	<link rel="canonical" href="http://typd.github.io/blog/2016/09/04/mobike-risks/">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 	<link href="/favicon.png" rel="shortcut icon">
 	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -117,33 +117,82 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 			
 			<div class="mid-col-container">
 				<div id="content" class="inner"><article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">What Makes a Good Engineering Culture?</h1>
-	<div class="entry-content" itemprop="articleBody"><p>I had many posts talk about engineering culture. Here&rsquo;s <a href="http://goo.gl/2VlzmQ">a good one</a> from others summaries the characters of a good culture.</p>
+    <h1 class="title" itemprop="name">摩拜单车风控分析</h1>
+	<div class="entry-content" itemprop="articleBody"><p>最近身边的出行类产品一下子出现了很多，其中最吸引我的还是没有车桩的摩拜单车mobike。我也深度试用了一把，不禁想到风控本行，把单车这样的高频工具通过网络自由借用，风险无疑是极大的。这个案例很有意思，下面从风控的视角分析：</p>
 
-<blockquote><ul>
-<li>Optimize for iteration speed
+<h1>产品分析</h1>
 
-<ul>
-<li>Team-wise, fast iteration speed means having a set of strong leaders to help coordinate and drive team efforts</li>
-</ul>
-</li>
-<li>Push relentlessly toward automation
+<p>试用数据：4段行程，累计28.2公里，2.5小时，花费7元。</p>
+
+<h3>车的设计</h3>
 
 <ul>
-<li>deploying, testing, etc</li>
+<li>无线车锁，内置了通讯模块，即需要充电，开锁需要网络信号</li>
+<li>实心橡胶轮胎，不用打气，不怕扎胎，大大降低维护成本。</li>
+<li>金属主体车身相当结实，钢辐条，提高耐久度，且使用内六角螺母，加大拆卸难度；但缺点是自重太大，骑起来稍有费力。</li>
+<li>链条盒全封闭，无变速，避免了掉链子问题。</li>
+<li>有车铃，无车筐，车座高度无法调节，这些设计权衡牺牲了一定体验，但提高了车辆耐久度</li>
+<li>挡泥板较小，过水潭似乎有溅起到后背的可能。</li>
 </ul>
-</li>
-<li>Build the right software abstractions</li>
-<li>Develop a focus on high code quality with code reviews</li>
-<li>Maintain a respectful work environment</li>
-<li>Build shared ownership of code</li>
-<li>Allot 20% time</li>
-<li>Build a culture of learning and continuous improvement</li>
-<li>Hire the best</li>
-</ul>
-</blockquote>
 
-<p>This can be a check list for evaluating a company.</p>
+
+<h3>APP使用流程</h3>
+
+<ul>
+<li>扫码自动开锁，关锁自动还车。</li>
+<li>注册需身份证实名认证，验证手机短信。</li>
+</ul>
+
+
+<h1>风险分析</h1>
+
+<p>一切欺诈、作弊背后都会有某种诉求，分析风险最直接的方法就是围绕这些“诉求”思考，也就是可以获得哪些“利益”。</p>
+
+<h3>实物（单车）</h3>
+
+<p>最为直接，也是最大的风险。单车造价据说在200以上，那么盗整车或拆解零件都是要防范的问题。一旦有这样的动机：</p>
+
+<ul>
+<li>正常开锁后盗取，仅靠帐号的实名认证约束显然不够。</li>
+<li>直接偷盗或拆解。</li>
+</ul>
+
+
+<p>实物风险恐怕不是技术可以彻底解决的，需要有法规威慑和兜底，即使这样，运营时也要有一些Plan B快速止损。</p>
+
+<h3>使用权</h3>
+
+<p>既然使用是一种利益，那么扩大这种利益也是自然的想法。</p>
+
+<ul>
+<li>恶意欠费（如果不认定为偷窃），无线锁的设计应该无法自主关锁</li>
+<li>扩大使用权，用户条例里写明不能放置非公共区域，但如何防止用户这么干却是比较麻烦的问题。例如如何界定“公共区域”？可以放在无网络信号，或者限制运营者和其他用户进入的地方。再比如可以利用15分钟预约权来持续锁定车辆，虽然这还比较容易破解，但只要利益有足够吸引力时，“共享作弊服务”就可能出现了。——虽说使用权的利益会随着车辆的增多而变小，但这只是相对的，大如一座城，服务条例天然认为每个角落是平权的，但执行起来不可能做到，因此只要服务正向发展，“使用权”的争夺一定出现。</li>
+</ul>
+
+
+<h3>伤害权</h3>
+
+<p> 即伤害“东家”的“权力”。大家都懂这有很大的可能，来自利益对立方、勒索者甚至只是看不顺眼的团体。作为将带有自己品牌的实物出借的服务，更容易受到伤害。</p>
+
+<ul>
+<li>把单车骑到不该它们出现的地方，配合PR的攻击加成。</li>
+<li>恶意控制车辆，例如上面提到的无信号或限制运营者进入的地方。再腹黑一点，骑到收费停车棚里锁车走人，这锅恐怕只能东家来背了。</li>
+</ul>
+
+
+<h3>关于帐号</h3>
+
+<p>要求身份证实名认证是一种强势做法，毕竟出借了实物这么要求也有情理。好消息是有了一定威慑作用，坏消息是这作用真的有限，且不说黑产实际控制大量身份证，身份证本身是难以认证归属的，张三用李四的信息注册，未来李四的权益如何保证？</p>
+
+<p>实名认证还是一把双刃剑，后台应该存了姓名+身份证明文（不然无法起到威慑作用），且不说法规是否允许，如果一旦被攻击脱库，对服务和公众都是难以挽回的损失。</p>
+
+<h3>其他</h3>
+
+<p>在如此活跃的经济市场中，在车身贴牛皮癣也是很“好”的点子，“专业疏通”、“疑难杂症”。。。</p>
+
+<h1>但是</h1>
+
+<p>虽说有风险，其实都有其解决之道。风险不会打败创业者，不正视风险才会。经过一天的试用，mobike已深得我心，祝越做越好！</p>
 </div>
 
 </article>
