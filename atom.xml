@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2016-09-04T22:30:58+08:00</updated>
+  <updated>2016-09-04T22:40:19+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -18,7 +18,7 @@
     <link href="http://typd.github.io/blog/2016/09/04/mobike-risks/"/>
     <updated>2016-09-04T21:54:00+08:00</updated>
     <id>http://typd.github.io/blog/2016/09/04/mobike-risks</id>
-    <content type="html"><![CDATA[<p>最近身边的出行类产品一下子出现了很多，其中最吸引我的还是没有车桩的摩拜单车mobike。我也深度试用了一把，不禁想到风控本行，把单车这样的高频工具通过网络自由借用，风险无疑是极大的。这个案例很有意思，下面从风控的视角分析：</p>
+    <content type="html"><![CDATA[<p>身边的出行类产品突然出现了很多，其中最吸引我的还是没有车桩的摩拜单车mobike。我也深度试用了一把，不禁想到风控本行，把单车这样的高频工具通过网络自由借用，风险无疑是极大的。这个案例很有意思，下面从风控的视角分析：</p>
 
 <h1>产品分析</h1>
 
