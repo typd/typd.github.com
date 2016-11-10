@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Me"
+title: "Yizhe Tang"
 date: 2016-11-05 22:09
 comments: true
 sharing: true
@@ -17,7 +17,7 @@ footer: true
 
 ## Meituan Dianping
 
-**Tech Lead of Risk Control**, build the state-of-art Risk Control infrastructure from sketch. Responsible for anti-fraud, anti-trade bubble, anti-crawler, account and card security services to all company businesses. More info:
+**Tech Lead of Risk Control**, build the state-of-art Risk Control infrastructure from sketch. Responsible for **anti-fraud**, **anti-trade bubble**, **anti-crawler**, **account and card security** services to all company businesses.
 
 - [Meituan Online Risk Control System](http://tech.meituan.com/online-risk-control.html) @ Meituan Dianping tech blog
 - [Sharing of Meituan Risk Control Experience](http://safe.it168.com/a2016/1028/3000/000003000971_all.shtml) @ System Architecture China Conference 2016
@@ -25,6 +25,6 @@ footer: true
 
 ## Hulu
 
-Hulu beijing early members, lead/build systems including Audience Platform, Recommendation, Ad Targeting, Video Search, Hulu Plus Payments.
+**Hulu beijing early members**, lead/build systems including **Audience Platform**, **Recommendation**, **Ad Targeting**, **Video Search**, **Hulu Plus International Payments**.
 
 

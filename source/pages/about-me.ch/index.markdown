@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Me"
+title: "唐义哲"
 date: 2016-11-05 22:09
 comments: true
 sharing: true
@@ -17,12 +17,12 @@ footer: true
 
 ## 美团点评
 
-**风险控制技术负责人**，服务于美团点评全平台业务，提供**反作弊**、**反刷单**、**反爬虫**、**账户安全**、**反盗卡消费**服务，达到业界先进水平。
+**风险控制技术负责人**，构建全业务线风险控制平台，**反作弊**、**反刷单**、**反爬虫**、**账户安全**、**反盗卡消费**服务，达到业界先进水平。
 
 - [美团风险控制系统综述](http://tech.meituan.com/online-risk-control.html) @ 美团点评技术博客
 - [美团业务风控系统构建经验](http://safe.it168.com/a2016/1028/3000/000003000971_all.shtml) @2016中国系统构架师大会
 
 ## Hulu
 
-Hulu Beijing早期成员，主导及参与Audience Platfrom, Recommendation, Ad Targeting, Video Search, Hulu Plus Payments.
+**Hulu Beijing早期成员**，主导及参与**用户定位平台**、**推荐**、**广告投放**、**视频搜索**、**Hulu Plus国际支付**。
 
