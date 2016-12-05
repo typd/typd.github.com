@@ -25,6 +25,6 @@ footer: true
 
 ## Hulu
 
-**Hulu beijing early members**, lead/build systems including **Audience Platform**, **Recommendation**, **Ad Targeting**, **Video Search**, **Hulu Plus International Payments**.
+**Hulu beijing early member**, lead/build systems including **Audience Platform**, **Recommendation**, **Ad Targeting**, **Video Search**, **Hulu Plus International Payments**.
 
 
