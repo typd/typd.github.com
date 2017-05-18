@@ -7,11 +7,10 @@ sharing: true
 footer: true
 ---
 
-- Reading, travelling, hiking, photography
-- Cycling around Qinghai Lake, Hainan province
-- Have been to >90% provinces of mainland China
-- 5 times half marathon
+- Reading, travelling
 - PADI open water diver
+- 5 times half marathon
+- Have been to >90% provinces of mainland China
 
 <br/>
 
