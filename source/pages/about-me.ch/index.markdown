@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-- 阅读、旅行
+- 阅读、旅行、篮球（控卫）
 - 5次半程马拉松完赛
 - PADI认证开放水域潜水员
 - 点亮>90%大陆省份
@@ -20,7 +20,7 @@ footer: true
 
 - [美团点评业务风控系统构建经验](http://tech.meituan.com/risk-control-system-experience-sharing.html) @ 美团点评技术博客
 - [美团风险控制系统综述](http://tech.meituan.com/online-risk-control.html) @ 美团点评技术博客
-- [美团业务风控系统构建经验](http://safe.it168.com/a2016/1028/3000/000003000971_all.shtml) @ 2016中国系统构架师大会
+- [美团业务风控系统构建经验](/res/sacc-rc/201610-sacc-rc.pdf), [链接](http://safe.it168.com/a2016/1028/3000/000003000971_all.shtml) @ 2016中国系统构架师大会
 
 ## Hulu
 

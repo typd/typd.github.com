@@ -7,7 +7,7 @@ sharing: true
 footer: true
 ---
 
-- Reading, travelling
+- Reading, travelling, basketball (PG)
 - PADI open water diver
 - 5 times half marathon
 - Have been to >90% provinces of mainland China
@@ -20,7 +20,7 @@ footer: true
 
 - [Experience sharing on Meituan Dianping Risk Control System](http://tech.meituan.com/risk-control-system-experience-sharing.html) @ Meituan Dianping tech blog
 - [Meituan Online Risk Control System](http://tech.meituan.com/online-risk-control.html) @ Meituan Dianping tech blog
-- [Sharing of Meituan Risk Control Experience](http://safe.it168.com/a2016/1028/3000/000003000971_all.shtml) @ System Architecture China Conference 2016
+- [Meituan Risk Control Experience Sharing](/res/sacc-rc/201610-sacc-rc.pdf), [link](http://safe.it168.com/a2016/1028/3000/000003000971_all.shtml) @ System Architecture China Conference 2016
 
 
 ## Hulu
