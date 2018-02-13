@@ -4,7 +4,7 @@
   <title><![CDATA[Yizhe Tang]]></title>
   <link href="http://typd.github.io/atom.xml" rel="self"/>
   <link href="http://typd.github.io/"/>
-  <updated>2018-02-13T22:04:17+08:00</updated>
+  <updated>2018-02-13T22:34:46+08:00</updated>
   <id>http://typd.github.io/</id>
   <author>
     <name><![CDATA[Yizhe Tang]]></name>
@@ -20,7 +20,22 @@
     <id>http://typd.github.io/blog/2017/12/28/programmer-growth</id>
     <content type="html"><![CDATA[<p>I gave a talk to fresh graduates recently. Look backward is helpful.</p>
 
-<p><embed src="http://typd.github.io/res/programmer-growth/201712-programmer-growth.pdf"/></p>
+<div id="pdf-20171228"></div>
+
+
+<script>
+var options = {
+  pdfOpenParams: {
+  pagemode: "thumbs",
+  navpanes: 0,
+  toolbar: 0,
+  statusbar: 0,
+  view: "FitV"
+  }
+};
+PDFObject.embed("/res/programmer-growth/201712-programmer-growth.pdf", "#pdf-20171228", options);
+</script>
+
 ]]></content>
   </entry>
   
