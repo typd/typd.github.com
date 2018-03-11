@@ -26,3 +26,7 @@ footer: true
 
 **Hulu Beijing早期成员**，主导及参与**用户定位平台**、**推荐**、**广告投放**、**视频搜索**、**Hulu Plus国际支付**。
 
+[What defines hulu](http://v.youku.com/v_show/id_XMzQ1NTk2MzU0MA==.html?spm=a2h3j.8428770.3416059.1)
+
+[Be ExtraOridenary](http://v.youku.com/v_show/id_XMzQ1NTk4MTgxNg==.html?spm=a2h3j.8428770.3416059.1)
+

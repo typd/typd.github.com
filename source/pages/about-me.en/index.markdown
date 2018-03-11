@@ -27,4 +27,8 @@ footer: true
 
 **Hulu beijing early member**, lead/build systems including **Audience Platform**, **Recommendation**, **Ad Targeting**, **Video Search**, **Hulu Plus International Payments**.
 
+[What defines hulu](http://v.youku.com/v_show/id_XMzQ1NTk2MzU0MA==.html?spm=a2h3j.8428770.3416059.1)
+
+[Be ExtraOridenary](http://v.youku.com/v_show/id_XMzQ1NTk4MTgxNg==.html?spm=a2h3j.8428770.3416059.1)
+
 

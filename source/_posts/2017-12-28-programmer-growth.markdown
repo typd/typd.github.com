@@ -6,6 +6,20 @@ comments: true
 categories: 
 ---
 
-[A talk I gave to fresh graduates recently](/res/programmer-growth/201712-programmer-growth.pdf).
+I gave a talk to fresh graduates recently. Look backward is helpful.
 
-Look backward is a good way to help going forward.
+<br/>
+
+<div id="pdf-20171228" style="width:600px;height:400px"></div>
+<script>
+var options = {
+  pdfOpenParams: {
+  pagemode: "thumbs",
+  navpanes: 0,
+  toolbar: 0,
+  statusbar: 0,
+  view: "FitV"
+  }
+};
+PDFObject.embed("/res/programmer-growth/201712-programmer-growth.pdf", "#pdf-20171228", options);
+</script>
