@@ -18,9 +18,8 @@ footer: true
 
 **风险控制技术负责人**，构建全业务线风险控制平台，**反作弊**、**反刷单**、**反爬虫**、**账户安全**、**反盗卡消费**服务，同行业领先。
 
-- [美团点评业务风控系统构建经验](http://tech.meituan.com/risk-control-system-experience-sharing.html) @ 美团点评技术博客
-- [美团风险控制系统综述](http://tech.meituan.com/online-risk-control.html) @ 美团点评技术博客
-- [美团业务风控系统构建经验](/res/sacc-rc/201610-sacc-rc.pdf), [链接](http://safe.it168.com/a2016/1028/3000/000003000971_all.shtml) @ 2016中国系统构架师大会
+- [美团点评业务风控系统构建经验](https://tech.meituan.com/risk_control_system_experience_sharing.html) @ 美团点评技术博客
+- [美团风险控制系统综述](https://tech.meituan.com/online_risk_control.html) @ 美团点评技术博客
 
 ## Hulu
 
