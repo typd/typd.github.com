@@ -1,3 +1,12 @@
+# NOTE
+
+- `rake generate`
+- `rake deploy`
+
+
+
+# Original README
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.

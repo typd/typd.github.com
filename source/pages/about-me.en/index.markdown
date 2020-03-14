@@ -15,8 +15,11 @@ footer: true
 
 **Tech Lead of Risk Control**, build the state-of-art Risk Control infrastructure from sketch. Responsible for **anti-fraud**, **anti-trade bubble**, **anti-crawler**, **account and card security** services to all business units.
 
-- [Experience sharing on Meituan Dianping Risk Control System](http://tech.meituan.com/risk_control_system_experience_sharing.html) @ Meituan Dianping tech blog
-- [Meituan Online Risk Control System](http://tech.meituan.com/online_risk_control.html) @ Meituan Dianping tech blog
+- [美团点评业务风控系统构建经验](https://tech.meituan.com/2017/01/13/risk-control-system-experience-sharing.html) @ 美团点评技术博客
+- 美团风险控制系统综述 @ 美团点评技术博客
+
+- [Experience sharing on Meituan Dianping Risk Control System](https://tech.meituan.com/2017/01/13/risk-control-system-experience-sharing.html) @ Meituan Dianping tech blog
+- Meituan Online Risk Control System @ Meituan Dianping tech blog
 
 
 ## Hulu
