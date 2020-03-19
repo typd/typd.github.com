@@ -1,0 +1,50 @@
+---
+layout: page
+title: "美团点评业务风控系统构建经验 @ 中国系统架构师大会 2016"
+date: 2016-10-27 23:59
+comments: true
+sharing: true
+footer: true
+---
+
+<img src='/res/2016-10-27/201610-sacc-rc_001.png' width="65%"/><br/>
+
+<!-- more -->
+
+<img src='/res/2016-10-27/201610-sacc-rc_002.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_003.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_004.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_005.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_006.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_007.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_008.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_009.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_010.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_011.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_012.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_013.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_014.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_015.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_016.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_017.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_018.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_019.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_020.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_021.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_022.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_023.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_024.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_025.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_026.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_027.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_028.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_029.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_030.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_031.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_032.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_033.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_034.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_035.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_036.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_037.png' width="65%"/><br/>
+<img src='/res/2016-10-27/201610-sacc-rc_038.png' width="65%"/><br/>

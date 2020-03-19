@@ -2,6 +2,9 @@
 
 - `rake generate`
 - `rake deploy`
+- `rake preview`
+
+more, see Rakefile
 
 
 

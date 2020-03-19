@@ -1,0 +1,48 @@
+---
+layout: page
+title: "谈谈技术管理 @ QCon 上海 2018"
+date: 2018-10-19 23:59
+comments: true
+sharing: true
+footer: true
+---
+
+<img src='/res/2018-10-19/20181011-QCon-v3_001.png' width="80%"/><br/>
+
+<!-- more -->
+
+<img src='/res/2018-10-19/20181011-QCon-v3_002.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_003.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_004.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_005.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_006.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_007.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_008.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_009.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_010.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_011.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_012.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_013.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_014.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_015.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_016.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_017.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_018.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_019.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_020.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_021.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_022.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_023.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_024.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_025.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_026.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_027.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_028.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_029.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_030.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_031.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_032.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_033.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_034.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_035.png' width="80%"/><br/>
+<img src='/res/2018-10-19/20181011-QCon-v3_036.png' width="80%"/><br/>
