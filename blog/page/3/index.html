@@ -9,7 +9,7 @@
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="Dec 20th, 2013 Reading Notes of More Joel on Software 日复一日写程序，扪心自问，从junior到senior，积累的是什么。Joel Spolsky就是一个略带奇葩乐于分享能满足我好奇心的人，More Joel on &hellip;">
+	<meta name="description" content="Feb 24th, 2014 Nathan Marz&#8217;s Sharing Nathan Marz is the author of storm. Just read an interview of him from &ldquo;Programmer&rdquo; magazine &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -124,6 +124,120 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		
+		<span class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-24T23:02:00+08:00" data-updated="true" itemprop="datePublished">Feb 24<span>th</span>, 2014</time></span>
+        <!-- include post/categories.html -->
+	</div>
+    <h1 class="title" itemprop="name"><a href="/blog/2014/02/24/nathan-marzs-sharing/" itemprop="url">Nathan Marz&#8217;s Sharing</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p><a href="http://nathanmarz.com">Nathan Marz</a> is the author of <a href="https://github.com/nathanmarz/storm">storm</a>. Just read an interview of him from &ldquo;Programmer&rdquo; magazine. Here&rsquo;re the <a href="http://nathanmarz.com/blog/interview-with-programmer-magazine.html">English</a> and <a href="http://www.csdn.net/article/2014-02-05/2818311-Storm-Nathan-Marz">Chinese</a> version. Some quotes here.</p>
+
+<blockquote><p>Q: How to improve your skills as a programmer?</p>
+
+<p>A: I get better by doing a lot of programming and trying new things. One of the best ways to become a better programmer is to learn new programming languages. By learn I mean more than just learning the syntax of the language, I mean understanding the language&rsquo;s idioms and writing something substantial in it. &hellip;</p>
+
+<p><br/></p>
+
+<p>Q: Main lessons you learned in the last few years of your professional career?</p>
+
+<p>A: Feedback is everything. For product development and managing a team.</p>
+
+<p><br/></p>
+
+<p>Q: Process of building a software system?</p>
+
+<p>A: The general idea is to avoid making &ldquo;general&rdquo; or &ldquo;extensible&rdquo; solutions until you have a very deep understanding of the problem domain. &hellip; The sequence is &ldquo;First make it possible. Then make it beautiful. Then make it fast.&rdquo;</p>
+
+<p><br/></p>
+
+<p>Q: What are the best programmers in common do you think?</p>
+
+<p>A: The best programmers are obsessed with improving as programmers. They love exploring new programming languages and new ideas. Another key trait of great programmers is a &ldquo;getting stuff done&rdquo; mentality. It&rsquo;s far more important to get something working than to make the perfect design. Plus a great programmer recognizes that you can&rsquo;t make a perfect design without first having something working that you can learn from.</p>
+
+<p><br/></p>
+
+<p>Q: What do you do in improve your writing skill?</p>
+
+<p>A: Write a lot. Get feedback. Read a lot and try to learn from great writers.</p></blockquote>
+
+<p>Sometimes, experience is important not because it tells something new, but because it confirms something you know.</p>
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		
+		<span class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-22T21:54:00+08:00" data-updated="true" itemprop="datePublished">Jan 22<span>nd</span>, 2014</time></span>
+        <!-- include post/categories.html -->
+	</div>
+    <h1 class="title" itemprop="name"><a href="/blog/2014/01/22/non-blocking-pipe/" itemprop="url">Non Blocking Pipe</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Met a problem of linux pipe from daily work, finally got me to write a small tool to get rid of it. Worth to note.</p>
+
+<h1>Motivation</h1>
+
+<p>I&rsquo;ve built a central logging system based on logstash. It looks like this, basically,</p>
+
+<br/>
+
+
+<p><img src="/images/posts/2014-01-22/1.png" alt="" /></p>
+
+<br/>
+
+
+<p>Then every program use logstash as a shipper to redirect its log into the broker, which is a redis as message queue. As this <a href="http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/">blog</a> recommended, treatting log as stream rather than files, linux pipe make it possible to guide the stream to anywhere easily.</p>
+
+<pre><code>application | java -jar logstash.jar agent -f logstash.conf
+</code></pre>
+
+<p>The problem occurs when the redis was accidently down, causes</p>
+
+<ul>
+<li>Logstash blocked, which is a designed behavior of <a href="http://logstash.net/docs/1.3.3/life-of-an-event">logstash</a>. It says &ldquo;dropping messages or unlimited queue lenght are both undesirable behavior&rdquo;, so simply leaves no option and get it blocked.</li>
+<li>Then caused upstream application blocked, too! This is done by OS after the pipe buffer is filled up. This is a more serious problem as it&rsquo;s not easy to change OS default behavior.</li>
+</ul>
+
+
+
+		
+		<a href="/blog/2014/01/22/non-blocking-pipe/" class="more-link">Read more</a>
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -461,88 +575,6 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 
 		
 		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		
-		<span class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-28T19:10:00+08:00" data-updated="true" itemprop="datePublished">Oct 28<span>th</span>, 2013</time></span>
-        <!-- include post/categories.html -->
-	</div>
-    <h1 class="title" itemprop="name"><a href="/blog/2013/10/28/community-edition-of-pycharm/" itemprop="url">Community Edition of PyCharm!</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>Just found the python IDE from IDEA, PyCharm, released a community edition last month. Community edition means FREE! As an environment friendly language, python is good for both beginners and seniors. IDEA shares a good thing!</p>
-
-<p>I knew IDEA from IntelliJ. The well known IDE for java, won much praise from others and me over eclipse. PyCharm has similar advantages:</p>
-
-<ul>
-<li>Simple UI, easy to use and understand</li>
-<li>Highly configurable, key shortcuts, rich plugins</li>
-<li>Fast, alghouth it consumes a lot memory</li>
-</ul>
-
-
-<p>I can live without an IDE, but if I use one, these are pretty much I need most. I use vim for both ruby and python, with proper grammar highlights and indention. The biggest concern I have for it, is about refactoring. For a bigger size project, I believe an IDE can help to make life easier. No matter how wonderful your vim or emacs is, IDE is designed to be better than it. It&rsquo;s clear to me, an desktop application has less limitation than a terminal one.</p>
-
-<p>This free version is a good start for me. Let me see when I need the rich features from pro version, more framework build-in support, especially for web.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		
-		<span class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-24T11:18:00+08:00" data-updated="true" itemprop="datePublished">Oct 24<span>th</span>, 2013</time></span>
-        <!-- include post/categories.html -->
-	</div>
-    <h1 class="title" itemprop="name"><a href="/blog/2013/10/24/rewrite-code-from-scratch/" itemprop="url">Rewrite Code From Scratch?</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>As a developer, almost everyone has made a difficult choice, rewrite something from scratch. Joel Spolsky wrote <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">this</a> to explain why you shouldn&rsquo;t do it. There&rsquo;re some good reasons.</p>
-
-<h1>Article summary</h1>
-
-<p>The very important, but hidden reason,</p>
-
-<blockquote><p>It&rsquo;s hard to read code than to write it.</p></blockquote>
-
-<p>It&rsquo;s definitly true. But no need to blame developers or the one made the rewrite decision. It&rsquo;s a nature fact in software. You don&rsquo;t necessarily have gone with the last version process, no memory, just code, may have spec or not, may have the code owner or not.</p>
-
-<p>Then you may have bias to make the decision.</p>
-
-
-		
-		<a href="/blog/2013/10/24/rewrite-code-from-scratch/" class="more-link">Read more</a>
 	</div>
 
 </article>

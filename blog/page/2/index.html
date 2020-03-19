@@ -9,7 +9,7 @@
 	<meta name="author" content="Yizhe Tang">
 
 	
-	<meta name="description" content="May 20th, 2014 Catch Up the Change A senior co-worker gave a talk about his work and philosophy, which is interesting. His team called &ldquo;DevOps &hellip;">
+	<meta name="description" content="Jun 2nd, 2014 How App Works on Heroku Heroku is a lead service in the Paas field. The 12 factor app is a good summarize of their experiences on how &hellip;">
 	
 
   <!-- http://t.co/dKP3o1e -->
@@ -124,6 +124,132 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 			<div class="mid-col-container">
 				<div id="content" class="inner">
 <div itemscope itemtype="http://schema.org/Blog">
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		
+		<span class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-02T22:32:00+08:00" data-updated="true" itemprop="datePublished">Jun 2<span>nd</span>, 2014</time></span>
+        <!-- include post/categories.html -->
+	</div>
+    <h1 class="title" itemprop="name"><a href="/blog/2014/06/02/how-app-works-on-heroku/" itemprop="url">How App Works on Heroku</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>Heroku is a lead service in the Paas field. The <a href="http://12factor.net/">12 factor app</a> is a good summarize of their experiences on how to build a service. Util I&rsquo;ve read <a href="https://devcenter.heroku.com/articles/how-heroku-works">this &ldquo;how heroku works&rdquo; spec</a>, and deployed a service recently, now I know more or less how they achieve that.</p>
+
+<blockquote><h1>Deploy</h1>
+
+<ul>
+<li>Applications consist of your source code, a description of any dependencies, and a Procfile.</li>
+<li>Procfiles list process types &ndash; named commands that you may want executed.</li>
+<li>Deploying applications involves sending the application to Heroku using git.</li>
+<li>Buildpacks lie behind the slug compilation process. Buildpacks take your application, its dependencies, and the language runtime, and produce slugs.</li>
+<li>A slug is a bundle of your source, fetched dependencies, the language runtime, and compiled/generated output of the build system &ndash; ready for execution.</li>
+<li>Config vars contain customizable configuration data that can be changed independently of your source code. The configuration is exposed to a running application via environment variables.</li>
+<li>Add-ons are third party, specialized, value-added cloud services that can be easily attached to an application, extending its functionality.</li>
+<li>A release is a combination of a slug (your application), config vars and add-ons. Heroku maintains an append-only ledger of releases you make.</li>
+</ul>
+
+
+<h1>Runtime</h1>
+
+<ul>
+<li>Dynos are isolated, virtualized unix containers, that provide the environment required to run an application.</li>
+<li>Your application’s dyno formation is the total number of currently-executing dynos, divided between the various process types you have scaled.</li>
+<li>The dyno manager is responsible for managing dynos across all applications running on Heroku.</li>
+<li>Applications with only a single web dyno sleep after one hour of inactivity by the dyno manager. Scaling to multiple web dynos will avoid this.</li>
+<li>One-off Dynos are temporary dynos that run with their input/output attached to your local terminal. They’re loaded with your latest release.</li>
+<li>Each dyno gets its own ephemeral filesystem &ndash; with a fresh copy of the most recent release. It can be used as temporary scratchpad, but changes to the filesystem are not reflected to other dynos.</li>
+<li>Logplex automatically collates log entries from all the running dynos of your app, as well as other components such as the routers, providing a single source of activity.</li>
+<li>Scaling an application involves varying the number of dynos of each process type.</li>
+</ul>
+</blockquote>
+
+<h1>About heroku</h1>
+
+<ul>
+<li>As a Paas, I think it&rsquo;s more friendly than Google App Engine. And the specs are good.</li>
+<li>No judgement on the stability, real service cost yet.</li>
+</ul>
+
+
+		
+		
+	</div>
+
+</article>
+
+
+    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+	<div class="meta">
+		
+		<span class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-29T11:02:00+08:00" data-updated="true" itemprop="datePublished">May 29<span>th</span>, 2014</time></span>
+        <!-- include post/categories.html -->
+	</div>
+    <h1 class="title" itemprop="name"><a href="/blog/2014/05/29/learn-from-smartisan-t1-conference/" itemprop="url">Learn From Smartisan T1 Conference</a></h1>
+	<div class="entry-content" itemprop="articleBody">
+		<p>事隔几天，看完了<a href="http://v.youku.com/v_show/id_XNzE0Nzc0OTQ0.html">老罗的Smartisan T1发布会</a>。时长两个半小时只一个人演讲，能吸引我在屏幕前不换台，当然是有其牛逼之处的。</p>
+
+<h1>对行业本身的信息</h1>
+
+<ul>
+<li>电子消费品的全行业产业链可谓已经十分成熟。芯片、机型制造、相机、电池、系统、客服、物流，哪怕是大家各自标榜的“人性化”设计，其实都有足够成熟、专业的分解提供商，真正“自家”的，大概主要是拍板产品理念，对各提供商产品的使用、组装，和必要的软件开发。当然这也不简单，不过还是有些攒机之感。</li>
+<li>苹果太成功，让大家心悦诚服的追赶。苹果固然有产业链中积累的优势，但后起者都信心满满觉得可以超越。雷军说苹果卖服务，老罗说卖软件，但都不认为核心是硬件本身，这点起码靠谱。</li>
+</ul>
+
+
+<h1>演讲和营销策略</h1>
+
+<ul>
+<li>说老罗会演讲，恐怕大多数人不会反对，以前&#8221;老罗英语学校&#8221;的第一年演讲也不错</li>
+<li>作为后起的&#8221;小厂商&#8221;，营销策略尤为重要，这里做的也很聪明
+
+<ul>
+<li>&ldquo;我很懂每一个环节，芯片、声音、相机、设计、软件等等&#8221;（当然你说还不够）</li>
+<li>&ldquo;我用了最牛逼的芯片，声音调试，相机调试，设计，你可以不相信我，但谁谁谁你认识吧，不否认吧，软件我做的，我演示给你看；我就是搅局者，别以为别家每个环节都是自己做的，他们也不过是组装商，还没有好的选择品味。&rdquo;</li>
+<li>额外的心理营销，找到独特的痛点：捐助openSSL，门票抵现，防摔保险，背夹电池</li>
+</ul>
+</li>
+</ul>
+
+
+<h1>一些感受</h1>
+
+<ul>
+<li>手机固然是兵家必争之地，如此激烈的竞争中还能创新，确实值得佩服。即便是用了那么多外包的服务，不可否认这个团队认真的思考了方方面面，组装也是品味要求</li>
+<li>另一方面，产业链确实更成熟了，设计的作用日渐突出，这也是很多快速发展事务中更迭尤其快的部分。设计的创新可以带动一个产业</li>
+<li>也不难理解越来越多的设计资源集中在了电子产品上，更多资金、人力投入让这个产业的设计水准可以与汽车、家居等设计集中领领域比较。<a href="http://v.youku.com/v_show/id_XNTIwMjg0MTky.html">工业设计的发展过程本身也很有意思</a></li>
+</ul>
+
+
+		
+		
+	</div>
+
+</article>
 
 
     <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
@@ -549,120 +675,6 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 
 		
 		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		
-		<span class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-02-24T23:02:00+08:00" data-updated="true" itemprop="datePublished">Feb 24<span>th</span>, 2014</time></span>
-        <!-- include post/categories.html -->
-	</div>
-    <h1 class="title" itemprop="name"><a href="/blog/2014/02/24/nathan-marzs-sharing/" itemprop="url">Nathan Marz&#8217;s Sharing</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p><a href="http://nathanmarz.com">Nathan Marz</a> is the author of <a href="https://github.com/nathanmarz/storm">storm</a>. Just read an interview of him from &ldquo;Programmer&rdquo; magazine. Here&rsquo;re the <a href="http://nathanmarz.com/blog/interview-with-programmer-magazine.html">English</a> and <a href="http://www.csdn.net/article/2014-02-05/2818311-Storm-Nathan-Marz">Chinese</a> version. Some quotes here.</p>
-
-<blockquote><p>Q: How to improve your skills as a programmer?</p>
-
-<p>A: I get better by doing a lot of programming and trying new things. One of the best ways to become a better programmer is to learn new programming languages. By learn I mean more than just learning the syntax of the language, I mean understanding the language&rsquo;s idioms and writing something substantial in it. &hellip;</p>
-
-<p><br/></p>
-
-<p>Q: Main lessons you learned in the last few years of your professional career?</p>
-
-<p>A: Feedback is everything. For product development and managing a team.</p>
-
-<p><br/></p>
-
-<p>Q: Process of building a software system?</p>
-
-<p>A: The general idea is to avoid making &ldquo;general&rdquo; or &ldquo;extensible&rdquo; solutions until you have a very deep understanding of the problem domain. &hellip; The sequence is &ldquo;First make it possible. Then make it beautiful. Then make it fast.&rdquo;</p>
-
-<p><br/></p>
-
-<p>Q: What are the best programmers in common do you think?</p>
-
-<p>A: The best programmers are obsessed with improving as programmers. They love exploring new programming languages and new ideas. Another key trait of great programmers is a &ldquo;getting stuff done&rdquo; mentality. It&rsquo;s far more important to get something working than to make the perfect design. Plus a great programmer recognizes that you can&rsquo;t make a perfect design without first having something working that you can learn from.</p>
-
-<p><br/></p>
-
-<p>Q: What do you do in improve your writing skill?</p>
-
-<p>A: Write a lot. Get feedback. Read a lot and try to learn from great writers.</p></blockquote>
-
-<p>Sometimes, experience is important not because it tells something new, but because it confirms something you know.</p>
-
-		
-		
-	</div>
-
-</article>
-
-
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-	<div class="meta">
-		
-		<span class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-22T21:54:00+08:00" data-updated="true" itemprop="datePublished">Jan 22<span>nd</span>, 2014</time></span>
-        <!-- include post/categories.html -->
-	</div>
-    <h1 class="title" itemprop="name"><a href="/blog/2014/01/22/non-blocking-pipe/" itemprop="url">Non Blocking Pipe</a></h1>
-	<div class="entry-content" itemprop="articleBody">
-		<p>Met a problem of linux pipe from daily work, finally got me to write a small tool to get rid of it. Worth to note.</p>
-
-<h1>Motivation</h1>
-
-<p>I&rsquo;ve built a central logging system based on logstash. It looks like this, basically,</p>
-
-<br/>
-
-
-<p><img src="/images/posts/2014-01-22/1.png" alt="" /></p>
-
-<br/>
-
-
-<p>Then every program use logstash as a shipper to redirect its log into the broker, which is a redis as message queue. As this <a href="http://adam.heroku.com/past/2011/4/1/logs_are_streams_not_files/">blog</a> recommended, treatting log as stream rather than files, linux pipe make it possible to guide the stream to anywhere easily.</p>
-
-<pre><code>application | java -jar logstash.jar agent -f logstash.conf
-</code></pre>
-
-<p>The problem occurs when the redis was accidently down, causes</p>
-
-<ul>
-<li>Logstash blocked, which is a designed behavior of <a href="http://logstash.net/docs/1.3.3/life-of-an-event">logstash</a>. It says &ldquo;dropping messages or unlimited queue lenght are both undesirable behavior&rdquo;, so simply leaves no option and get it blocked.</li>
-<li>Then caused upstream application blocked, too! This is done by OS after the pipe buffer is filled up. This is a more serious problem as it&rsquo;s not easy to change OS default behavior.</li>
-</ul>
-
-
-
-		
-		<a href="/blog/2014/01/22/non-blocking-pipe/" class="more-link">Read more</a>
 	</div>
 
 </article>
