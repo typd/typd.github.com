@@ -65,7 +65,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # douban
-douban_user: typd
+douban_user: 
 douban_apikey: # you can leave this blank
 douban_display_category: #movie, book, music (if blank, will fetch all these categories)
 
@@ -76,7 +76,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Coderwall
-coderwall_user: typd
+coderwall_user: 
 
 # Twitter
 twitter_user:
